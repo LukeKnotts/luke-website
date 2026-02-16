@@ -22,6 +22,7 @@
       explore the other <a href="/school/worldsfair/">stories</a> and some of
       the other presentations!
     </p>
+    <p><a href="/school/worldsfair/">Back to title</a>.</p>
     <br />
     <p class="subtitle">Thank you for playing!</p>
     <br />
