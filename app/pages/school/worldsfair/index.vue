@@ -4,11 +4,19 @@
     <p class="subtitle">An Interactive Experience</p>
     <br />
     <p>
-      Welcome to this virtual exploration of British literature, ranging from Old English to the Industrial Revolution. Below you will have the option to explore up to three stories. For each story, you will be taken into the story, and you will walk through a circumstance in the shoes of the characters that illustrates themes important to British literature.
+      Welcome to this virtual exploration of British literature, ranging from
+      Old English to the Industrial Revolution. Below you will have the option
+      to explore up to three stories. For each story, you will be taken into the
+      story, and you will walk through a circumstance in the shoes of the
+      characters that illustrates themes important to British literature.
     </p>
-    <a href="" class="beowulf">Beowulf</a>
-    <a href="/" class="canterbury">The Canterbury Tales</a>
-    <a href="/" class="scrooge">A Christmas Carol</a>
+    <div class="buttons">
+      <a href="./beowulf" class="beowulf">Beowulf</a>
+      <a href="./canterbury" class="canterbury">The Canterbury Tales</a>
+      <a href="./scrooge" class="scrooge">A Christmas Carol</a>
+    </div>
+    <hr />
+    <p class="subtitle">A project by <a href="/">Luke Knotts</a>.</p>
     <hr />
   </div>
 </template>
@@ -21,5 +29,5 @@ useHead({
 </script>
 
 <style scoped>
-@import './main.css';
+@import "./main.css";
 </style>

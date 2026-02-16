@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <h1>Hello, INDEX!</h1>
+    <h1>Welcome to LukeKnotts.com</h1>
     <p>Luke's new website!!</p>
     <ul>
       <li><a href="/games">Games</a></li>
