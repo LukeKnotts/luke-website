@@ -14,6 +14,7 @@
       You, the reader, will be placed in the heroic Beowulf's shoes and be
       tasked with trying to follow in his footsteps.
     </p>
+    <p><a href="/school/worldsfair/beowulf-start">Continue.</a></p>
 
     <WFFooter />
   </div>
