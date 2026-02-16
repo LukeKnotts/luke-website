@@ -17,9 +17,7 @@
       >
       <a href="/school/worldsfair/scrooge" class="scrooge">A Christmas Carol</a>
     </div>
-    <hr />
-    <p class="subtitle">A project by <a href="/">Luke Knotts</a>.</p>
-    <hr />
+    <WFFooter />
   </div>
 </template>
 
@@ -28,6 +26,8 @@
 useHead({
   htmlAttrs: { lang: "en" },
 });
+
+import WFFooter from "./components/WFFooter.vue";
 </script>
 
 <style scoped>

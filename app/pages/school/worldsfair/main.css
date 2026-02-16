@@ -87,3 +87,8 @@ a.scrooge {
 
   text-decoration: underline;
 }
+
+.nowrap {
+  white-space: nowrap;
+  width: 100%;
+}
