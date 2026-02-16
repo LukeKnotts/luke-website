@@ -2,7 +2,7 @@
   <div class="everything">
     <StoryHeader />
     <h1>Beowulf</h1>
-    <img src="/images/school/worldsfair/beowulf.png" />
+    <img src="/images/school/worldsfair/Beowulf.png" />
     <p>
       Beowulf is an ancient Anglo-Saxon story that was originally told orally,
       perhaps as a way to pass the time during travels. The story teaches
