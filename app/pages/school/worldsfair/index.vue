@@ -11,9 +11,11 @@
       characters that illustrates themes important to British literature.
     </p>
     <div class="buttons">
-      <a href="./beowulf" class="beowulf">Beowulf</a>
-      <a href="./canterbury" class="canterbury">The Canterbury Tales</a>
-      <a href="./scrooge" class="scrooge">A Christmas Carol</a>
+      <a href="/school/worldsfair/beowulf" class="beowulf">Beowulf</a>
+      <a href="/school/worldsfair/canterbury" class="canterbury"
+        >The Canterbury Tales</a
+      >
+      <a href="/school/worldsfair/scrooge" class="scrooge">A Christmas Carol</a>
     </div>
     <hr />
     <p class="subtitle">A project by <a href="/">Luke Knotts</a>.</p>
