@@ -6,7 +6,7 @@
     <p>
       Welcome to this virtual exploration of British literature, ranging from Old English to the Industrial Revolution. Below you will have the option to explore up to three stories. For each story, you will be taken into the story, and you will walk through a circumstance in the shoes of the characters that illustrates themes important to British literature.
     </p>
-    <a href="/" class="beowulf">Beowulf</a>
+    <a href="" class="beowulf">Beowulf</a>
     <a href="/" class="canterbury">The Canterbury Tales</a>
     <a href="/" class="scrooge">A Christmas Carol</a>
     <hr />
