@@ -5,7 +5,7 @@
     <p>
       You are wealthy and reserved, hardened and selfish. But one night near
       Christmas, a ghost visits you. At first you are completely terrified, but
-      he does you know harm. Instead the ghost shows you your own childhood. He
+      he does you no harm. Instead the ghost shows you your own childhood. He
       makes you realize how you have pushed everyone else away in selfish
       security. And tragically, he makes you relive how you abandoned your love.
       It is too much to bare. You try to ward off this ghost.
@@ -29,8 +29,10 @@
       the second ghost is waiting for you. Do you approach the next ghost, or do
       you attempt to evade and resist the subsequent specter?
     </p>
-    <p>A) <a href="">Resist the ghost!</a></p>
-    <p>B) <a href="">Approach the ghost...</a></p>
+    <p>A) <a href="/school/worldsfair/scrooge-wrong">Resist the ghost!</a></p>
+    <p>
+      B) <a href="/school/worldsfair/scrooge-correct">Approach the ghost...</a>
+    </p>
     <WFFooter />
   </div>
 </template>

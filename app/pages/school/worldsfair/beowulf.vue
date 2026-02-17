@@ -23,6 +23,11 @@
 <script setup>
 import WFFooter from "./components/WFFooter.vue";
 import StoryHeader from "./components/StoryHeader.vue";
+
+// The language needs to be set to 'English' in order for the "hyphens" CSS property to split words into multiple lines. The text looks better that way.
+useHead({
+  htmlAttrs: { lang: "en" },
+});
 </script>
 
 <style scoped>
