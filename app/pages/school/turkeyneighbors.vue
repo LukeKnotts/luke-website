@@ -21,7 +21,7 @@
         <FlashCard term="No.8" def="Georgia" />
         <FlashCard term="No.9" def="Armenia" />
         <FlashCard term="No.10" def="Azerbaijan (barely!)" />
-        <FlashCard term="No.11" def="Iraq" />
+        <FlashCard term="No.11" def="Iran" />
       </div>
     </div>
     <br />
