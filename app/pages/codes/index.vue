@@ -5,7 +5,7 @@ import Header from "~/components/Header.vue";
 <template>
   <div>
     <Header />
-    <h1>Codes!</h1>
+    <h1>Code Catalogue</h1>
     <p>
       A place for me to catalogue codes, whenever I feel like it. Don't expect
       much from here, I can't promise I'll update again anytime soon.
@@ -13,6 +13,10 @@ import Header from "~/components/Header.vue";
     <hr />
     <ul>
       <li><a href="/codes/screamcipher">Scream Cipher</a>, xkcd</li>
+      <li>
+        Anne Frank's
+        <a href="/codes/annefranknum">Numeric Substitution Cipher</a>
+      </li>
     </ul>
   </div>
 </template>

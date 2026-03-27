@@ -12,7 +12,7 @@ import Header from "~/components/Header.vue";
       text in Scream Cipher looks kind of like screaming.
     </p>
     <img
-      src="/images/langs-and-codes/scream-cipher-xkcd.png"
+      src="/images/codes/screamcipher/scream-cipher-xkcd.png"
       title="AAAAAA A ÃA̧AȂA̦ ǍÅÂÃĀÁȂ AAAAAAA!"
       class="archive halfWidth"
     />
@@ -33,9 +33,9 @@ import Header from "~/components/Header.vue";
       ǍÅÂÃĀÁȂ AAAAAAA!"
     </p>
     <p>
-      The comic also featured the following mouseover text: "In the Scream
-      Cipher, messages consist of all As, with different letters distinguished
-      using diacritics."
+      Below the main image of the comic is the text: "In the Scream Cipher,
+      messages consist of all As, with different letters distinguished using
+      diacritics."
     </p>
     <p>Below is the scream cipher in a table.</p>
     <table>
@@ -180,9 +180,9 @@ import Header from "~/components/Header.vue";
       </tbody>
     </table>
     <p>
-      I'm not too sure about my transciption of the character for "Z", but it's
-      good enough --and at least that encoding isn't ambiguous. So yeah. Scream
-      folks.
+      I must admit that not all of my transcriptions show up well on all
+      devices. If someone has a better way to type the Scream Cipher online,
+      please tell me!
     </p>
   </div>
 </template>
