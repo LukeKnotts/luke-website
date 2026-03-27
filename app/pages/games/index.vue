@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import Header from "/components/Header.vue";
-
-const { data: posts } = await useAsyncData("blog", () =>
-  queryCollection("games").all()
-);
+import Header from "~/components/Header.vue";
 </script>
 
 <template>
@@ -14,9 +10,26 @@ const { data: posts } = await useAsyncData("blog", () =>
       Every project here I've worked on with the help of cool coders, musicians,
       artists, and writers.
     </p>
+    <p>
+      I have listed the projects in the order that I suggest new people look at
+      my work in.
+    </p>
     <ul>
-      <li v-for="post in posts" :key="post.date">
-        <NuxtLink :to="post.path">{{ post.title }}</NuxtLink>
+      <li>
+        <NuxtLink to="/games/thehunt">The Hunt!</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/games/erase">ERASE Employment</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/games/occulinaryclub">The Occulinary Club</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/games/dontgooutside">Don't Go Outide</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/games/worldthumbboxing">World Thumb Boxing</NuxtLink>
+        (Canceled)
       </li>
     </ul>
   </div>

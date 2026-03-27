@@ -4,9 +4,9 @@
     <h1>About</h1>
     <p>
       Studying game design, Knotts is a high school student with interests in
-      storytelling and music theory. This website is home to their video game
-      <a class="inline-link" href="/wtdevlog">development blog</a>, as well as
-      some creative projects (including a few
+      storytelling and music theory. This website holds my video game
+      <a class="inline-link" href="/games/wtdevlog">development blog</a> from my
+      time at Warren Tech, as well as some creative projects (including a few
       <a class="inline-link" href="/games">games</a>!).
     </p>
   </div>

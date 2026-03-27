@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <NuxtLayout>
       <h1>What Can JavaScript Do?</h1>
       <p>JavaScript can change HTML attribute values.</p>
@@ -20,4 +21,5 @@
 useHead({
   title: "A Page to Test Code Stuffs",
 });
+import Header from "/components/Header.vue";
 </script>

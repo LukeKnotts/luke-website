@@ -1,6 +1,7 @@
 <script setup>
 import FlashCard from "./components/FlashCard.vue";
 import { mycards } from "./composables/cards.js";
+import Header from "/components/Header.vue";
 
 // shuffle function for list of bugs, take from Google ai, Gemini
 function ShuffleArray(array) {
@@ -61,6 +62,7 @@ onMounted(() => {
 
 <template>
   <div class="everything">
+    <Header />
     <p>
       Luke's PreCalc flash cards. Check out the other stuff at
       <a href="/">lukeknotts.com</a>: [Fake link]. See a mistake? Email me at

@@ -1,5 +1,6 @@
 <template>
   <div class="everything">
+    <Header />
     <h1>
       Copy Paste Symbols &nbsp;
       <span class="normal"><a href="/">lukeknotts.com</a></span>
@@ -137,6 +138,10 @@
     </table>
   </div>
 </template>
+
+<script setup>
+import Header from "/components/Header.vue";
+</script>
 
 <style scoped>
 /* Generic Styles */

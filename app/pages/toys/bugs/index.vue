@@ -22,10 +22,14 @@ bugList = ShuffleArray(bugList);
 onMounted(() => {
   runAnimations();
 });
+
+// Header import
+import Header from "/components/Header.vue";
 </script>
 
 <template>
   <div class="everything">
+    <Header />
     <!----------------Title Heading------------------>
     <div>
       <h1>Luke's Hall of Bugs &nbsp; {{ bugOne }}</h1>
