@@ -16,7 +16,7 @@ import Header from "~/components/Header.vue";
         Team: <a href="https://itch.io/profile/callend-07">Callen Dickerson</a>,
         <a href="https://hirokahara.itch.io/">Hiro Kahara</a>, Luke Knotts (me),
         <a href="https://alexprice2123.github.io/alex.price/">Alex Price</a>,
-        <a href="https://www.tvornik-comic.com/">Emma Schmucker</a>,
+        <a href="https://www.mushroomsoupcat.com/">Emma Schmucker</a>,
         <a href="https://ratbill.itch.io/">Leo Sheng</a>, and
         <a href="https://itch.io/profile/dqrktimes-lukas">Lukas Wilkens Mota</a>
       </li>
