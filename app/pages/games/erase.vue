@@ -8,7 +8,7 @@ import Header from "~/components/Header.vue";
     <h1>ERASE Employment</h1>
     <p>
       Made during my 2024-25 school year at
-      <a href="https://www.3to1games.com/">Warren Tech</a>.
+      <a href="https://warrentech.jeffcopublicschools.org/">Warren Tech</a>.
     </p>
     <img src="/images/erase-employment-game/basket.png" />
     <ul class="summary">
@@ -42,8 +42,9 @@ import Header from "~/components/Header.vue";
       project in Unreal Engine. I got better at commmunication, writing,
       collaboration, and pushing forward even when I didn't know how. This
       program was a life changing opportunity for me. Our class released games
-      under the moniker "3to1games" because we brought together the skills of
-      the three main disciplines in games: artists, coders, and designers.
+      under the moniker "<a href="https://www.3to1games.com/">3to1games</a>"
+      because we brought together the skills of the three main disciplines in
+      games: artists, coders, and designers.
     </p>
     <p>
       I have to give a tremendous thanks to our teacher,
@@ -57,8 +58,9 @@ import Header from "~/components/Header.vue";
       One part of this game development program was to make weekly blogs,
       detailing our work. Sometimes I was annoyed or lazy, and sometimes I went
       overboard and wrote too much. If you want to look at the terrifying time
-      capsule that is my <a href="/games/wtdevlog">Warren Tech dev log</a>, note
-      that you have been warned, and click that hyperlink.
+      capsule that is my
+      <NuxtLink to="/games/wtdevlog">Warren Tech dev log</NuxtLink>, note that
+      you have been warned, and click that hyperlink.
     </p>
     <p>
       And for those of you who missed the link above, we want YOU to join ERASE!

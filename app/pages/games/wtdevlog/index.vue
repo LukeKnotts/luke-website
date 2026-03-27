@@ -17,10 +17,10 @@ const { data: posts } = await useAsyncData("blog", () =>
     </p>
     <p>
       It was during this year that I worked on
-      <a href="games/thehunt">The Hunt</a>,
-      <a href="games/erase">ERASE Employment</a>,
-      <a href="games/occulinaryclub">The Occulinary Club</a>, and
-      <a href="games/worldthumbboxing">World Thumb Boxing</a>.
+      <NuxtLink to="/games/thehunt">The Hunt</NuxtLink>,
+      <NuxtLink to="/games/erase">ERASE Employment</NuxtLink>,
+      <NuxtLink to="/games/occulinaryclub">The Occulinary Club</NuxtLink>, and
+      <NuxtLink to="/games/worldthumbboxing">World Thumb Boxing</NuxtLink>.
     </p>
     <ul>
       <li v-for="post in posts" :key="post.date">
