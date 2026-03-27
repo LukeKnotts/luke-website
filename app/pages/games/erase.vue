@@ -4,7 +4,7 @@ import Header from "~/components/Header.vue";
 
 <template>
   <div>
-    <Header sectionlink="/games/" sectionname="Games" />
+    <Header :array="[{ link: '/games', name: 'Games' }]" />
     <h1>ERASE Employment</h1>
     <p>
       Made during my 2024-25 school year at

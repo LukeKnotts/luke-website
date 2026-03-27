@@ -4,7 +4,7 @@ import Header from "~/components/Header.vue";
 
 <template>
   <div>
-    <Header sectionlink="/games" sectionname="Games" />
+    <Header :array="[{ link: '/games', name: 'Games' }]" />
     <h1>Don't Go Outside</h1>
     <p>A Choose-Your-Own-Adventure style mystery</p>
     <img src="/images/dontgooutside/title.png" />

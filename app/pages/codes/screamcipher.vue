@@ -4,7 +4,7 @@ import Header from "~/components/Header.vue";
 
 <template>
   <div>
-    <Header sectionlink="/codes" sectionname="Codes" />
+    <Header :array="[{ link: '/codes', name: 'Codes' }]" />
     <h1>Scream Cipher</h1>
     <p>A substitution cipher for the 26-letter English alphabet.</p>
     <p>

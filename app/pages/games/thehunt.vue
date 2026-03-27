@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header sectionlink="/games/" sectionname="Games" />
+    <Header :array="[{ link: '/games', name: 'Games' }]" />
     <h1>The Hunt</h1>
     <p>for Warren Tech's 2025 Creative Jam: Run!</p>
     <img src="/images/thehunt/unsafe.png" />

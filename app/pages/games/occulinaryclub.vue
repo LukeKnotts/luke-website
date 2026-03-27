@@ -4,7 +4,7 @@ import Header from "~/components/Header.vue";
 
 <template>
   <div>
-    <Header sectionlink="/games" sectionname="Games" />
+    <Header :array="[{ link: '/games', name: 'Games' }]" />
     <h1>The Occulinary Club</h1>
     <p>A strange club with even stranger members...</p>
     <img

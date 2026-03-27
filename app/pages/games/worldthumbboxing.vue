@@ -4,7 +4,7 @@ import Header from "~/components/Header.vue";
 
 <template>
   <div>
-    <Header sectionlink="/games" sectionname="Games" />
+    <Header :array="[{ link: '/games', name: 'Games' }]" />
     <h1>World Thumb Boxing (Canceled)</h1>
     <p>The first game jam I failed to complete...!</p>
     <img src="/images/WorldThumbBoxing/credits.png" />
