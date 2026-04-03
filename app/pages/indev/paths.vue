@@ -4,12 +4,11 @@
     <p>Here it is.</p>
     <p>{{ combination_count }} different paths.</p>
     <hr />
-    <div class="path_wall">
+    <div class="path_wall" v-show="isVisible">
       <template v-for="(ele, index) in combination_list" :key="ele">
-        <div v-if="combination_count != 'loading...'" class="path_card">
+        <div class="path_card">
           <canvas
             height="100"
-            ,
             width="100"
             :id="index"
             :ref="(el) => (canvases[index] = el)"
@@ -18,10 +17,10 @@
           <p>{{ ele }}</p>
           <p>No. {{ index }}</p>
         </div>
-        <div v-else>
-          <p>Loading...</p>
-        </div>
       </template>
+    </div>
+    <div v-show(!isVisible)>
+      <p>Loading...</p>
     </div>
     <hr />
   </div>
@@ -78,6 +77,8 @@ const generate_combinations = () => {
 
 // setup Canvas
 const canvases = ref({});
+// show loading until content is ready
+const isVisible = ref(false);
 
 onMounted(async () => {
   generate_combinations();
@@ -88,6 +89,7 @@ onMounted(async () => {
     canvases.value[ii + "ctx"] = canvases.value[ii].getContext("2d");
     canvases.value[ii] = canvases.value[ii + "ctx"];
     draw_path(ii, combination_list.value[ii]);
+    isVisible.value = true;
   }
 });
 
