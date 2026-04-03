@@ -23,6 +23,7 @@
         </div>
       </template>
     </div>
+    <hr />
   </div>
 </template>
 
