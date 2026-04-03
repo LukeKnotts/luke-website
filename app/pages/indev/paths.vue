@@ -14,8 +14,12 @@
             :ref="(el) => (canvases[index] = el)"
             style="border: solid 1px black"
           ></canvas>
-          <p>{{ ele }}</p>
-          <p>No. {{ index }}</p>
+          <p>
+            {{ ele }} <span class="nowrap">No. {{ index }}, </span>&nbsp;<span
+              class="nowrap"
+              >Lines: {{ ele.length }}</span
+            >
+          </p>
         </div>
       </template>
     </div>
@@ -214,10 +218,16 @@ const draw_path = (canvas_index, arr) => {
 </script>
 
 <style scoped>
+/* Class styles */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Path setup */
 .path_wall {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: rgb(219, 219, 219);
 }
 .path_card {
