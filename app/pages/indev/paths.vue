@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1>Paths. <a href="/">Luke Knotts</a></h1>
+    <h1>Paths. <NuxtLink to="/">Luke Knotts</NuxtLink></h1>
     <p>Here it is.</p>
     <p>{{ combination_count }} different paths.</p>
     <hr />
-    <div class="path_wall" v-show="isVisible">
+    <div v-show="isVisible" class="path_wall">
       <template v-for="(ele, index) in combination_list" :key="ele">
         <div class="path_card">
           <canvas
@@ -19,7 +19,7 @@
         </div>
       </template>
     </div>
-    <div v-show(!isVisible)>
+    <div v-show="!isVisible">
       <p>Loading...</p>
     </div>
     <hr />
