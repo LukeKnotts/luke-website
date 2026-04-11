@@ -11,11 +11,11 @@ defineProps({
 <template>
   <div>
     <div class="flex-container">
-      <p><a href="/">Home</a></p>
-      <p>&nbsp;</p>
+      <p><a href="/">LukeKnotts.com</a></p>
+      <p>&emsp;</p>
       <p><a href="/about">About</a></p>
       <template v-for="newlink in array">
-        <p>&nbsp;</p>
+        <p>&emsp;</p>
         <p>
           <a :href="newlink.link">{{ newlink.name }}</a>
         </p>
