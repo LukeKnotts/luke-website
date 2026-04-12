@@ -16,7 +16,8 @@ export function list_scales(edo, include_transpositions = false) {
 
     // calc how many scales we need to make room for in memory
     const calc_list_size = (edo, include_transpositions) => {
-        let size = 0;
+        // include additional one for empty set
+        let size = 1;
         for (let ii = 0; ii < (edo); ii++) {
             if (include_transpositions) {
                 size += combinations(edo, ii);
@@ -82,5 +83,5 @@ export function list_scales(edo, include_transpositions = false) {
     };
 
     console.log("finished generating scales!")
-    return scale_list;
+    return {arr: scale_list, size: scale_list_size};
 }

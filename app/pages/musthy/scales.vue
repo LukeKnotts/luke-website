@@ -40,6 +40,7 @@
     >
       Calculate Scales!
     </button>
+    <p>Generated {{ scale_amount }} scales.</p>
     <hr />
     <div v-if="generation_state == done">
       <template v-for="ele in scale_list">
@@ -70,6 +71,7 @@ const generation_state = ref(clickTo.value);
 
 // init scale list
 const scale_list = ref([]);
+const scale_amount = ref(0);
 
 watch(generation_state, async () => {
   if (generation_state.value == generating.value) {
@@ -79,9 +81,9 @@ watch(generation_state, async () => {
 });
 
 const generateScales = () => {
-  scale_list.value = list_scales(edo.value, include_transpositions.value);
-
-  //   generation_state.value = done;
+  const scales = list_scales(edo.value, include_transpositions.value);
+  scale_list.value = scales.arr;
+  scale_amount.value = scales.size;
   console.log(scale_list);
 };
 </script>
