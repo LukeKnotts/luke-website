@@ -9,7 +9,7 @@
     </p>
     <div class="user-options">
       <div>
-        <label>Notes per octave: </label>
+        <label for="edo">Notes per octave: </label>
         <select
           v-model="edo"
           @change="
@@ -26,7 +26,7 @@
         </select>
       </div>
       <div>
-        <label>Include transpositions: </label>
+        <label for="transpose">Include transpositions: </label>
         <input v-model="include_transpositions" type="checkbox" />
       </div>
     </div>
@@ -37,6 +37,7 @@
           console.log(generation_state);
         }
       "
+      id="transpose"
     >
       Calculate Scales!
     </button>
