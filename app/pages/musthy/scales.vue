@@ -73,8 +73,8 @@ const scale_list = ref([]);
 
 watch(generation_state, async () => {
   if (generation_state.value == generating.value) {
-    console.log("hello");
     generateScales();
+    generation_state.value = done;
   }
 });
 
