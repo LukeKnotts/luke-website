@@ -50,15 +50,13 @@ export function list_scales(edo, include_transpositions = false) {
     for (let ii = 0; ii < edo; ii++) {
         // 'starting values' to init recursive process
         // force everything to start on 0 or allow transpositions
-        if (include_transpositions) {
-            temporary = [];
-        }
-        else {
-            temporary = [0];
-            if (ii == 0) ii++;
-        }
+        temporary = [];
         temporary.push(ii);
         unbranched.push(temporary);
+        
+        if (!include_transpositions) {
+            break;
+        }
     }
 
     // function to recursively generate scales
