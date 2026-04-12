@@ -10,7 +10,16 @@
     <div class="user-options">
       <div>
         <label>Notes per octave: </label>
-        <select v-model="edo" name="edo" , id="edo">
+        <select
+          v-model="edo"
+          @change="
+            () => {
+              generation_state = clickTo;
+            }
+          "
+          name="edo"
+          id="edo"
+        >
           <template v-for="(ele, index) in max_edo + 1">
             <option :value="index">{{ index }}</option>
           </template>
@@ -21,22 +30,30 @@
         <input v-model="include_transpositions" type="checkbox" />
       </div>
     </div>
-    <button @click="generateScales()">Calculate Scales!</button>
+    <button
+      @click="
+        () => {
+          generation_state = generating;
+          console.log(generation_state);
+        }
+      "
+    >
+      Calculate Scales!
+    </button>
     <hr />
-    <div v-if="done_generating">
+    <div v-if="generation_state == done">
       <template v-for="ele in scale_list">
         <p>{{ ele }}</p>
       </template>
     </div>
     <div v-else>
-      <p>
-        {{ generating_scales ? "Generating..." : "Click to generate scales!" }}
-      </p>
+      <p>{{ generation_state }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
+import { watch } from "vue";
 import Header from "/components/Header.vue";
 import { list_scales } from "./js/scalelist";
 
@@ -45,17 +62,26 @@ const edo = ref(12);
 
 const include_transpositions = ref(false);
 
-const generating_scales = ref(false);
-const done_generating = ref(false);
+// display messages
+const generating = ref("Generating...");
+const clickTo = ref("Click to generate!");
+const done = "Done!";
+const generation_state = ref(clickTo.value);
 
+// init scale list
 const scale_list = ref([]);
 
-const generateScales = () => {
-  generating_scales.value = true;
+watch(generation_state, async () => {
+  if (generation_state.value == generating.value) {
+    console.log("hello");
+    generateScales();
+  }
+});
 
+const generateScales = () => {
   scale_list.value = list_scales(edo.value, include_transpositions.value);
-  done_generating.value = true;
-  generating_scales.value = false;
+
+  //   generation_state.value = done;
   console.log(scale_list);
 };
 </script>
