@@ -136,7 +136,6 @@ const playScale = async (scale, isChord = false) => {
     useSimpleTone().playTone(freq(scale[ii]));
     if (!isChord) {
       await wait(0.5);
-      console.log("hi");
     }
   }
 };
