@@ -35,7 +35,7 @@
       @click="
         () => {
           generation_state = generating;
-          console.log(generation_state);
+          // console.log(generation_state);
         }
       "
       id="transpose"
@@ -108,7 +108,7 @@ const generateScales = () => {
   const scales = list_scales(edo.value, include_transpositions.value);
   scale_list.value = scales.arr;
   scale_amount.value = scales.size;
-  console.log(scale_list);
+  // console.log(scale_list);
 };
 
 const playScale = async (scale, isChord = false) => {

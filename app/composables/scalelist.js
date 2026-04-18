@@ -85,7 +85,7 @@ export default function list_scales(edo, include_transpositions = false) {
     // generate scales until all "branches" have been made and unbranched is empty
     while (unbranched[0]) {
         branch(unbranched[0]);
-        console.log(scale_list.length)
+        // console.log(scale_list.length)
     };
 
     //console.log("finished generating scales!")
