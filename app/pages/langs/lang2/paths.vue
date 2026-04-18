@@ -6,19 +6,18 @@
     <p>Hello. here will be the paths.</p>
     <hr />
     <!-- v-if scale generation has finished. -->
-    <div v-if="ready">
+    <div v-if="mounted">
       <p>{{ path_amount }} sets</p>
       <hr />
-      <template v-for="(ele, index) in paths" :key="index">
-        <p>{{ index }}: {{ ele }}</p>
+      <template v-for="ele in paths" :key="ele.num">
+        <p>{{ ele.num }}: {{ ele.arr }}</p>
         <canvas
-          :id="'c' + index"
+          :id="'c' + ele.num"
           :height="canvas_height"
           :width="canvas_width"
           :ref="
             (el) => {
-              c_refs['c' + index] = el;
-              // console.log(c_refs['c' + index]);
+              c_refs['c' + ele.num] = el;
             }
           "
           class="canvas"
@@ -51,32 +50,38 @@ import draw_path from "./composables/drawpath";
 
 // generate all path arrays
 const path_data = ref(list_scales(12, true));
-const paths = ref(path_data.value.arr);
 const path_amount = ref(path_data.value.size);
+const paths = ref([]);
+for (let ii = 0; ii < path_amount.value; ii++) {
+  paths.value.push({ num: ii, arr: path_data.value.arr[ii] });
+}
 
 // canvas dimensions
 const canvas_height = ref(100);
 const canvas_width = ref(100);
 
 // only load canvas stuff after mounted
-const ready = ref(false);
+const mounted = ref(false);
 // store canvas refs.
-const c_refs = ref({});
+const c_refs = ref(Array(path_amount.value));
 
 onMounted(async () => {
   // once mounted load canvases
-  ready.value = true;
+  mounted.value = true;
+
   // wait for list to finish loading
-  await c_refs["c4095"];
+  await c_refs.value["c4095"];
 
   // draw each 'path'
   let c;
   let ctx;
   for (var ii = 0; ii < paths.value.length; ii++) {
     // console.log("Log canvas", "c" + ii + ":", c_refs.value["c" + ii]);
-    c = document.getElementById("c" + ii);
+    c = c_refs.value["c" + ii];
     ctx = c.getContext("2d");
-    draw_path(ctx, toRaw(paths.value[ii]));
+
+    ctx.lineWidth = 5;
+    draw_path(ctx, paths.value[ii].arr);
   }
 });
 </script>
