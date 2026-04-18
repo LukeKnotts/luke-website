@@ -4,7 +4,7 @@
     <Wipbanner />
     <AIwarn
       :array="[
-        'Specifically, AI helped me sync up the thousand canvas with unique contexts to draw on the right ones.',
+        'Specifically, AI helped me sync up the thousand canvases with unique contexts to draw on the right ones.',
       ]"
     />
     <h1>Paths. <NuxtLink to="/">Luke Knotts</NuxtLink></h1>

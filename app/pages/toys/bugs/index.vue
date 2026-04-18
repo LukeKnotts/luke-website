@@ -33,7 +33,7 @@ import AIwarn from "/components/AIwarn.vue";
     <Header :array="[{ link: '/toys', name: 'Toys' }]" />
     <AIwarn
       :array="[
-        'I did not document my AI useage enough to remember what was used where on this page.',
+        'I did not document my AI useage enough to remember what was used where on this page. I think it was just a little bit of help exporting functions between files.',
       ]"
     />
     <!----------------Title Heading------------------>
