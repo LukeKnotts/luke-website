@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header :array="[{ link: '/musthy', name: 'Music Theory' }]" />
+    <Wipbanner />
     <h1>Musical Scale Calculator</h1>
     <p>
       Calculate the pc sets of every music scale in an equal temperment of your
@@ -76,8 +77,9 @@
 <script setup>
 import { watch } from "vue";
 import Header from "/components/Header.vue";
-import { list_scales } from "./js/scalelist";
+import Wipbanner from "/components/Wipbanner.vue";
 import useSimpleTone from "/composables/simpleTones.js";
+import list_scales from "/composables/scalelist.js";
 
 // max_edo is dependent on how large things can be before website breaks D:
 const max_edo = ref(17);

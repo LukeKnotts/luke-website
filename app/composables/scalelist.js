@@ -1,7 +1,13 @@
-export function list_scales(edo, include_transpositions = false) {
+// function that generates a list of all combinations of sets with "edo" elements.
+// "include transpositions" indicates whether or not you want to include sets that
+//      do not start on zero or not, 'false' meaning not to include those 
+//      "transpositionally equivalent" sets.
+// The terminology used her comes form my experimentation with music theory.
 
-    console.log("Edo:", edo, "Include transpositions?:", include_transpositions);
-    console.log("Generating scales...");
+export default function list_scales(edo, include_transpositions = false) {
+
+    //console.log("Edo:", edo, "Include transpositions?:", include_transpositions);
+    //console.log("Generating scales...");
 
     // math functions to help prepare list size
     const factorial = (num) => {
@@ -31,7 +37,7 @@ export function list_scales(edo, include_transpositions = false) {
     }
     const scale_list_size = calc_list_size(edo, include_transpositions);
 
-    console.log("there will be", scale_list_size, "scales.");
+    //console.log("there will be", scale_list_size, "scales.");
 
     // init scale list
     let scale_list = new Array(scale_list_size).fill(['x'.repeat(edo)]);
@@ -82,6 +88,6 @@ export function list_scales(edo, include_transpositions = false) {
         console.log(scale_list.length)
     };
 
-    console.log("finished generating scales!")
+    //console.log("finished generating scales!")
     return {arr: scale_list, size: scale_list_size};
 }

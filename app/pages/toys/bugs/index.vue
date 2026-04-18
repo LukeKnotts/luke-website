@@ -25,11 +25,17 @@ onMounted(() => {
 
 // Header import
 import Header from "/components/Header.vue";
+import AIwarn from "/components/AIwarn.vue";
 </script>
 
 <template>
   <div class="everything">
-    <Header />
+    <Header :array="[{ link: '/toys', name: 'Toys' }]" />
+    <AIwarn
+      :array="[
+        'I did not document my AI useage enough to remember what was used where on this page.',
+      ]"
+    />
     <!----------------Title Heading------------------>
     <div>
       <h1>Luke's Hall of Bugs &nbsp; {{ bugOne }}</h1>

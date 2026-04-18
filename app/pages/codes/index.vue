@@ -1,10 +1,12 @@
 <script setup>
 import Header from "~/components/Header.vue";
+import Wipbanner from "~/components/wipbanner.vue";
 </script>
 
 <template>
   <div>
     <Header />
+    <Wipbanner />
     <h1>Code Catalogue</h1>
     <p>
       A place for me to catalogue codes, whenever I feel like it. Don't expect
