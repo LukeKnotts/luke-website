@@ -102,7 +102,7 @@ onMounted(async () => {
   for (var ii = 0; ii < combination_count.value; ii++) {
     canvases.value[ii + "ctx"] = canvases.value[ii].getContext("2d");
     canvases.value[ii] = canvases.value[ii + "ctx"];
-    draw_path(ii, combination_list.value[ii]);
+    draw_path(canvases.value[ii], combination_list.value[ii]);
     isVisible.value = true;
   }
 });
@@ -181,8 +181,7 @@ const draw11 = (canvas) => {
   canvas.stroke();
 };
 
-const draw_path = (canvas_index, arr) => {
-  let canvas = canvases.value[canvas_index];
+const draw_path = (canvas, arr) => {
   canvas.lineWidth = 5;
   for (var ii = 0; ii < arr.length; ii++) {
     switch (arr[ii]) {
