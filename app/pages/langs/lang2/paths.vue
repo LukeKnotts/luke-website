@@ -10,7 +10,7 @@
       <p>{{ path_amount }} sets</p>
       <hr />
       <template v-for="ele in paths" :key="ele.num">
-        <p>{{ ele.num }}: {{ ele.arr }}</p>
+        <p>{{ ele.num }}: {{ ele.arr }}. Path: {{ ele.path }}</p>
         <canvas
           :id="'c' + ele.num"
           :height="canvas_height"
@@ -44,16 +44,24 @@ import Header from "~/components/Header.vue";
 import Wipbanner from "~/components/wipbanner.vue";
 import list_scales from "~/composables/scalelist.js";
 // vue imports
-import { onMounted, toRaw } from "vue";
+import { onMounted } from "vue";
 // composable imports
 import draw_path from "./composables/drawpath";
+import isConnected from "./composables/pathplay";
 
 // generate all path arrays
 const path_data = ref(list_scales(12, true));
 const path_amount = ref(path_data.value.size);
 const paths = ref([]);
 for (let ii = 0; ii < path_amount.value; ii++) {
-  paths.value.push({ num: ii, arr: path_data.value.arr[ii] });
+  let ele = { num: ii, arr: path_data.value.arr[ii] };
+
+  // organize data and compute stats
+  // ele.path = isConnected(ele.arr);
+  // console.log(ele.path);
+
+  // add ele to paths
+  paths.value.push(ele);
 }
 
 // canvas dimensions

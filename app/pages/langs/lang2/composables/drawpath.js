@@ -75,7 +75,7 @@ const draw11 = (canvas) => {
   canvas.stroke();
 };
 
-// main function
+// draw line segments based on input array
 //
 
 export default function draw_path(canvas, arr) {
