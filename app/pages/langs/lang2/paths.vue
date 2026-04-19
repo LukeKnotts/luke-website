@@ -9,20 +9,41 @@
     <div v-if="mounted">
       <p>{{ path_amount }} sets</p>
       <hr />
-      <template v-for="ele in paths" :key="ele.num">
-        <p>{{ ele.num }}: {{ ele.arr }}. Path: {{ ele.path }}</p>
-        <canvas
-          :id="'c' + ele.num"
-          :height="canvas_height"
-          :width="canvas_width"
-          :ref="
-            (el) => {
-              c_refs['c' + ele.num] = el;
-            }
-          "
-          class="canvas"
-        ></canvas>
-      </template>
+      <div class="path-gallery">
+        <template v-for="ele in paths" :key="ele.num">
+          <div class="path">
+            <div>
+              <p>No. {{ ele.num }}</p>
+              <hr />
+            </div>
+
+            <div>
+              <p>Side Array: {{ ele.arr }}</p>
+              <hr />
+            </div>
+            <div>
+              <p>Path: {{ ele.path }}</p>
+              <hr />
+            </div>
+            <div>
+              <p>Vertice edges: {{ ele.edges }}</p>
+              <hr />
+            </div>
+
+            <canvas
+              :id="'c' + ele.num"
+              :height="canvas_height"
+              :width="canvas_width"
+              :ref="
+                (el) => {
+                  c_refs['c' + ele.num] = el;
+                }
+              "
+              class="canvas"
+            ></canvas>
+          </div>
+        </template>
+      </div>
     </div>
     <!-- v-else content is still loading! -->
     <div v-else>
@@ -47,7 +68,7 @@ import list_scales from "~/composables/scalelist.js";
 import { onMounted } from "vue";
 // composable imports
 import draw_path from "./composables/drawpath";
-import isConnected from "./composables/pathplay";
+import usePath from "./composables/pathplay";
 
 // generate all path arrays
 const path_data = ref(list_scales(12, true));
@@ -57,8 +78,9 @@ for (let ii = 0; ii < path_amount.value; ii++) {
   let ele = { num: ii, arr: path_data.value.arr[ii] };
 
   // organize data and compute stats
-  // ele.path = isConnected(ele.arr);
-  // console.log(ele.path);
+  let edges = usePath().edgeNotate(ele.arr);
+  ele.edges = usePath().prettyEdges(edges);
+  // ele.path = usePath().isConnected(toRaw(ele.arr));
 
   // add ele to paths
   paths.value.push(ele);
@@ -95,6 +117,22 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+.path-gallery {
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.path {
+  flex-basis: 200px;
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  border: solid, black, 1px;
+}
+
 .canvas {
   border: solid, black, 1px;
 }
