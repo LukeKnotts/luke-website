@@ -1,6 +1,11 @@
 <template>
   <div>
-    <Header :array="[{ link: '/langs', name: 'Langs' }]" />
+    <Header
+      :array="[
+        { link: '/langs', name: 'Langs' },
+        { link: '/langs/pathlang', name: 'Pathlang' },
+      ]"
+    />
     <Wipbanner />
     <p>**this is a work of fiction.</p>
     <h1>Proto-Pathlang Dictionary Reconstruction</h1>
@@ -24,10 +29,6 @@
 
             <div>
               <p>Side Array: {{ ele.arr }}</p>
-              <hr />
-            </div>
-            <div>
-              <p>Path: {{ ele.path }}</p>
               <hr />
             </div>
             <div>
