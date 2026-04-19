@@ -8,7 +8,7 @@ import Wipbanner from "~/components/Wipbanner.vue";
     <Header />
     <Wipbanner />
     <h1>Languages</h1>
-    <p>A place for me to put the languages I've made.</p>
+    <p>A place for me to put the languages I've made. Woo-hoo!</p>
     <hr />
     <ul>
       <li><a href="/langs/pathlang/">Pathlang</a></li>
