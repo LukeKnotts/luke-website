@@ -68,7 +68,7 @@
 <script setup>
 // component imports
 import Header from "~/components/Header.vue";
-import Wipbanner from "~/components/wipbanner.vue";
+import Wipbanner from "~/components/Wipbanner.vue";
 import list_scales from "~/composables/scalelist.js";
 // vue imports
 import { onMounted } from "vue";
