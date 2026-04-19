@@ -1,6 +1,6 @@
 <script setup>
 import Header from "~/components/Header.vue";
-import Wipbanner from "~/components/wipbanner.vue";
+import Wipbanner from "~/components/Wipbanner.vue";
 </script>
 
 <template>
