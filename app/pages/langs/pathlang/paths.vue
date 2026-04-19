@@ -2,8 +2,13 @@
   <div>
     <Header :array="[{ link: '/langs', name: 'Langs' }]" />
     <Wipbanner />
-    <h1>Paths (new)</h1>
-    <p>Hello. here will be the paths.</p>
+    <p>**this is a work of fiction.</p>
+    <h1>Proto-Pathlang Dictionary Reconstruction</h1>
+    <p>
+      This page details a mathematical reconstruction of the complete
+      Proto-Pathlang alphabet. The below image demonstrates the labeling system.
+    </p>
+    <img src="/images/langs/pathlang/labels.png" />
     <hr />
     <!-- v-if scale generation has finished. -->
     <div v-if="mounted">
@@ -117,6 +122,10 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+img {
+  width: 250px;
+}
+
 .path-gallery {
   background-color: grey;
   display: flex;
