@@ -8,10 +8,10 @@
     />
     <Wipbanner />
     <p>**this is a work of fiction.</p>
-    <h1>Proto-Pathlang Dictionary Reconstruction</h1>
+    <h1>Every Combination of Line Segments on a 3x3 Grid.</h1>
     <p>
-      This page details a mathematical reconstruction of the complete
-      Proto-Pathlang alphabet. The below image demonstrates the labeling system.
+      This page lists every possible combination of different line segments on a
+      3x3 grid. Cool! See the below image to understand the labeling used.
     </p>
     <img src="/images/langs/pathlang/labels.png" />
     <hr />
@@ -20,7 +20,7 @@
       <p>{{ path_amount }} sets</p>
       <hr />
       <div class="path-gallery">
-        <template v-for="ele in paths" :key="ele.num">
+        <template v-for="(ele, index) in paths" :key="ele.num">
           <div class="path">
             <div>
               <p>No. {{ ele.num }}</p>
@@ -47,6 +47,7 @@
               "
               class="canvas"
             ></canvas>
+            <p>Is a path?: {{ ele.pathy }}</p>
           </div>
         </template>
       </div>
@@ -88,6 +89,8 @@ for (let ii = 0; ii < path_amount.value; ii++) {
   ele.edges = usePath().prettyEdges(edges);
   // ele.path = usePath().isConnected(toRaw(ele.arr));
 
+  ele.pathy = usePath().isPath(ele.arr);
+
   // add ele to paths
   paths.value.push(ele);
 }
@@ -125,6 +128,12 @@ onMounted(async () => {
 <style scoped>
 img {
   width: 250px;
+}
+
+@media print {
+  div {
+    break-inside: avoid;
+  }
 }
 
 .path-gallery {

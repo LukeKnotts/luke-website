@@ -4,6 +4,10 @@
 // these functions expect ordered arrays of numbers 0 through 11, i.e. [0, 1, 3] or [4, 5, 6].
 
 export default function usePath() {
+
+    //
+    //
+    //
     
     // return sides adjacent to a given side.
     const adj = (num) => {
@@ -35,12 +39,33 @@ export default function usePath() {
         }
     }
 
+    //
+    //
+    //
+
+    // determine whether there are disconnected segments so you don't have to "hop" between parts of the path.
+    const isPath = (arr) => {
+        let r = toRaw(arr);
+
+       
+    }
+    
+    //
+    //
+    //
+
     // convert an array of sides to an array of edges from node verticies.
-    // A-0-B-1-C
-    // 2   3   4
-    // D-5-E-6-F
-    // 7   8   9
-    // G-t-H-e-I
+    //
+    //  A-[0]-B-[1]-C
+    //  |     |     |
+    // [2]   [3]   [4]
+    //  |     |     |
+    //  D-[5]-E-[6]-F
+    //  |     |     |
+    // [7]   [8]   [9]
+    //  |     |     |
+    //  G-[t]-H-[e]-I
+    //
     // for example, Side 0 becomes [A,B] and Side 9 becomes [F,I].
     //
     const edgeNotate = (arr) => {
@@ -99,8 +124,13 @@ export default function usePath() {
         return output;
     }
 
+    //
+    //
+    //
+
     return {
         adj,
+        isPath,
         edgeNotate,
         prettyEdges,
         // return functions here.
