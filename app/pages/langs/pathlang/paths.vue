@@ -56,6 +56,48 @@
         reverse engineer one of these numeric labels from a given array. Such
         will be a future project, I suppose.
       </p>
+      <h2>Adjacent Line Segments</h2>
+      <p>
+        In order to study the visually apparent properties of different grid
+        symbols, figuring out which line segements are connected to which other
+        line segments is necessary. Below is a 'table' that shows numerically
+        which line segments are adjacent to each other.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <td>Line Segment</td>
+            <td>(vertices)</td>
+            <td>Adjacent Lines</td>
+            <td>(vertices)</td>
+          </tr>
+        </thead>
+        <tbody>
+          <template v-for="ii in 12">
+            <tr>
+              <td>{{ ii - 1 }}</td>
+              <td>
+                {{
+                  usePath().prettyEdges(
+                    usePath().edgeNotate(usePath().new_arr(ii - 1)),
+                  )
+                }}
+              </td>
+              <td>
+                {{ usePath().adj(ii - 1) }}
+              </td>
+              <td>
+                {{
+                  usePath().prettyEdges(
+                    usePath().edgeNotate(usePath().adj(ii - 1)),
+                  )
+                }}
+              </td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+
       <h2>'Continuous' Metric</h2>
       <p>
         If we imagine each grid symbol is a 'path' that could be walked on, it
@@ -64,7 +106,7 @@
         symbol without having to backtrack or 'jump' and skip over an adjacent
         line segment. Such grid symbols are labeled with a "continuous" metric
         above zero. This property can be thought of like continuous contour line
-        drawings from art, drawings that are made without lifting up the pen
+        drawings from art, drawings that are made without lifting up one's pen
         from the beginning to the end.
       </p>
       <p>
@@ -76,11 +118,11 @@
         complicated. The one quirk here is that grid symbols with only one line
         segment have a continuousness of 1. This is because my code looks
         through each grid symbol in terms of its line segments, not its
-        vertices, so there is no individual 'side' of a given line segment.
+        vertices, so there is no individual 'side' of a single line segment.
       </p>
-      <h3>Pokey Continuousness</h3>
+      <h2>Pokey Continuousness</h2>
       <p>
-        As mentioned above, computing grid symbols as ararys of line segments
+        As mentioned above, computing grid symbols as arrays of line segments
         rather than as arrays of vertice pairs means that without extra
         consideration, there is no difference between opposite sides of a given
         line segment. When I was programming the continuous metric, I mistakenly
@@ -92,8 +134,8 @@
         all of their adjacent lines, this does not make sense visually because I
         imagine traveling across the line segments from vertice to vertice, not
         from line segment to line segment. If I traveled to one end of a line
-        segment, I shouldn't be able to 'backtrack' and go to a line segment on
-        the side I came from.
+        segment, I shouldn't be able to 'backtrack' and go to a line segment
+        adjacent to the vertice I just crossed.
       </p>
       <p>
         To account for this, the continuous metric only allows for adjacent line
@@ -113,6 +155,10 @@
         pokey continuous metric is simply left out and implied to be the same.
         In places where it is unique from the continous metric, it is shown.
       </p>
+      <!-- Repeate button so people can close Exposition from bottom. Right now this is duplicate code, so be careful! -->
+      <button @click="toggleSec(show_info)">
+        {{ show_info.show ? "Hide" : "Show" }} Exposition
+      </button>
     </div>
 
     <hr />
@@ -204,8 +250,8 @@
         Don't refresh the page! You may need to wait a moment, but the page will
         update automatically when it is ready. If you refresh this window, the
         loading process will restart. I apologize for this funky in-development
-        setup! But seriously, if this takes for than 2 minutes, something might
-        be broken and I would give up waiting.
+        setup! If this takes for than 2 minutes, something might be broken and I
+        would give up waiting.
       </p>
     </div>
   </div>
@@ -346,5 +392,22 @@ img {
 
 .canvas {
   border: solid, black, 1px;
+}
+
+/* HTML Table */
+table {
+  background-color: grey;
+  border-radius: 5px;
+}
+thead tr td {
+  background-color: lightgrey;
+}
+td {
+  background-color: white;
+}
+th,
+td {
+  padding: 5px;
+  border-radius: 2px;
 }
 </style>
