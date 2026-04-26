@@ -380,15 +380,24 @@ img {
 }
 
 /* Make scrollbars always visible so user can tell if content scrolls */
-/* Code taken from https://stackoverflow.com/questions/35663653/make-a-scrollbar-always-visible-in-a-div-chrome */
+/* Code taken from https://stackoverflow.com/questions/22907777/make-scrollbar-visible-in-mobile-browsers */
 ::-webkit-scrollbar {
   -webkit-appearance: none;
-  width: 7px;
+}
+::-webkit-scrollbar:vertical {
+  width: 12px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 12px;
 }
 ::-webkit-scrollbar-thumb {
-  border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 
 .canvas {
