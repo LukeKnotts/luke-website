@@ -83,15 +83,26 @@ export default function usePath() {
             return false;
         }
         for (let ii = 0; ii < arr1.length; ii++) {
-            if (arr1[ii] != arr2[ii]) {
+            // go recursive for nested arrays
+            if (Array.isArray(arr1) && Array.isArray(arr2)) {
+
+            }
+            else if (Array.isArray(arr1) != Array.isArray(arr2)) {
                 return false;
+            }
+            else {
+                if (arr1[ii] != arr2[ii]) {
+                    // base recursive case
+                    return false;
+                }
             }
         }
         return true;
     }
 
     // determine whether path can be made without disconnected segments or backtracking.
-    const continuous = (arr) => {
+    // pokey setting allows for "continuous" segments that 'backtrack' onto segments adjacent to prior segmenet
+    const continuous = (arr, pokey = false) => {
         // console.log("adj from", toRaw(arr));
         let output = {};
         output.num = 0;
@@ -124,7 +135,14 @@ export default function usePath() {
                         d.push(new_arr(current));
                     }
                     else {
-                        const adj_set = new Set(adj(current.at(-1), current.at(-2)));
+                        let adj_set;
+                        // choose to remove 'pokey' adjacent segments
+                        if (!pokey) {
+                            adj_set = new Set(adj(current.at(-1), current.at(-2)));
+                        }
+                        else {
+                             adj_set = new Set(adj(current.at(-1)));
+                        }
                         const r_set = new Set(new_arr(r));
                         const intersect = adj_set.intersection(r_set);
 
