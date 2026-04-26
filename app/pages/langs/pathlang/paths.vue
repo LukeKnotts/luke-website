@@ -120,6 +120,12 @@
         through each grid symbol in terms of its line segments, not its
         vertices, so there is no individual 'side' of a single line segment.
       </p>
+      <p>
+        Currently on mobile, the display for continuous or pokey continuous
+        routes does not show a scrollbar so it is not obvious that you can
+        scroll through all possible routes. My apologies, I would like to figure
+        out how to fix this in the future!
+      </p>
       <h2>Pokey Continuousness</h2>
       <p>
         As mentioned above, computing grid symbols as arrays of line segments
