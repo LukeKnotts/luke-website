@@ -92,9 +92,7 @@ export default function usePath() {
 
     // determine whether path can be made without disconnected segments or backtracking.
     const isForked = (arr) => {
-
         let found_arr = true;
-
         const r = toRaw(arr);
 
         // size-based checks
@@ -134,21 +132,17 @@ export default function usePath() {
                             }
                         })
                     }
-
                     // remove 'current' so "c" is eventually emptied
                     c.splice(0, 1);
                 }
             }
-
            // console.log(r, ":", "find", r, "in", d);
-
             for (let jj = 0; jj < d.length; jj++) {
                 if (arr_equal(d[jj], r)) {
                     found_arr = false;
                 }
             }
         })
-
         // if we found it then that means the can be built continuously, and is therefore not forked.
         return found_arr;
     }
