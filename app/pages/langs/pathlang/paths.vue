@@ -376,6 +376,7 @@ img {
   overflow-y: scroll;
 
   font-size: 14px;
+  border: solid 2px black;
 }
 
 /* Make scrollbars always visible so user can tell if content scrolls */
