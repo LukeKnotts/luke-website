@@ -23,7 +23,7 @@
         <template v-for="(ele, index) in paths" :key="ele.num">
           <div class="path">
             <div>
-              <p>No. {{ ele.num }}</p>
+              <p>No. {{ ele.num }}, &ensp; Lines: {{ ele.arr.length }}</p>
               <hr />
             </div>
 
@@ -47,8 +47,25 @@
               "
               class="canvas"
             ></canvas>
-            <div v-if="!ele.forked">
-              <p>Is Forked: {{ ele.forked }}</p>
+
+            <hr />
+            <div v-if="ele.cont.num > 0">
+              <p>
+                <button @click="toggleContSec(ele)">
+                  Continuous: {{ ele.cont.num }}
+                </button>
+              </p>
+              <div v-if="ele.cont.show">
+                <hr />
+                <div class="cont-values">
+                  <template v-for="ii in ele.cont.seqs"
+                    ><p>{{ ii }}</p></template
+                  >
+                </div>
+              </div>
+            </div>
+            <div v-else>
+              <p>Continuous: {{ ele.cont.num }}</p>
             </div>
           </div>
         </template>
@@ -91,7 +108,9 @@ for (let ii = 0; ii < path_amount.value; ii++) {
   ele.edges = usePath().prettyEdges(edges);
   // ele.path = usePath().isConnected(toRaw(ele.arr));
 
-  ele.forked = usePath().isForked(ele.arr);
+  ele.cont = usePath().continuous(ele.arr);
+  // set up display var for each element to toggle continuous stats
+  ele.cont.show = false;
 
   // add ele to paths
   paths.value.push(ele);
@@ -125,6 +144,16 @@ onMounted(async () => {
     draw_path(ctx, paths.value[ii].arr);
   }
 });
+
+//
+//
+// cosemetic functions
+//
+
+const contsection = ref("hide");
+const toggleContSec = (ele) => {
+  ele.cont.show = !ele.cont.show;
+};
 </script>
 
 <style scoped>
@@ -138,6 +167,10 @@ img {
   }
 }
 
+.hide {
+  display: none;
+}
+
 .path-gallery {
   background-color: grey;
   display: flex;
@@ -148,10 +181,20 @@ img {
 
 .path {
   flex-basis: 200px;
+  align-self: flex-start;
   background-color: white;
   padding: 10px;
   margin: 10px;
   border: solid, black, 1px;
+}
+
+.cont-values {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  font-size: 14px;
 }
 
 .canvas {

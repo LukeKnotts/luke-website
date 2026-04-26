@@ -91,16 +91,22 @@ export default function usePath() {
     }
 
     // determine whether path can be made without disconnected segments or backtracking.
-    const isForked = (arr) => {
-        let found_arr = true;
+    const continuous = (arr) => {
+        // console.log("adj from", toRaw(arr));
+        let output = {};
+        output.num = 0;
+        output.seqs = [];
         const r = toRaw(arr);
 
         // size-based checks
         if (r.length == 0) {
-            return false;
+            output.num = 0;
+            return output;
         }
         if (r.length == 1) {
-            return false;
+            output.num = 1;
+            output.seqs = new_arr(r[0]);
+            return output;
         }
 
         // go through every root and try to build 'r' from an adjacent segments.
@@ -112,10 +118,9 @@ export default function usePath() {
 
             while (c.length > 0) {
                 for (let kk = 0; kk < c.length; kk++) {
-                    let current = new_arr(c[kk]);
+                    let current = new_arr(c[0]);
 
                     if (current.length == r.length) {
-                        current.sort((a,b) => a - b);
                         d.push(new_arr(current));
                     }
                     else {
@@ -136,15 +141,20 @@ export default function usePath() {
                     c.splice(0, 1);
                 }
             }
-           // console.log(r, ":", "find", r, "in", d);
+
+            // console.log(r, ":", "find", r, "in", d);
             for (let jj = 0; jj < d.length; jj++) {
-                if (arr_equal(d[jj], r)) {
-                    found_arr = false;
+                let dj = new_arr(d[jj]);
+                dj.sort((a,b) => a - b);
+                // console.log(d[jj]);
+                if (arr_equal(dj, r)) {
+                    output.num++;
+                    output.seqs.push(new_arr(d[jj]));
                 }
             }
         })
         // if we found it then that means the can be built continuously, and is therefore not forked.
-        return found_arr;
+        return output;
     }
     
     //
@@ -229,7 +239,7 @@ export default function usePath() {
         adj,
         new_arr,
         arr_equal,
-        isForked,
+        continuous,
         edgeNotate,
         prettyEdges,
         // return functions here.
