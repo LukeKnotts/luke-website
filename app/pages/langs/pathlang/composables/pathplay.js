@@ -10,44 +10,147 @@ export default function usePath() {
     //
     
     // return sides adjacent to a given side.
-    const adj = (num) => {
+    const adj = (num, prior = 'none') => {
+        let output;
+
         switch (num) {
             case 0:
-               return [1, 2, 3]; 
+                output = [1, 2, 3];
+                break;
             case 1:
-                return [0, 3, 4];
+                output = [0, 3, 4];
+                break;
             case 2:
-                return [0, 5, 7];
+                output = [0, 5, 7];
+                break;
             case 3:
-                return [0, 1, 5, 6, 8];
+                output = [0, 1, 5, 6, 8];
+                break;
             case 4:
-                return [1, 6, 9];
+                output = [1, 6, 9];
+                break;
             case 5:
-                return [2, 3, 6, 7, 8];
+                output = [2, 3, 6, 7, 8];
+                break;
             case 6:
-                return [3, 4, 5, 8, 9];
+                output = [3, 4, 5, 8, 9];
+                break;
             case 7:
-                return [2, 5, 10];
+                output = [2, 5, 10];
+                break;
             case 8:
-                return [3, 5, 6, 10, 11];
+                output = [3, 5, 6, 10, 11];
+                break;
             case 9:
-                return [4, 6, 11];
+                output = [4, 6, 11];
+                break;
             case 10:
-                return [7, 8, 11];
+                output = [7, 8, 11];
+                break;
             case 11:
-                return [8, 9, 10];
+                output = [8, 9, 10];
+                break;
         }
+
+        if (prior == 'none') {
+            return output;
+        }
+        else {
+            // filter out adjacent segments that were also adj to prior segmenet
+            // this makes sense visually, when you see the paths drawn.
+            output = output.filter( function(ele) { return !adj(prior).includes(ele) });
+        }
+
+        // console.log(output);
+        return output;
     }
 
     //
     //
     //
 
-    // determine whether there are disconnected segments so you don't have to "hop" between parts of the path.
-    const isPath = (arr) => {
-        let r = toRaw(arr);
+    const new_arr = (arry) => {
+        let r = arry;
+        if (!Array.isArray(arry)) {
+            r = [arry];
+        }
 
-       
+        return r.slice();
+    }
+
+    const arr_equal = (arr1, arr2) => {
+        if (arr1.length != arr2.length) {
+            return false;
+        }
+        for (let ii = 0; ii < arr1.length; ii++) {
+            if (arr1[ii] != arr2[ii]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // determine whether path can be made without disconnected segments or backtracking.
+    const isForked = (arr) => {
+
+        let found_arr = true;
+
+        const r = toRaw(arr);
+
+        // size-based checks
+        if (r.length == 0) {
+            return false;
+        }
+        if (r.length == 1) {
+            return false;
+        }
+
+        // go through every root and try to build 'r' from an adjacent segments.
+        r.forEach((ii) => {
+            let c = [];
+            let d = [];
+
+            c.push(new_arr(ii));
+
+            while (c.length > 0) {
+                for (let kk = 0; kk < c.length; kk++) {
+                    let current = new_arr(c[kk]);
+
+                    if (current.length == r.length) {
+                        current.sort((a,b) => a - b);
+                        d.push(new_arr(current));
+                    }
+                    else {
+                        const adj_set = new Set(adj(current.at(-1), current.at(-2)));
+                        const r_set = new Set(new_arr(r));
+                        const intersect = adj_set.intersection(r_set);
+
+                        intersect.forEach((jj) => {
+                            let add_arr = new_arr(current);
+                            add_arr.push(jj);
+
+                            if (!current.includes(jj)) {
+                                c.push(new_arr(add_arr));
+                            }
+                        })
+                    }
+
+                    // remove 'current' so "c" is eventually emptied
+                    c.splice(0, 1);
+                }
+            }
+
+           // console.log(r, ":", "find", r, "in", d);
+
+            for (let jj = 0; jj < d.length; jj++) {
+                if (arr_equal(d[jj], r)) {
+                    found_arr = false;
+                }
+            }
+        })
+
+        // if we found it then that means the can be built continuously, and is therefore not forked.
+        return found_arr;
     }
     
     //
@@ -130,7 +233,9 @@ export default function usePath() {
 
     return {
         adj,
-        isPath,
+        new_arr,
+        arr_equal,
+        isForked,
         edgeNotate,
         prettyEdges,
         // return functions here.

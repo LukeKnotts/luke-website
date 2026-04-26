@@ -47,7 +47,9 @@
               "
               class="canvas"
             ></canvas>
-            <p>Is a path?: {{ ele.pathy }}</p>
+            <div v-if="!ele.forked">
+              <p>Is Forked: {{ ele.forked }}</p>
+            </div>
           </div>
         </template>
       </div>
@@ -89,7 +91,7 @@ for (let ii = 0; ii < path_amount.value; ii++) {
   ele.edges = usePath().prettyEdges(edges);
   // ele.path = usePath().isConnected(toRaw(ele.arr));
 
-  ele.pathy = usePath().isPath(ele.arr);
+  ele.forked = usePath().isForked(ele.arr);
 
   // add ele to paths
   paths.value.push(ele);
