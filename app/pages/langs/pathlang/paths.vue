@@ -97,6 +97,14 @@
           </template>
         </tbody>
       </table>
+      <p>
+        One downside to writing in terms of line segments is that without
+        considering vertices, there is no recognition of which side of a line
+        segment one is on. In retrospect, I should have probably used
+        coordinates like (0,0) and (0,1) to make the calculations less
+        arbitrary. This downside of line segment notations like [0,1,2,4] came
+        up when making the 'continuous' metrics.
+      </p>
 
       <h2>'Continuous' Metric</h2>
       <p>
@@ -174,77 +182,129 @@
       <hr />
       <div class="path-gallery">
         <template v-for="(ele, index) in paths" :key="ele.num">
-          <div class="path">
-            <div>
-              <p>No. {{ ele.num }}, &ensp; Lines: {{ ele.arr.length }}</p>
-              <hr />
-            </div>
-
-            <div>
-              <p>Side Array: {{ ele.arr }}</p>
-              <hr />
-            </div>
-            <div>
-              <p>Vertice edges: {{ ele.edges }}</p>
-              <hr />
-            </div>
-
-            <canvas
-              :id="'c' + ele.num"
-              :height="canvas_height"
-              :width="canvas_width"
-              :ref="
-                (el) => {
-                  c_refs['c' + ele.num] = el;
-                }
-              "
-              class="canvas"
-            ></canvas>
-
-            <hr />
-            <!-- Continuous Stats -->
-            <div v-if="ele.cont.num > 0">
-              <p>
-                <button @click="toggleSec(ele.cont)">
-                  Continuous: {{ ele.cont.num }}
-                </button>
-              </p>
-              <div v-if="ele.cont.show">
+          <div class="path" :style="{ 'flex-basis': ele.width + 'px' }">
+            <div class="main-column">
+              <div>
+                <p>
+                  No. {{ ele.num }}, &ensp; Lines: {{ ele.arr.length }} &ensp;
+                  #{{ index }}
+                </p>
                 <hr />
-                <div class="cont-values">
-                  <template v-for="ii in ele.cont.seqs"
-                    ><p>{{ ii }}</p></template
+              </div>
+
+              <div>
+                <p>Side Array: {{ ele.arr }}</p>
+                <hr />
+              </div>
+              <div>
+                <p>Vertice edges: {{ ele.edges }}</p>
+                <hr />
+              </div>
+
+              <canvas
+                :id="'c' + ele.num"
+                :height="canvas_height"
+                :width="canvas_width"
+                :ref="
+                  (el) => {
+                    c_refs['c' + ele.num] = el;
+                  }
+                "
+                class="canvas"
+              ></canvas>
+
+              <hr />
+              <!-- Continuous Stats -->
+              <div v-if="ele.cont.num > 0">
+                <p>
+                  <button @click="toggleSec(ele.cont)">
+                    Continuous: {{ ele.cont.num }}
+                  </button>
+                </p>
+                <div v-if="ele.cont.show">
+                  <hr />
+                  <div class="cont-values">
+                    <template v-for="ii in ele.cont.seqs"
+                      ><p>{{ ii }}</p></template
+                    >
+                  </div>
+                </div>
+              </div>
+              <div v-else>
+                <p>Continuous: {{ ele.cont.num }}</p>
+              </div>
+
+              <!-- Pokey variation of Continuous stats -->
+              <div
+                v-if="
+                  ele.pokeycont.num > 0 &&
+                  !usePath().arr_equal(ele.pokeycont.seqs, ele.cont.seqs)
+                "
+              >
+                <hr />
+                <p>
+                  <button @click="toggleSec(ele.pokeycont)">
+                    Pokey Continuous: {{ ele.pokeycont.num }}
+                  </button>
+                </p>
+                <div v-if="ele.pokeycont.show">
+                  <hr />
+                  <div class="cont-values">
+                    <template v-for="ii in ele.pokeycont.seqs"
+                      ><p>{{ ii }}</p></template
+                    >
+                  </div>
+                </div>
+              </div>
+              <div v-else><!-- Nothing! --></div>
+              <hr />
+              <div v-if="ele.modes.list.length >= 1">
+                <button
+                  @click="
+                    () => {
+                      if (toggleSec(ele.modes)) {
+                        renderModes(ele.num, ele.modes.list);
+                        card_width(true, ele);
+                      } else {
+                        card_width(false, ele);
+                      }
+                    }
+                  "
+                >
+                  Rotations: {{ ele.modes.list.length + 1 }}
+                </button>
+              </div>
+              <div v-else>
+                <p>Rotations: {{ ele.modes.list.length + 1 }}</p>
+              </div>
+            </div>
+            <div class="rotation-column">
+              <div v-if="ele.modes.show" class="rotation-sec">
+                <p>Rotations of No.{{ ele.num }}</p>
+                <hr />
+                <div class="rotations">
+                  <template
+                    v-for="(rot, mindex) in ele.modes.list"
+                    :key="ele.num + 'r' + mindex"
                   >
+                    <div class="single-rotation">
+                      <!-- Rotation (mode) Canvases -->
+                      <canvas
+                        :id="'c' + ele.num + 'r' + mindex"
+                        :height="canvas_height"
+                        :width="canvas_width"
+                        :ref="
+                          (el) => {
+                            c_rot_refs['c' + ele.num + 'r' + mindex] = el;
+                          }
+                        "
+                        class="canvas"
+                      ></canvas>
+                    </div>
+                  </template>
                 </div>
               </div>
             </div>
-            <div v-else>
-              <p>Continuous: {{ ele.cont.num }}</p>
-            </div>
-
-            <!-- Pokey variation of Continuous stats -->
-            <div
-              v-if="
-                ele.pokeycont.num > 0 &&
-                !usePath().arr_equal(ele.pokeycont.seqs, ele.cont.seqs)
-              "
-            >
-              <hr />
-              <p>
-                <button @click="toggleSec(ele.pokeycont)">
-                  Pokey Continuous: {{ ele.pokeycont.num }}
-                </button>
-              </p>
-              <div v-if="ele.pokeycont.show">
-                <hr />
-                <div class="cont-values">
-                  <template v-for="ii in ele.pokeycont.seqs"
-                    ><p>{{ ii }}</p></template
-                  >
-                </div>
-              </div>
-            </div>
-            <div v-else><!-- Nothing! --></div>
           </div>
         </template>
       </div>
@@ -274,28 +334,51 @@ import { onMounted } from "vue";
 import draw_path from "./composables/drawpath";
 import usePath from "./composables/pathplay";
 
+// size of path_cards
+const path_card_width = ref(200);
+
 // generate all path arrays
 const path_data = ref(list_scales(12, true));
 const path_amount = ref(path_data.value.size);
 const paths = ref([]);
+let used_paths = [];
 for (let ii = 0; ii < path_amount.value; ii++) {
   let ele = { num: ii, arr: path_data.value.arr[ii] };
+  let unique = true;
 
-  // organize data and compute stats
-  let edges = usePath().edgeNotate(ele.arr);
-  ele.edges = usePath().prettyEdges(edges);
-  // ele.path = usePath().isConnected(toRaw(ele.arr));
+  for (let jj = 0; jj < used_paths.length; jj++) {
+    if (usePath().arr_equal(ele.arr, used_paths[jj])) {
+      unique = false;
+    }
+  }
 
-  ele.cont = usePath().continuous(ele.arr);
-  // set up display var for each element to toggle continuous stats
-  ele.cont.show = false;
-  // pokey variant of continuous
-  ele.pokeycont = usePath().continuous(ele.arr, true);
-  ele.pokeycont.show = false;
+  if (unique) {
+    // organize data and compute stats
+    let edges = usePath().edgeNotate(ele.arr);
+    ele.edges = usePath().prettyEdges(edges);
+    // ele.path = usePath().isConnected(toRaw(ele.arr));
 
-  // add ele to paths
-  paths.value.push(ele);
+    ele.cont = usePath().continuous(ele.arr);
+    // set up display var for each element to toggle continuous stats
+    ele.cont.show = false;
+    // pokey variant of continuous
+    ele.pokeycont = usePath().continuous(ele.arr, true);
+    ele.pokeycont.show = false;
+
+    ele.modes = { list: usePath().makeModes(ele.arr), show: false };
+    for (let jj = 0; jj < ele.modes.list.length; jj++) {
+      used_paths.push(ele.modes.list[jj].arr);
+    }
+
+    // how big to make each path card per ele. But dynamic!
+    ele.width = path_card_width.value;
+
+    // add ele to paths
+    paths.value.push(ele);
+    used_paths.push(ele.arr);
+  }
 }
+path_amount.value = paths.value.length;
 
 // canvas dimensions
 const canvas_height = ref(100);
@@ -306,6 +389,9 @@ const mounted = ref(false);
 // store canvas refs.
 const c_refs = ref(Array(path_amount.value));
 
+// test to draw rotated canvases
+const c_rot_refs = ref(Array(path_amount.value));
+
 onMounted(async () => {
   // once mounted load canvases
   mounted.value = true;
@@ -314,17 +400,34 @@ onMounted(async () => {
   await c_refs.value["c4095"];
 
   // draw each 'path'
+  let cindex;
   let c;
   let ctx;
   for (var ii = 0; ii < paths.value.length; ii++) {
-    // console.log("Log canvas", "c" + ii + ":", c_refs.value["c" + ii]);
-    c = c_refs.value["c" + ii];
+    cindex = paths.value[ii].num;
+    // console.log("Log canvas", "c" + cindex + ":", c_refs.value["c" + cindex]);
+    c = c_refs.value["c" + cindex];
     ctx = c.getContext("2d");
 
     ctx.lineWidth = 5;
     draw_path(ctx, paths.value[ii].arr);
   }
 });
+
+const renderModes = async (ele_num, mode_arr) => {
+  // wait for v-for to load all modes
+  await c_rot_refs.value["c" + ele_num + "r" + (mode_arr.length - 1)];
+
+  // render each mode in the mode_arr
+  for (let ii = 0; ii < mode_arr.length; ii++) {
+    // console.log("c_rot_refs:", c_rot_refs.value["c" + ele_num + "r" + ii]);
+
+    let c = c_rot_refs.value["c" + ele_num + "r" + ii];
+    let ctx = c.getContext("2d");
+
+    draw_path(ctx, mode_arr[ii].arr);
+  }
+};
 
 //
 //
@@ -337,6 +440,15 @@ show_info.show = false;
 // taken an object with .show prop and toggle it
 const toggleSec = (ele) => {
   ele.show = !ele.show;
+  return ele.show;
+};
+
+const card_width = (grow, ele) => {
+  if (grow) {
+    ele.width += path_card_width.value;
+  } else {
+    ele.width -= path_card_width.value;
+  }
 };
 </script>
 
@@ -364,12 +476,25 @@ img {
 }
 
 .path {
-  flex-basis: 200px;
+  /* flex-basis: v-bind(path_card_width + "px"); */
   align-self: flex-start;
   background-color: white;
   padding: 10px;
   margin: 10px;
   border: solid, black, 1px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.path div {
+  max-width: 200px;
+}
+.path p {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .cont-values {
@@ -383,6 +508,26 @@ img {
 
   font-size: 14px;
   border: solid 2px black;
+}
+
+.rotation-sec {
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  border: solid 1px black;
+
+  align-self: flex-start;
+}
+
+.rotations {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.single-rotation {
+  margin: 5px;
 }
 
 /* Make scrollbars always visible so user can tell if content scrolls */

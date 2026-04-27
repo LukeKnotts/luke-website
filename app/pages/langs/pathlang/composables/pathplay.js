@@ -84,10 +84,13 @@ export default function usePath() {
         }
         for (let ii = 0; ii < arr1.length; ii++) {
             // go recursive for nested arrays
-            if (Array.isArray(arr1) && Array.isArray(arr2)) {
-
+            if (Array.isArray(arr1[ii]) && Array.isArray(arr2[ii])) {
+                let temp_r = arr_equal(arr1[ii], arr2[ii]);
+                if (temp_r == false) {
+                    return false;
+                }
             }
-            else if (Array.isArray(arr1) != Array.isArray(arr2)) {
+            else if (Array.isArray(arr1[ii]) != Array.isArray(arr2[ii])) {
                 return false;
             }
             else {
@@ -179,6 +182,72 @@ export default function usePath() {
     //
     //
 
+    // rotate a grid symbol 90deg clockwise
+    const rotate = (arr) => {
+        let output = [];
+        const r = toRaw(arr);
+
+        r.forEach((ele) => {
+            switch (ele) {
+                case 0:
+                    output.push(4);
+                    break;
+                case 1:
+                    output.push(9);
+                    break;
+                case 2:
+                    output.push(1);
+                    break;
+                case 3:
+                    output.push(6);
+                    break;
+                case 4:
+                    output.push(11);
+                    break;
+                case 5:
+                    output.push(3);
+                    break;
+                case 6:
+                    output.push(8);
+                    break;
+                case 7:
+                    output.push(0);
+                    break;
+                case 8:
+                    output.push(5);
+                    break;
+                case 9:
+                    output.push(10);
+                    break;
+                case 10:
+                    output.push(2);
+                    break;
+                case 11:
+                    output.push(7);
+                    break;
+            }
+        })
+
+        return output.sort((a,b) => a - b);
+    }
+
+    // generate all rotations of a given grid symbol
+    const makeModes = (arr) => {
+        let output = [];
+        let r = toRaw(arr);
+        let current_mode = rotate(r);
+
+        while (!arr_equal(current_mode, r)) {
+            output.push({arr: new_arr(current_mode)});
+            current_mode = rotate(current_mode);
+        }
+        return output;
+    }
+
+    //
+    //
+    //
+
     // convert an array of sides to an array of edges from node verticies.
     //
     //  A-[0]-B-[1]-C
@@ -258,6 +327,8 @@ export default function usePath() {
         new_arr,
         arr_equal,
         continuous,
+        rotate,
+        makeModes,
         edgeNotate,
         prettyEdges,
         // return functions here.
