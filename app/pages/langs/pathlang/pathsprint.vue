@@ -23,7 +23,10 @@
           <div class="path" :style="{ 'flex-basis': ele.width + 'px' }">
             <div class="main-column">
               <div>
-                <p>No. {{ ele.num }}, &ensp; Lines: {{ ele.arr.length }}</p>
+                <p>
+                  No. {{ ele.num }}, &ensp; Lines: {{ ele.arr.length }} &ensp;
+                  #{{ index }}
+                </p>
                 <hr />
               </div>
 
