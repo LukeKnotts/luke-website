@@ -74,10 +74,10 @@ import Layout from "~/pages/langs/mclang/components/Layout.vue";
         </ul>
         <br />
         <ul>
-          <p>19 - [space] - Word delimeter.</p>
+          <p>19 - [space] - Word delimiter.</p>
         </ul>
         <ul>
-          <p>20 - [double space] - Sentence delimeter.</p>
+          <p>20 - [double space] - Sentence delimiter.</p>
         </ul>
       </div>
     </Layout>
