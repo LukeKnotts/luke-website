@@ -26,7 +26,7 @@ const conjTypeSymbol = (conjType) => {
       <h1>Dictionary</h1>
       <p>The words in Slabbic.</p>
       <hr />
-      <div class="ditionary">
+      <div class="dictionary">
         <template v-for="word in word_data">
           <div class="dictionary-word">
             <p>
@@ -55,12 +55,12 @@ const conjTypeSymbol = (conjType) => {
 
 <style scoped>
 .dictionary {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
-  grid-template-rows: repeat(auto-fit, 1fr);
+  display: flex;
+  flex-wrap: wrap;
 }
 .dictionary-word {
   display: inline-block;
+  width: 300px;
 
   border: solid 1px black;
   padding: 10px;

@@ -8,12 +8,6 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
     <Layout>
       <h1>Grammar</h1>
       <p>How sentences are structured.</p>
-      <p>
-        <span class="todo"
-          >Currently not all text written with Slabbic images is accurate. This
-          site is under construction.</span
-        >
-      </p>
       <hr />
       <h2>Word Order</h2>
       <p>
