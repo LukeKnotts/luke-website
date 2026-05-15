@@ -1,5 +1,5 @@
 <script setup>
-import Layout from "~/pages/langs/mclang/components/Layout.vue";
+import Layout from "~/pages/langs/slabbic/components/Layout.vue";
 </script>
 
 <template>

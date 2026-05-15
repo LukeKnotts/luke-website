@@ -1,6 +1,6 @@
 <script setup>
-import Layout from "~/pages/langs/mclang/components/Layout.vue";
-import Letter from "~/pages/langs/mclang/components/Letter.vue";
+import Layout from "~/pages/langs/slabbic/components/Layout.vue";
+import Letter from "~/pages/langs/slabbic/components/Letter.vue";
 </script>
 
 <template>

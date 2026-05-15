@@ -3,7 +3,7 @@ const props = defineProps(["roman"]);
 
 let show_image = true;
 
-let word = props.roman;
+const word = props.roman;
 
 // compatibility to allow nothing to generate
 if (word == "!") {
@@ -77,15 +77,16 @@ const getLetterLink = (letter) => {
 </script>
 
 <template>
-  <div class="inline" v-if="show_image">
+  <span class="inline" v-if="show_image">
     <template v-for="ltr in word">
       <img
         :src="getLetterLink(ltr)"
         :alt="'Slabbic' + ' \'' + ltr + '\''"
         :title="'Slabbic' + ' \'' + ltr + '\''"
         class="letter"
-    /></template>
-  </div>
+      />
+    </template>
+  </span>
 </template>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <script setup>
-import Layout from "~/pages/langs/mclang/components/Layout.vue";
-import Letter from "~/pages/langs/mclang/components/Letter.vue";
-import word_data from "~/pages/langs/mclang/data/dictionary.json" with { type: "json" };
+import Layout from "~/pages/langs/slabbic/components/Layout.vue";
+import Letter from "~/pages/langs/slabbic/components/Letter.vue";
+import word_data from "~/pages/langs/slabbic/data/dictionary.json" with { type: "json" };
 
 // data formatting and visualizing
 const conjTypeSymbol = (conjType) => {

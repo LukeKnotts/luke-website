@@ -1,6 +1,6 @@
 <script setup>
-import Layout from "~/pages/langs/mclang/components/Layout.vue";
-import Letter from "~/pages/langs/mclang/components/Letter.vue";
+import Layout from "~/pages/langs/slabbic/components/Layout.vue";
+import Letter from "~/pages/langs/slabbic/components/Letter.vue";
 </script>
 
 <template>
@@ -20,6 +20,14 @@ import Letter from "~/pages/langs/mclang/components/Letter.vue";
         Verbs go first. Other than that, the words that are the object or
         subject are conjugated to be such, and those words can be freely ordered
         from there.
+      </p>
+      <h3>Example</h3>
+      <p>
+        This means that both <Letter roman="cbe bdbxji oh" class="islab" /> and
+        <Letter roman="cbe oh bdbxji" class="islab" /> are valid translations of
+        "Unity creates Acacia wood". The order of the words
+        <Letter roman="bdbxji" class="islab" /> and
+        <Letter roman="oh" class="islab" /> is entirely up to the author.
       </p>
       <hr />
       <h2>Noun Conjugations</h2>
@@ -70,14 +78,6 @@ import Letter from "~/pages/langs/mclang/components/Letter.vue";
         other cases like <span class="todo">[TODO]</span> (helper form + sub or
         obj form in clauses?).
       </p>
-      <h3>Example</h3>
-      <p>
-        This means that both <Letter roman="cbe bdbxji oh" class="islab" /> and
-        <Letter roman="cbe oh bdbxji" class="islab" /> are valid translations of
-        "Unity creates Acacia wood". The order of the words
-        <Letter roman="bdbxji" class="islab" /> and
-        <Letter roman="oh" class="islab" /> is entirely up to the author.
-      </p>
       <hr />
       <h2>Verb Types</h2>
       <p>
@@ -86,8 +86,9 @@ import Letter from "~/pages/langs/mclang/components/Letter.vue";
         get a meaning across. Some verbs do not conjugate however, and play a
         stricter role. <i>Strictly Intransitive</i> verbs can never have an
         object, while <i>Strictly Transitive</i> verbs always have an object, so
-        no conjugation is necessary. All of the other verbs, however, conjugate
-        to specify whether or not they have an object.
+        no conjugation is necessary. All of the other verbs, called
+        <i>Flexible Verbs</i>, however, conjugate to specify whether or not they
+        have an object.
       </p>
       <table>
         <thead>
@@ -100,7 +101,9 @@ import Letter from "~/pages/langs/mclang/components/Letter.vue";
         <tbody>
           <tr>
             <th>Flexible Verbs</th>
-            <td><Letter roman="e" /></td>
+            <td>
+              <Letter roman="e" />
+            </td>
             <td><Letter roman="1" /></td>
           </tr>
         </tbody>

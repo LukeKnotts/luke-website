@@ -8,7 +8,7 @@ import Wipbanner from "~/components/Wipbanner.vue";
     <Header
       :array="[
         { link: '/langs', name: 'Langs' },
-        { link: '/langs/mclang', name: 'Slabbic' },
+        { link: '/langs/slabbic', name: 'Slabbic' },
       ]"
     />
     <Wipbanner />
