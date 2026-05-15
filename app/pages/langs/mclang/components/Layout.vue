@@ -36,12 +36,13 @@ h2 {
   margin-top: 5px;
 }
 
-p {
-  font-size: 20px;
+:slotted(p) {
+  font-size: 18px;
   text-align: left;
+  line-height: 1.5em;
 }
 
-.subtitle {
+:slotted(.subtitle) {
   color: grey;
   font-size: 16px;
 }
@@ -62,5 +63,16 @@ p {
 }
 :slotted(.underline) {
   text-decoration: underline;
+}
+/* Stands for "inline Slabbic". Used to make text in Slabbic that is in the middle of an English paragraph not look too weird.*/
+:slotted(.islab) {
+  border: 1px solid rgb(47, 47, 170);
+  background: rgb(201, 225, 233);
+  padding: 2px;
+  border-radius: 3px;
+}
+
+:slotted(hr) {
+  width: 100%;
 }
 </style>

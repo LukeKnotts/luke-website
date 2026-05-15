@@ -1,105 +1,90 @@
 <script setup>
-const props = defineProps(["letter"]);
+const props = defineProps(["roman"]);
 
-let letter_str = props.letter;
-let letter_img_link;
-switch (letter_str) {
-  case "a":
-    letter_img_link = "/images/langs/mclang/a.png";
-    break;
-  case "b":
-    letter_img_link = "/images/langs/mclang/b.png";
-    break;
-  case "c":
-    letter_img_link = "/images/langs/mclang/c.png";
-    break;
-  case "d":
-    letter_img_link = "/images/langs/mclang/d.png";
-    break;
-  case "e":
-    letter_img_link = "/images/langs/mclang/e.png";
-    break;
-  case "f":
-    letter_img_link = "/images/langs/mclang/f.png";
-    break;
-  case "g":
-    letter_img_link = "/images/langs/mclang/g.png";
-    break;
-  case "h":
-    letter_img_link = "/images/langs/mclang/h.png";
-    break;
-  case "i":
-    letter_img_link = "/images/langs/mclang/i.png";
-    break;
-  case "j":
-    letter_img_link = "/images/langs/mclang/j.png";
-    break;
-  case "k":
-    letter_img_link = "/images/langs/mclang/k.png";
-    break;
-  case "l":
-    letter_img_link = "/images/langs/mclang/l.png";
-    break;
-  case "m":
-    letter_img_link = "/images/langs/mclang/m.png";
-    break;
-  case "n":
-    letter_img_link = "/images/langs/mclang/n.png";
-    break;
-  case "o":
-    letter_img_link = "/images/langs/mclang/o.png";
-    break;
-  case "p":
-    letter_img_link = "/images/langs/mclang/p.png";
-    break;
-  case "q":
-    letter_img_link = "/images/langs/mclang/q.png";
-    break;
-  case "r":
-    letter_img_link = "/images/langs/mclang/r.png";
-    break;
-  case "s":
-    letter_img_link = "/images/langs/mclang/s.png";
-    break;
-  case "t":
-    letter_img_link = "/images/langs/mclang/t.png";
-    break;
-  case "u":
-    letter_img_link = "/images/langs/mclang/u.png";
-    break;
-  case "v":
-    letter_img_link = "/images/langs/mclang/v.png";
-    break;
-  case "w":
-    letter_img_link = "/images/langs/mclang/w.png";
-    break;
-  case "x":
-    letter_img_link = "/images/langs/mclang/x.png";
-    break;
-  case "y":
-    letter_img_link = "/images/langs/mclang/y.png";
-    break;
-  case "z":
-    letter_img_link = "/images/langs/mclang/z.png";
-    break;
-  case "za":
-    letter_img_link = "/images/langs/mclang/za.png";
-    break;
-  default:
-    // default image as an "error" image.
-    letter_img_link = "/images/occulinary-club/banner.png";
-    break;
+let show_image = true;
+
+let word = props.roman;
+
+// compatibility to allow nothing to generate
+if (word == "!") {
+  show_image = false;
 }
+
+// the '?' symbol is used for unknowns; let default switch case happen to use the error image.
+const getLetterLink = (letter) => {
+  switch (letter) {
+    case "a":
+      return "/images/langs/mclang/a.png";
+    case "b":
+      return "/images/langs/mclang/b.png";
+    case "c":
+      return "/images/langs/mclang/c.png";
+    case "d":
+      return "/images/langs/mclang/d.png";
+    case "e":
+      return "/images/langs/mclang/e.png";
+    case "f":
+      return "/images/langs/mclang/f.png";
+    case "g":
+      return "/images/langs/mclang/g.png";
+    case "h":
+      return "/images/langs/mclang/h.png";
+    case "i":
+      return "/images/langs/mclang/i.png";
+    case "j":
+      return "/images/langs/mclang/j.png";
+    case "k":
+      return "/images/langs/mclang/k.png";
+    case "l":
+      return "/images/langs/mclang/l.png";
+    case "m":
+      return "/images/langs/mclang/m.png";
+    case "n":
+      return "/images/langs/mclang/n.png";
+    case "o":
+      return "/images/langs/mclang/o.png";
+    case "p":
+      return "/images/langs/mclang/p.png";
+    case "q":
+      return "/images/langs/mclang/q.png";
+    case "r":
+      return "/images/langs/mclang/r.png";
+    case "s":
+      return "/images/langs/mclang/s.png";
+    case "t":
+      return "/images/langs/mclang/t.png";
+    case "u":
+      return "/images/langs/mclang/u.png";
+    case "v":
+      return "/images/langs/mclang/v.png";
+    case "w":
+      return "/images/langs/mclang/w.png";
+    case "x":
+      return "/images/langs/mclang/x.png";
+    case "y":
+      return "/images/langs/mclang/y.png";
+    case "z":
+      return "/images/langs/mclang/z.png";
+    case "1":
+      return "/images/langs/mclang/za.png";
+    case " ":
+      return "/images/langs/mclang/zspace.png";
+    default:
+      // default image as an "error" image.
+      return "/images/occulinary-club/banner.png";
+  }
+};
 </script>
 
 <template>
-  <div class="inline">
-    <img
-      :src="letter_img_link"
-      :alt="'Slabbic' + ' \'' + letter_str + '\''"
-      :title="'Slabbic' + ' \'' + letter_str + '\''"
-      class="letter"
-    />
+  <div class="inline" v-if="show_image">
+    <template v-for="ltr in word">
+      <img
+        :src="getLetterLink(ltr)"
+        :alt="'Slabbic' + ' \'' + ltr + '\''"
+        :title="'Slabbic' + ' \'' + ltr + '\''"
+        class="letter"
+    /></template>
   </div>
 </template>
 
@@ -108,7 +93,7 @@ switch (letter_str) {
   display: inline;
 }
 .letter {
-  height: 1lh;
-  vertical-align: bottom;
+  height: 1em;
+  vertical-align: text-bottom;
 }
 </style>

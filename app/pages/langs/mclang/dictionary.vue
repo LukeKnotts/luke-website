@@ -12,8 +12,10 @@ const conjTypeSymbol = (conjType) => {
       return "j";
     case "H-noun":
       return "h";
+    case "Standard Verb":
+      return "!";
     default:
-      return "Gaaah!!";
+      return "?";
   }
 };
 </script>
@@ -23,14 +25,12 @@ const conjTypeSymbol = (conjType) => {
     <Layout>
       <h1>Dictionary</h1>
       <p>The words in Slabbic.</p>
-      <p>---</p>
+      <hr />
       <div class="ditionary">
         <template v-for="word in word_data">
           <div class="dictionary_word">
             <p>
-              <template v-for="letter in word.word">
-                <Letter :letter="letter" />
-              </template>
+              <Letter :roman="word.word" />
               &emsp;|&emsp; {{ word.word }}
             </p>
             <hr />
@@ -39,7 +39,7 @@ const conjTypeSymbol = (conjType) => {
             </p>
             <p v-if="word.conjugation_type">
               <span class="underline">Conjugation Type:</span> &emsp;<Letter
-                :letter="conjTypeSymbol(word.conjugation_type)"
+                :roman="conjTypeSymbol(word.conjugation_type)"
               />
               {{ word.conjugation_type }}
             </p>
