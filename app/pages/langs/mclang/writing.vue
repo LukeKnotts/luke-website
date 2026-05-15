@@ -83,24 +83,40 @@ import Letter from "~/pages/langs/mclang/components/Letter.vue";
         </ul>
         <br />
         <ul>
-          <p>
-            19 - S - <Letter letter="s" /> - Cobblestone Stair (upside down)
-          </p>
+          <p>19 - S - <Letter letter="s" /> - Cobblestone Stair (up left)</p>
         </ul>
         <ul>
-          <p>20 - T - <Letter letter="t" /> - Stone Stair (upside down)</p>
+          <p>20 - T - <Letter letter="t" /> - Stone Stair (up left)</p>
         </ul>
         <ul>
-          <p>
-            21 - U - <Letter letter="u" /> - Stone Brick Stair (upside down)
-          </p>
+          <p>21 - U - <Letter letter="u" /> - Stone Brick Stair (up left)</p>
         </ul>
         <br />
         <ul>
-          <p>22 - [space] - Word delimiter.</p>
+          <p>22 - V - <Letter letter="v" /> - Cobblestone Stair (up back)</p>
         </ul>
         <ul>
-          <p>23 - [double space] - Sentence delimiter.</p>
+          <p>23 - W - <Letter letter="w" /> - Stone Stair (up back)</p>
+        </ul>
+        <ul>
+          <p>24 - X - <Letter letter="x" /> - Stone Brick Stair (up back)</p>
+        </ul>
+        <br />
+        <ul>
+          <p>25 - Y - <Letter letter="y" /> - Cobblestone Stair (up right)</p>
+        </ul>
+        <ul>
+          <p>26 - Z - <Letter letter="z" /> - Stone Stair (up right)</p>
+        </ul>
+        <ul>
+          <p>27 - ZA - <Letter letter="za" /> - Stone Brick Stair (up right)</p>
+        </ul>
+        <br />
+        <ul>
+          <p>28 - [space] - Word delimiter.</p>
+        </ul>
+        <ul>
+          <p>29 - [double space] - Sentence delimiter.</p>
         </ul>
       </div>
     </Layout>

@@ -38,7 +38,7 @@ import Letter from "~/pages/langs/mclang/components/Letter.vue";
             <th>M-nouns</th>
             <td><Letter letter="m" /></td>
             <td><Letter letter="i" /></td>
-            <td><Letter letter="s" /></td>
+            <td><Letter letter="v" /></td>
           </tr>
           <tr>
             <th>J-nouns</th>

@@ -67,6 +67,24 @@ switch (letter_str) {
   case "u":
     letter_img_link = "/images/langs/mclang/u.png";
     break;
+  case "v":
+    letter_img_link = "/images/langs/mclang/v.png";
+    break;
+  case "w":
+    letter_img_link = "/images/langs/mclang/w.png";
+    break;
+  case "x":
+    letter_img_link = "/images/langs/mclang/x.png";
+    break;
+  case "y":
+    letter_img_link = "/images/langs/mclang/y.png";
+    break;
+  case "z":
+    letter_img_link = "/images/langs/mclang/z.png";
+    break;
+  case "za":
+    letter_img_link = "/images/langs/mclang/za.png";
+    break;
   default:
     // default image as an "error" image.
     letter_img_link = "/images/occulinary-club/banner.png";
