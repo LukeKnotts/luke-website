@@ -2,6 +2,20 @@
 import Layout from "~/pages/langs/mclang/components/Layout.vue";
 import Letter from "~/pages/langs/mclang/components/Letter.vue";
 import word_data from "~/pages/langs/mclang/data/dictionary.json" with { type: "json" };
+
+// data formatting and visualizing
+const conjTypeSymbol = (conjType) => {
+  switch (conjType) {
+    case "M-noun":
+      return "m";
+    case "J-noun":
+      return "j";
+    case "H-noun":
+      return "h";
+    default:
+      return "Gaaah!!";
+  }
+};
 </script>
 
 <template>
@@ -24,9 +38,10 @@ import word_data from "~/pages/langs/mclang/data/dictionary.json" with { type: "
               <span class="underline">Word Type:</span> &emsp;{{ word.type }}
             </p>
             <p v-if="word.conjugation_type">
-              <span class="underline">Conjugation Type:</span> &emsp;{{
-                word.conjugation_type
-              }}
+              <span class="underline">Conjugation Type:</span> &emsp;<Letter
+                :letter="conjTypeSymbol(word.conjugation_type)"
+              />
+              {{ word.conjugation_type }}
             </p>
             <p>
               <span class="underline">English:</span> &emsp;{{ word.english }}
