@@ -15,6 +15,10 @@ import Letter from "~/pages/langs/mclang/components/Letter.vue";
         Letter symbol images are either ripped straight from Minecraft or are
         edited versions of Minecraft textures.
       </p>
+      <p>
+        The alphabet is designed so that all blocks needed for the language can
+        be made with stone blocks and a stonecutter.
+      </p>
       <hr />
       <h1>Alphabet</h1>
       <div class="alphabet">
@@ -79,10 +83,24 @@ import Letter from "~/pages/langs/mclang/components/Letter.vue";
         </ul>
         <br />
         <ul>
-          <p>19 - [space] - Word delimiter.</p>
+          <p>
+            19 - S - <Letter letter="s" /> - Cobblestone Stair (upside down)
+          </p>
         </ul>
         <ul>
-          <p>20 - [double space] - Sentence delimiter.</p>
+          <p>20 - T - <Letter letter="t" /> - Stone Stair (upside down)</p>
+        </ul>
+        <ul>
+          <p>
+            21 - U - <Letter letter="u" /> - Stone Brick Stair (upside down)
+          </p>
+        </ul>
+        <br />
+        <ul>
+          <p>22 - [space] - Word delimiter.</p>
+        </ul>
+        <ul>
+          <p>23 - [double space] - Sentence delimiter.</p>
         </ul>
       </div>
     </Layout>

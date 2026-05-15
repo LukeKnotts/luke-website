@@ -5,9 +5,8 @@ import Layout from "~/pages/langs/mclang/components/Layout.vue";
 <template>
   <div>
     <Layout>
-      <h1>MC Lang</h1>
+      <h1>Slabbic</h1>
       <p class="subtitle">A language made for Minecraft.</p>
-      <p>Hello.</p>
       <hr />
       <ul>
         <p><a href="/langs/mclang/lore">Lore</a></p>
@@ -17,6 +16,9 @@ import Layout from "~/pages/langs/mclang/components/Layout.vue";
       </ul>
       <ul>
         <p><a href="/langs/mclang/grammar">Grammar</a></p>
+      </ul>
+      <ul>
+        <p><a href="/langs/mclang/dictionary">Dictionary</a></p>
       </ul>
     </Layout>
   </div>

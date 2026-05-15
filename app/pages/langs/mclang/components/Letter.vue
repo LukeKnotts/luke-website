@@ -58,6 +58,15 @@ switch (letter_str) {
   case "r":
     letter_img_link = "/images/langs/mclang/r.png";
     break;
+  case "s":
+    letter_img_link = "/images/langs/mclang/s.png";
+    break;
+  case "t":
+    letter_img_link = "/images/langs/mclang/t.png";
+    break;
+  case "u":
+    letter_img_link = "/images/langs/mclang/u.png";
+    break;
   default:
     // default image as an "error" image.
     letter_img_link = "/images/occulinary-club/banner.png";
@@ -69,8 +78,8 @@ switch (letter_str) {
   <div class="inline">
     <img
       :src="letter_img_link"
-      :alt="'mclang' + ' \'' + letter_str + '\''"
-      :title="'mclang' + ' \'' + letter_str + '\''"
+      :alt="'Slabbic' + ' \'' + letter_str + '\''"
+      :title="'Slabbic' + ' \'' + letter_str + '\''"
       class="letter"
     />
   </div>

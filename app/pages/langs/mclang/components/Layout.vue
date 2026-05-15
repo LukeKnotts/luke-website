@@ -8,7 +8,7 @@ import Wipbanner from "~/components/Wipbanner.vue";
     <Header
       :array="[
         { link: '/langs', name: 'Langs' },
-        { link: '/langs/mclang', name: '[MC Lang]' },
+        { link: '/langs/mclang', name: 'Slabbic' },
       ]"
     />
     <Wipbanner />
@@ -21,15 +21,46 @@ import Wipbanner from "~/components/Wipbanner.vue";
 
 <style scoped>
 .page-content {
-  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-left: 10%;
+  margin-right: 20px;
+  max-width: 900px;
+}
+
+.page-content p,
+h1,
+h2 {
+  margin-top: 5px;
 }
 
 p {
   font-size: 20px;
+  text-align: left;
 }
 
 .subtitle {
   color: grey;
   font-size: 16px;
+}
+
+:slotted(img) {
+  max-width: 80%;
+}
+
+:slotted(table) {
+  border: solid 1px black;
+}
+:slotted(td) {
+  border: solid 1px black;
+}
+
+:slotted(.todo) {
+  color: red;
+}
+:slotted(.underline) {
+  text-decoration: underline;
 }
 </style>
