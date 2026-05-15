@@ -1,5 +1,6 @@
 <script setup>
 import Layout from "~/pages/langs/mclang/components/Layout.vue";
+import Letter from "~/pages/langs/mclang/components/Letter.vue";
 </script>
 
 <template>
@@ -10,67 +11,71 @@ import Layout from "~/pages/langs/mclang/components/Layout.vue";
         Writing is built left-to-right in single rows, preferably surrounded by
         one layer of blocks on all sides, perhaps built into a wall.
       </p>
+      <p>
+        Letter symbol images are either ripped straight from Minecraft or are
+        edited versions of Minecraft textures.
+      </p>
       <hr />
       <h1>Alphabet</h1>
       <div class="alphabet">
         <ul>
-          <p>1 - A - Cobblestone Block</p>
+          <p>1 - A - <Letter letter="a" /> - Cobblestone Block</p>
         </ul>
         <ul>
-          <p>2 - B - Stone Block</p>
+          <p>2 - B - <Letter letter="b" /> - Stone Block</p>
         </ul>
         <ul>
-          <p>3 - C - Stone Brick Block</p>
-        </ul>
-        <br />
-        <ul>
-          <p>4 - D - Cobblestone Slab (lower)</p>
-        </ul>
-        <ul>
-          <p>5 - E - Stone Slab (lower)</p>
-        </ul>
-        <ul>
-          <p>6 - F - Stone Brick Slab (lower)</p>
+          <p>3 - C - <Letter letter="c" /> - Stone Brick Block</p>
         </ul>
         <br />
         <ul>
-          <p>7 - G - Cobblestone Slab (upper)</p>
+          <p>4 - D - <Letter letter="d" /> - Cobblestone Slab (lower)</p>
         </ul>
         <ul>
-          <p>8 - H - Stone Slab (upper)</p>
+          <p>5 - E - <Letter letter="e" /> - Stone Slab (lower)</p>
         </ul>
         <ul>
-          <p>9 - I - Stone Brick Slab (upper)</p>
-        </ul>
-        <br />
-        <ul>
-          <p>10 - J - Cobblestone Stair (left)</p>
-        </ul>
-        <ul>
-          <p>11 - K - Stone Stair (left)</p>
-        </ul>
-        <ul>
-          <p>12 - L - Stone Brick Stair (left)</p>
+          <p>6 - F - <Letter letter="f" /> - Stone Brick Slab (lower)</p>
         </ul>
         <br />
         <ul>
-          <p>13 - M - Cobblestone Stair (back)</p>
+          <p>7 - G - <Letter letter="g" /> - Cobblestone Slab (upper)</p>
         </ul>
         <ul>
-          <p>14 - N - Stone Stair (back)</p>
+          <p>8 - H - <Letter letter="h" /> - Stone Slab (upper)</p>
         </ul>
         <ul>
-          <p>15 - O - Stone Brick Stair (back)</p>
+          <p>9 - I - <Letter letter="i" /> - Stone Brick Slab (upper)</p>
         </ul>
         <br />
         <ul>
-          <p>16 - P - Cobblestone Stair (right)</p>
+          <p>10 - J - <Letter letter="j" /> - Cobblestone Stair (left)</p>
         </ul>
         <ul>
-          <p>17 - Q - Stone Stair (right)</p>
+          <p>11 - K - <Letter letter="k" /> - Stone Stair (left)</p>
         </ul>
         <ul>
-          <p>18 - R - Stone Brick Stair (right)</p>
+          <p>12 - L - <Letter letter="l" /> - Stone Brick Stair (left)</p>
+        </ul>
+        <br />
+        <ul>
+          <p>13 - M - <Letter letter="m" /> - Cobblestone Stair (back)</p>
+        </ul>
+        <ul>
+          <p>14 - N - <Letter letter="n" /> - Stone Stair (back)</p>
+        </ul>
+        <ul>
+          <p>15 - O - <Letter letter="o" /> - Stone Brick Stair (back)</p>
+        </ul>
+        <br />
+        <ul>
+          <p>16 - P - <Letter letter="p" /> - Cobblestone Stair (right)</p>
+        </ul>
+        <ul>
+          <p>17 - Q - <Letter letter="q" /> - Stone Stair (right)</p>
+        </ul>
+        <ul>
+          <p>18 - R - <Letter letter="r" /> - Stone Brick Stair (right)</p>
         </ul>
         <br />
         <ul>
