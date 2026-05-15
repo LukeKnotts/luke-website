@@ -28,7 +28,7 @@ const conjTypeSymbol = (conjType) => {
       <hr />
       <div class="ditionary">
         <template v-for="word in word_data">
-          <div class="dictionary_word">
+          <div class="dictionary-word">
             <p>
               <Letter :roman="word.word" />
               &emsp;|&emsp; {{ word.word }}
@@ -55,10 +55,13 @@ const conjTypeSymbol = (conjType) => {
 
 <style scoped>
 .dictionary {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
 }
-.dictionary_word {
+.dictionary-word {
+  display: inline-block;
+
   border: solid 1px black;
   padding: 10px;
   margin: 5px;

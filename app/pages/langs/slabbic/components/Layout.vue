@@ -27,7 +27,7 @@ import Wipbanner from "~/components/Wipbanner.vue";
 
   margin-left: 10%;
   margin-right: 20px;
-  max-width: 900px;
+  max-width: 1100px;
 }
 
 .page-content p,

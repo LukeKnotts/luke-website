@@ -12,7 +12,7 @@ import Wipbanner from "~/components/Wipbanner.vue";
     <hr />
     <ul>
       <li><a href="/langs/pathlang/">Pathlang</a></li>
-      <li><a href="/langs/mclang">Slabbic</a></li>
+      <li><a href="/langs/slabbic">Slabbic</a></li>
     </ul>
   </div>
 </template>

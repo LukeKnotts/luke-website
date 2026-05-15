@@ -1,5 +1,9 @@
 [
     {"word":"bdbxjm", "root":"bdbxj-", "english":"True Unity", "type":"Noun", "conjugation_type":"M-noun"},
     {"word":"oh", "root":"o-", "english":"Acacia Wood", "type":"Noun", "conjugation_type":"H-noun"},
+    {"word":"cbe", "root":"cb-", "english":"To birth; To create", "type":"Verb", "conjugation_type":"Standard Verb"},
+
+    {"word":"bdbxjm", "root":"bdbxj-", "english":"True Unity", "type":"Noun", "conjugation_type":"M-noun"},
+    {"word":"oh", "root":"o-", "english":"Acacia Wood", "type":"Noun", "conjugation_type":"H-noun"},
     {"word":"cbe", "root":"cb-", "english":"To birth; To create", "type":"Verb", "conjugation_type":"Standard Verb"}
 ]
