@@ -2,7 +2,7 @@
 const props = defineProps(["edo"]);
 const edo = props.edo;
 
-import scaleID from "~/pages/musthy/scales/composables/scaleid.js";
+import scaleID from "~/pages/musthy/composables/scaleid.js";
 </script>
 
 <template>

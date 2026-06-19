@@ -19,5 +19,5 @@ import ScaleCard from "~/pages/musthy/scales/components/ScaleCard.vue";
 
 const edo = ref(12);
 
-import test from "~/pages/musthy/scales/composables/scalegentest.js";
+import test from "~/pages/musthy/composables/scalegentest.js";
 </script>

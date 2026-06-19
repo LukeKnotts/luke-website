@@ -20,9 +20,10 @@ import Header from "/components/Header.vue";
 }
 
 .page-content {
-  width: 70%;
+  width: 80%;
+  max-width: 1000px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .page-content {
     width: 95%;
   }
@@ -37,5 +38,6 @@ import Header from "/components/Header.vue";
   text-align: left;
   line-height: 1.5em;
   font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: justify;
 }
 </style>
