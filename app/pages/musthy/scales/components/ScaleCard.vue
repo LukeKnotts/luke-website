@@ -1,14 +1,17 @@
 <script setup>
-const props = defineProps(["pcs_num"]);
+const props = defineProps(["pcs_num", "edo"]);
 
 // Pitch Class Set Number!
 const pcs_num = props.pcs_num;
+const edo = props.edo;
+
+import scaleID from "~/pages/musthy/scales/composables/scaleid.js";
 </script>
 
 <template>
   <div class="flex-display">
     <div class="content-card">
-      <p>Scale #{{ pcs_num }}</p>
+      <p>Scale ({{ pcs_num }})({{ scaleID().scale(pcs_num, edo) }})</p>
     </div>
   </div>
 </template>
@@ -26,7 +29,7 @@ const pcs_num = props.pcs_num;
 
   display: block;
   width: 100%;
-  max-width: 700px;
+  max-width: 1000px;
 
   margin: 5px;
   padding-left: 10px;

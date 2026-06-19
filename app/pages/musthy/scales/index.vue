@@ -4,7 +4,7 @@
       <h1>Musical Scales</h1>
       <p>Howdy folks!</p>
       <template v-for="(scale_num, index) in 100 + 1">
-        <ScaleCard :pcs_num="index" />
+        <ScaleCard :pcs_num="index" :edo="12" />
       </template>
     </Layout>
   </div>
