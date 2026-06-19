@@ -11,7 +11,7 @@ import scaleID from "~/pages/musthy/scales/composables/scaleid.js";
 <template>
   <div class="flex-display">
     <div class="content-card">
-      <p>Scale ({{ pcs_num }})({{ scaleID().scale(pcs_num, edo) }})</p>
+      <p>Scale ({{ pcs_num }}) - {{ scaleID().scale(pcs_num, edo) }}</p>
     </div>
   </div>
 </template>
