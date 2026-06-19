@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import Layout from "~/pages/musthy/scales/components/Layout.vue";
+import Layout from "~/pages/musthy/components/Layout.vue";
 import TuningStats from "~/pages/musthy/scales/components/TuningStats.vue";
 import ScaleCard from "~/pages/musthy/scales/components/ScaleCard.vue";
 

@@ -1,8 +1,10 @@
 <template>
   <div>
-    <Header />
-    <div class="page-content">
-      <slot />
+    <Header :array="[{ link: '/musthy', name: 'Music Theory' }]" />
+    <div class="flex-display">
+      <div class="page-content">
+        <slot />
+      </div>
     </div>
   </div>
 </template>
@@ -12,8 +14,18 @@ import Header from "/components/Header.vue";
 </script>
 
 <style scoped>
+.flex-display {
+  display: flex;
+  justify-content: center;
+}
+
 .page-content {
-  margin: 20px;
+  width: 70%;
+}
+@media only screen and (max-width: 600px) {
+  .page-content {
+    width: 95%;
+  }
 }
 
 :slotted(h1) {

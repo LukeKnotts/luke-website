@@ -1,19 +1,21 @@
 <script setup>
-import Header from "/components/Header.vue";
+import Layout from "~/pages/musthy/components/Layout.vue";
 </script>
 
 <template>
   <div>
-    <Header />
-    <h1>Music Theory</h1>
-    <p>
-      I am passionate about exploring the different patterns found in
-      combinations of music notes. You can explore some of my endeavors on the
-      pages below.
-    </p>
-    <hr />
-    <ul>
-      <li><a href="/musthy/scales">Scale Calculator</a></li>
-    </ul>
+    <Layout>
+      <h1>Music Theory</h1>
+      <p>
+        I am passionate about exploring the different patterns found in
+        combinations of music notes. You can explore some of my endeavors on the
+        pages below.
+      </p>
+      <hr />
+      <ul>
+        <li><a href="/musthy/scales">Scale Calculator</a></li>
+        <li><a href="/musthy/idsystem">ID's for Musical Scales</a></li>
+      </ul>
+    </Layout>
   </div>
 </template>
