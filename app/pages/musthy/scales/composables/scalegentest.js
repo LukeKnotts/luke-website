@@ -29,9 +29,11 @@ export default function test() {
         }
     }
 
+
     const descendant_count = (ele, edo) => {
         return edo - ele - 1;
     }
+
 
     const printNumber = (num, edo) => {
         console.log("TEST PRINT NUMBER function:");
