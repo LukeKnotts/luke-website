@@ -2,19 +2,20 @@
   <div class="flex-display">
     <div class="component-content">
       <h1>Binary Scale IDs</h1>
+      <p>The edo is {{ edo }}</p>
       <table>
         <thead>
           <tr>
             <td>Decimal</td>
-            <td>Binary</td>
+            <td>{{ edo }}-bit Binary</td>
             <td>Pc Set</td>
           </tr>
         </thead>
         <tbody>
-          <template v-for="id in 100">
+          <template v-for="(ele, id) in 100 + 1">
             <tr>
               <td>{{ id }}</td>
-              <td>{{ id }}</td>
+              <td class="binary">{{ scaleID().bin(id, edo) }}</td>
               <td>{{ id }}</td>
             </tr>
           </template>
@@ -23,6 +24,12 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import scaleID from "~/pages/musthy/composables/scaleid.js";
+
+const edo = ref(12);
+</script>
 
 <style scoped>
 .flex-display {
@@ -60,5 +67,12 @@ thead {
 td {
   border: 1px solid grey;
   padding: 5px;
+}
+
+h1 {
+  margin: 0px;
+}
+.binary {
+  font-family: monospace;
 }
 </style>

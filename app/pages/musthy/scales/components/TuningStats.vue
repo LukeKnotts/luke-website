@@ -10,8 +10,8 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
     <hr />
     <p>
       Hello, the current tuning is "{{ edo }}-Tone Equal Temperment", or
-      {{ edo }}edo. There are {{ scaleID().count_scales(edo) }} scales in this
-      tuning.
+      {{ edo }}edo. There are {{ scaleID().count_scales(edo) }} scales
+      (including the empty set; ignoring transpositions) in this tuning.
     </p>
     <hr />
   </div>
