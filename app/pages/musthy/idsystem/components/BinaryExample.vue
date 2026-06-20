@@ -1,8 +1,8 @@
 <template>
-  <div class="flex-display">
-    <div class="component-content">
+  <div class="binexample-flexcontainer">
+    <div class="binexample-content">
       <h1>Binary Scale IDs</h1>
-      <p>The edo is {{ edo }}</p>
+      <EdoSelect />
       <table>
         <thead>
           <tr>
@@ -26,18 +26,19 @@
 </template>
 
 <script setup>
+import EdoSelect from "~/pages/musthy/components/EdoSelect.vue";
 import scaleID from "~/pages/musthy/composables/scaleid.js";
 
 const edo = ref(12);
 </script>
 
 <style scoped>
-.flex-display {
+.binexample-flexcontainer {
   display: flex;
   justify-content: center;
 }
 
-.component-content {
+.binexample-content {
   border: 1px solid black;
   border-radius: 5px;
   padding: 20px;
@@ -53,7 +54,7 @@ const edo = ref(12);
   overflow-y: scroll;
 }
 @media only screen and (max-width: 500px) {
-  .component-content {
+  .binexample-content {
     width: 95%;
   }
 }
