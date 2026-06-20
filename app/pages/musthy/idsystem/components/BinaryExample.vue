@@ -50,8 +50,6 @@ const edo = ref(12);
   border-radius: 5px;
   padding: 20px 20px 20px 20px;
 
-  overscroll-behavior: none;
-
   width: 60%;
   max-width: 600px;
 
