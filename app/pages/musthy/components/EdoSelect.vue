@@ -1,10 +1,35 @@
-<script setup></script>
+<script setup>
+const model = defineModel();
+const text_input = ref(model.value);
+
+defineEmits(["update"]);
+
+import scaleID from "~/pages/musthy/composables/scaleid.js";
+</script>
 
 <template>
   <div class="edoselect-content">
-    <label for="edo-input">Select your edo tuning! </label>
-    <input id="edo-input" type="text" class="text-input" />
-    <p>The current tuning is</p>
+    <label for="edo-input">Type your edo tuning! </label>
+    <input
+      id="edo-input"
+      type="text"
+      class="text-input"
+      v-model="text_input"
+      @keyup="
+        () => {
+          text_input = text_input.replace(/[^0-9]/g, '');
+          if (!scaleID().valid_edo(Number(text_input))) {
+            text_input = model;
+          }
+        }
+      "
+      @keyup.enter="
+        () => {
+          $emit('update', text_input);
+        }
+      "
+    />
+    <p class="inline">&nbsp; The current tuning is {{ model }}edo.</p>
   </div>
 </template>
 
@@ -24,5 +49,8 @@
 
 p {
   margin-bottom: 5px;
+}
+.inline {
+  display: inline;
 }
 </style>
