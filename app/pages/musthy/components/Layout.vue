@@ -6,6 +6,10 @@
         <slot />
       </div>
     </div>
+    <br />
+    <br />
+    <hr />
+    <p>LukeKnotts.com</p>
   </div>
 </template>
 
