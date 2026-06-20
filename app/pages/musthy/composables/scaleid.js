@@ -1,4 +1,7 @@
 export default function scaleID() {
+    // -------------------------------------------------------------------
+    //  GENERAL PURPOSE FUNCTIONS
+    // -------------------------------------------------------------------
 
 
     // compute the nth triangle number
@@ -19,6 +22,21 @@ export default function scaleID() {
         }
         return true;
     }
+
+
+    // count all transpositionally equaivalent pc sets with edo notes.
+    const count_scales = (edo) => {
+        if (!valid_edo(edo)) {
+            return "[Error; invalid edo.]"
+        }
+        let count = 0;
+        return count;
+    }
+
+
+    // -------------------------------------------------------------------
+    //  "CARD, LEX" ID SYSTEM
+    // -------------------------------------------------------------------
 
 
     // TODO
@@ -47,22 +65,12 @@ export default function scaleID() {
     }
 
 
-    // count all transpositionally equaivalent pc sets with edo notes.
-    const count_scales = (edo) => {
-        if (!valid_edo(edo)) {
-            return "[Error; invalid edo.]"
-        }
-        let count = 0;
-        return count;
-    }
-
-
     // take a scale as input and generate its ID number.
     const id = (scale, edo) => {
         // scale must be sorted, cannot have repeats, cannot have element greater than edo
         // TODO: make separate function to ensure scale is correct format; this maybe useful other places
 
-        // TODO: generate dense unique ID that sorts scales by chirality (number of notes; length) and then lexicographically (alphabetically; i.e., [0,1,3] before [0,1,4]).
+        // TODO: generate dense unique ID that sorts scales by cardinality (number of notes; length) and then lexicographically (alphabetically; i.e., [0,1,3] before [0,1,4]).
 
         // console.log("The inputted scale is", scale, "edo is", edo, "tri of edo:", tri(edo));
     }
@@ -83,6 +91,17 @@ export default function scaleID() {
     }
 
 
+    // -------------------------------------------------------------------
+    //  BINARY ID SYSTEM
+    // -------------------------------------------------------------------
+
+
+    
+
+
+    // -------------------------------------------------------------------
+    //  Function EXPORTS
+    // -------------------------------------------------------------------
     return {
         id,
         scale,
