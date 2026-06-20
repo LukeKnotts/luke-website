@@ -93,6 +93,7 @@ td {
   display: none; /* Older Safari and Chromium */
 }
 .cell-data:hover {
+  /* TODO: only show hover icon if content is scrollable. */
   text-overflow: clip;
   cursor: ew-resize;
 }
