@@ -36,8 +36,8 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
       &nbsp; The current tuning is {{ model }}edo. There are
       {{
         include_transpositions
-          ? scaleID().count_scales(model + 1) - 1
-          : scaleID().count_scales(model)
+          ? (scaleID().count_scales(model + 1) - 1).toLocaleString()
+          : scaleID().count_scales(model).toLocaleString()
       }}
       scales {{ include_transpositions ? "(including transpositions)" : "" }} in
       this tuning.

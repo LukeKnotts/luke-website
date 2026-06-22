@@ -17,7 +17,7 @@
           </tr>
         </thead>
         <tbody>
-          <template v-for="(ele, id) in 100 + 1">
+          <template v-for="id in display_range">
             <tr>
               <td>
                 <div class="cell-data">{{ id }}</div>
@@ -41,6 +41,16 @@ import EdoSelect from "~/pages/musthy/components/EdoSelect.vue";
 import scaleID from "~/pages/musthy/composables/scaleid.js";
 
 const edo = ref(12);
+// make system to choose to count transpositions and use that instead.
+const scale_count = computed(() => {
+  return scaleID().count_scales(edo.value + 1) - 1;
+});
+// initialize display range
+const display_range = computed(() => {
+  return scale_count.value < 100
+    ? scaleID().range(0, scale_count.value)
+    : scaleID().range(0, 100);
+});
 </script>
 
 <style scoped>

@@ -60,7 +60,15 @@ export default function scaleID() {
             count += comb(edo - 1, ii);
         }
 
+        // TODO:
+        // make feature to choose to count transpositions.
+
         return count;
+    }
+
+    // make array of incrementing values with start and end
+    const range = (start, end) => {
+        return Array.from({ length: end - start }, (_, i) => start + i)
     }
 
 
@@ -153,6 +161,7 @@ export default function scaleID() {
         tri,
         fact,
         comb,
+        range,
         valid_edo,
         count_scales,
 
