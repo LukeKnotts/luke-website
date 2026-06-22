@@ -31,7 +31,8 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
     />
     <p class="inline">
       &nbsp; The current tuning is {{ model }}edo. There are
-      {{ scaleID().count_scales(Number(text_input)) }} scales in this tuning.
+      {{ scaleID().count_scales(Number(text_input) + 1) - 1 }} scales in this
+      tuning.
     </p>
   </div>
 </template>
