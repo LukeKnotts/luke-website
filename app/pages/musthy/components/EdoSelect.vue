@@ -17,19 +17,22 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
       v-model="text_input"
       @keyup="
         () => {
-          text_input = text_input.replace(/[^0-9]/g, '');
-          if (!scaleID().valid_edo(Number(text_input))) {
-            text_input = model;
-          }
+          text_input = String(text_input).replace(/[^0-9]/g, '');
         }
       "
       @keyup.enter="
         () => {
-          $emit('update', text_input);
+          if (scaleID().valid_edo(Number(text_input))) {
+            text_input = String(text_input).replace(/[^0-9]/g, '');
+            $emit('update', Number(text_input));
+          }
         }
       "
     />
-    <p class="inline">&nbsp; The current tuning is {{ model }}edo.</p>
+    <p class="inline">
+      &nbsp; The current tuning is {{ model }}edo. There are
+      {{ scaleID().count_scales(Number(text_input)) }} scales in this tuning.
+    </p>
   </div>
 </template>
 

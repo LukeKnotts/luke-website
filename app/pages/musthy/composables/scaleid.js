@@ -36,11 +36,11 @@ export default function scaleID() {
     // error messages if edo is somereason not positive int (including zero).
     const valid_edo = (edo) => {
         if (edo < 0) {
-            console.error("Error, invalid edo less than zero.")
+            console.error("'Edo Error' with ("+edo+"): is less than zero.")
             return false;
         }
         if (!Number.isInteger(edo)) {
-            console.error("Error, invalid edo is not an integer.")
+            console.error("'Edo Error' with ("+edo+"): is not an integer.")
             return false;
         }
         return true;
@@ -128,7 +128,7 @@ export default function scaleID() {
             console.error(id, "Is not a valid binary id; must be integer.");
             return false;
         }
-        if (Math.abs(id) > count_scales(edo)) {
+        if (Math.abs(id) >= count_scales(edo)) {
             console.error(id, "Is not a valid binary id; absolute value can't be greater than number of scales.");
             return false;
         }
@@ -137,8 +137,8 @@ export default function scaleID() {
     }
 
     const bin = (num, edo) => {
-        // check ID with "edo + 1" because binary representations include the additional transpositionally equivalent scales.
-        if (!valid_bin_id(num, edo + 1)) {
+        // check ID with "num + 1" and "edo + 1" because binary representations include the additional transpositionally equivalent scales.
+        if (!valid_bin_id(num + 1, edo + 1)) {
             return "[INVALID ID num.]";
         }
         // use a bitshift so negative numbers work "properly", like complemenet scales
