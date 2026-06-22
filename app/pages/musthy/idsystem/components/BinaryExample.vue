@@ -2,7 +2,11 @@
   <div class="binexample-flexcontainer">
     <div class="binexample-content">
       <h1>Binary Scale IDs</h1>
-      <EdoSelect v-model="edo" @update="(n) => (edo = n)" />
+      <EdoSelect
+        v-model="edo"
+        :include_transpositions="true"
+        @update="(n) => (edo = n)"
+      />
 
       <table>
         <thead>

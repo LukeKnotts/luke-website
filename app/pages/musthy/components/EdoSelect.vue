@@ -1,4 +1,7 @@
 <script setup>
+const props = defineProps(["include_transpositions"]);
+const include_transpositions = props.include_transpositions;
+
 const model = defineModel();
 const text_input = ref(model.value);
 
@@ -31,8 +34,13 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
     />
     <p class="inline">
       &nbsp; The current tuning is {{ model }}edo. There are
-      {{ scaleID().count_scales(Number(text_input) + 1) - 1 }} scales in this
-      tuning.
+      {{
+        include_transpositions
+          ? scaleID().count_scales(model + 1) - 1
+          : scaleID().count_scales(model)
+      }}
+      scales {{ include_transpositions ? "(including transpositions)" : "" }} in
+      this tuning.
     </p>
   </div>
 </template>
