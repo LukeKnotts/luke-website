@@ -7,7 +7,7 @@
         Denver. On this website you can find my video game projects, music
         theory work, and other schenanigans.
       </p>
-      <img src="/images/homepage/me.jpg" class="portrait" />
+      <img src="/images/homepage/me.JPG" class="portrait" />
       <hr />
       <h1>Projects</h1>
       <ul>
