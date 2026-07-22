@@ -38,7 +38,7 @@ const bg_color = ref("rgb(224, 186, 132)");
 }
 
 :deep(a) {
-  color: rgb(41, 142, 205);
+  color: rgb(14, 89, 194);
   text-decoration: underline dotted rgb(46, 175, 36);
 }
 
