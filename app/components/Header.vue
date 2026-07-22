@@ -9,17 +9,18 @@ defineProps({
 const topOfPage = () => {
   window.scrollTo(0, 0);
 };
+
+const can_scroll = ref(false);
 </script>
 
 <template>
-  <div class="everything">
+  <div class="header-component">
     <div class="flex-container">
       <p><a href="/">LukeKnotts.com</a></p>
       <p>&emsp;</p>
-      <p><a href="/about">About</a></p>
-      <p>&emsp;</p>
-      <p><button @click="topOfPage()">Top &uparrow;</button></p>
-      <p>&emsp;</p>
+      <p v-if="can_scroll">
+        <button @click="topOfPage()">Top &uparrow;</button>&emsp;
+      </p>
       <p v-if="array">|</p>
       <template v-for="newlink in array">
         <p>&emsp;</p>
@@ -28,7 +29,6 @@ const topOfPage = () => {
         </p>
       </template>
     </div>
-    <hr />
   </div>
 </template>
 
@@ -37,9 +37,12 @@ const topOfPage = () => {
   display: flex;
   flex-direction: horizontal;
 }
-.everything {
+.header-component {
   position: sticky;
   top: 0;
   background-color: white;
+
+  padding: 10px;
+  border-bottom: black 2px solid;
 }
 </style>

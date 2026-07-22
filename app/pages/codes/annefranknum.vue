@@ -39,7 +39,7 @@ import Header from "~/components/Header.vue";
   </div>
 </template>
 
-<style scroped>
+<style scoped>
 img {
   width: 500px;
   border: solid black 2px;

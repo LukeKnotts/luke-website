@@ -92,9 +92,20 @@ const getLetterLink = (letter) => {
 <style scoped>
 .inline {
   display: inline;
+  margin: none;
 }
 .letter {
   height: 1em;
-  vertical-align: text-bottom;
+  vertical-align: text-top;
+
+  width: auto;
+  border: none;
+  display: inline;
+
+  margin: none;
+  padding: none;
+}
+img {
+  margin: none;
 }
 </style>
