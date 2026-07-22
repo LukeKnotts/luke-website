@@ -36,13 +36,19 @@ const can_scroll = ref(false);
 .header-component {
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: rgb(245, 245, 245);
 
   padding: 5px 10px 5px 20px;
   border-bottom: black 2px solid;
 
   /* TEXT STYLE */
   font-family: georgia, serif;
+}
+
+a:link,
+a:visited {
+  color: rgb(14, 89, 194);
+  text-decoration: underline dotted rgb(46, 175, 36);
 }
 
 .flex-container {
