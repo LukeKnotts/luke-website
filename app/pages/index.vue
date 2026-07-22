@@ -1,8 +1,6 @@
 <template>
   <div>
     <Header />
-    <h1>Welcome to LukeKnotts.com</h1>
-    <p>Luke's new website!!</p>
     <ul>
       <li><a href="/games">Games</a></li>
       <li><a href="/musthy">Music Theory</a></li>

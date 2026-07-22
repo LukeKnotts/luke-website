@@ -26,7 +26,7 @@
                 <div class="cell-data">{{ scaleID().bin(id, edo) }}</div>
               </td>
               <td>
-                <div class="cell-data">{{ id }}</div>
+                <div class="cell-data">Placeholder</div>
               </td>
             </tr>
           </template>
@@ -96,15 +96,8 @@ td {
   padding: 5px;
 }
 .cell-data {
-  overflow: hidden;
+  overflow-y: scroll;
   overflow-x: scroll;
-
-  /* Disable visual scrollbar. */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox, Safari 18.2+, Chromium 121+ */
-}
-.cell-data::-webkit-scrollbar {
-  display: none; /* Older Safari and Chromium */
 }
 .cell-data:hover {
   /* TODO: only show hover icon if content is scrollable. */
@@ -118,6 +111,18 @@ td {
 .cell-data::after {
   content: "]";
   color: green;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  margin: 2px;
+
+  background-color: rgb(229, 229, 229);
 }
 
 h1 {

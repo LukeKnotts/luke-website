@@ -32,8 +32,9 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
         }
       "
     />
-    <p class="inline">
-      &nbsp; The current tuning is {{ model }}edo. There are
+    <p class="inline">&nbsp; The current tuning is {{ model }}edo.</p>
+    <p>
+      There are
       {{
         include_transpositions
           ? (scaleID().count_scales(model + 1) - 1).toLocaleString()
