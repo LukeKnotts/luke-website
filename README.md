@@ -2,7 +2,11 @@
 
 Hello! New test to README.md!!
 
-For some reason I have to `nvm install node` in order to switch to the most updated version of node (which I need for JS set capability). Then I run `npm rebuild` and I think everything is good from there. But I don't like it.
+For some reason I have to `nvm install node` in order to switch to the most updated version of node (which I need for JS set capability). Then I run `npm rebuild` and I think everything is good from there. But I don't like it. (currently this doesn't happen because I approved script packages, but it could come up again later.)
+
+If your build breaks, check Netlify for the status of recent deploys.
+
+- One reason your build could break is spelling a link wrong -- using ".jpg" when the file is ".JPG" could break the build!
 
 # Nuxt Minimal Starter
 
