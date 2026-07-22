@@ -11,7 +11,7 @@
       <hr />
       <h1>Projects</h1>
       <ul>
-        <li><a href="/games">Games</a></li>
+        <li><a href="/games">Video Games</a></li>
         <li><a href="/musthy">Music Theory</a></li>
       </ul>
       <hr />

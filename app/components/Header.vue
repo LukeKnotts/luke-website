@@ -33,16 +33,20 @@ const can_scroll = ref(false);
 </template>
 
 <style scoped>
-.flex-container {
-  display: flex;
-  flex-direction: horizontal;
-}
 .header-component {
   position: sticky;
   top: 0;
   background-color: white;
 
-  padding: 10px;
+  padding: 5px 10px 5px 20px;
   border-bottom: black 2px solid;
+
+  /* TEXT STYLE */
+  font-family: georgia, serif;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: horizontal;
 }
 </style>
