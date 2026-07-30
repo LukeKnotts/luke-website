@@ -102,7 +102,11 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         </tbody>
       </table>
       <hr />
-      <h2>hi</h2>
+      <h2>Converting Sentences Into the Noun of that Sentence's Action</h2>
+      <p>
+        To convert a sentence into the noun of doing that sentence, convert the
+        verb into noun form, and then attach the ordered
+      </p>
     </Layout>
   </div>
 </template>
