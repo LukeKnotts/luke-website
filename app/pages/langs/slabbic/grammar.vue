@@ -19,10 +19,9 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
       <h3>Example</h3>
       <p>
         This means that both <Letter roman="cbe bdbxji oh" class="islab" /> and
-        <Letter roman="cbe oh bdbxji" class="islab" /> are valid translations of
-        "Unity creates Acacia wood". The order of the words
-        <Letter roman="bdbxji" class="islab" /> and
-        <Letter roman="oh" class="islab" /> is entirely up to the author.
+        <Letter roman="oh bdbxji cbe" class="islab" /> are valid translations of
+        "Unity creates Acacia wood". The order of the words is entirely up to
+        the author.
       </p>
       <hr />
       <h2>Noun Conjugations</h2>
@@ -41,7 +40,7 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
             <th></th>
             <th>Object (dict. form)</th>
             <th>Subject Form</th>
-            <th>Helper Form</th>
+            <th>Noun Form</th>
           </tr>
         </thead>
         <tbody>
@@ -69,9 +68,8 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         "Object form" or "Dictionary form" nouns are both the form that is
         typically listed in the dictionary, as well as the conjugation used to
         make that noun the object of the sentence's verb. "Subject form" is used
-        to make a noun the subject of the sentence. "Helper form" is used in
-        other cases like <span class="todo">[TODO]</span> (helper form + sub or
-        obj form in clauses?).
+        to make a noun the subject of the sentence. "Noun form" is a conjugation
+        that turns the verb into the action of doing that verb.
       </p>
       <hr />
       <h2>Verb Types</h2>
@@ -103,6 +101,8 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
           </tr>
         </tbody>
       </table>
+      <hr />
+      <h2>hi</h2>
     </Layout>
   </div>
 </template>
