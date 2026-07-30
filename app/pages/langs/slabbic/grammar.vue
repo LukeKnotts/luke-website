@@ -11,9 +11,10 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
       <hr />
       <h2>Word Order</h2>
       <p>
-        Verbs go first. Other than that, the words that are the object or
-        subject are conjugated to be such, and those words can be freely ordered
-        from there.
+        A sentence has three core words. At minimum it must have a verb, and it
+        may also have subject and object nouns. These words can go anywhere in
+        the sentence, but clauses, adjectives, and other attached words are
+        ordered relative to the core words.
       </p>
       <h3>Example</h3>
       <p>
