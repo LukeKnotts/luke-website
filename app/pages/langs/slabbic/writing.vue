@@ -109,7 +109,7 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
           <p>26 - Z - <Letter roman="z" /> - Stone Stair (up right)</p>
         </ul>
         <ul>
-          <p>27 - ZA - <Letter roman="1" /> - Stone Brick Stair (up right)</p>
+          <p>27 - 1 - <Letter roman="1" /> - Stone Brick Stair (up right)</p>
         </ul>
         <br />
         <ul>
