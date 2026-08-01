@@ -40,7 +40,7 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
             <th></th>
             <th>Object (dict. form)</th>
             <th>Subject Form</th>
-            <th>Noun Form</th>
+            <th>Verb Form</th>
           </tr>
         </thead>
         <tbody>
@@ -68,8 +68,9 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         "Object form" or "Dictionary form" nouns are both the form that is
         typically listed in the dictionary, as well as the conjugation used to
         make that noun the object of the sentence's verb. "Subject form" is used
-        to make a noun the subject of the sentence. "Noun form" is a conjugation
-        that turns the verb into the action of doing that verb.
+        to make a noun the subject of the sentence. "Verb form" is a conjugation
+        that turns the noun into a verb, like how we jokingly verb nouns to turn
+        them into action words.
       </p>
       <hr />
       <h2>Verb Types</h2>
@@ -101,11 +102,21 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
           </tr>
         </tbody>
       </table>
-      <hr />
-      <h2>Converting Sentences Into the Noun of that Sentence's Action</h2>
+      <h2>Making Verbs into Nouns</h2>
       <p>
-        To convert a sentence into the noun of doing that sentence, convert the
-        verb into noun form, and then attach the ordered
+        To make a verb into a noun, you can add the noun prefix "<Letter
+          roman="a"
+        />" to the beginning of it.
+      </p>
+      <p>
+        In order to make a whole sentence into a noun, you can use particles
+        that attach object and subject nouns to a specific verb, like a verb
+        that has been turned into a noun with <Letter roman="a" />-. These
+        clauses, listed after the noun-ed verb, can be put in any order, but the
+        clauses must immediately follow. "<Letter roman="1u" />" initiates a
+        clause that lists the noun-ed verb's subject, and "<Letter
+          roman="zk"
+        />" initiates a clause that lists the noun-ed verb's object.
       </p>
     </Layout>
   </div>

@@ -81,8 +81,8 @@ const getLetterLink = (letter) => {
     <template v-for="ltr in word">
       <img
         :src="getLetterLink(ltr)"
-        :alt="'Slabbic' + ' \'' + ltr + '\''"
-        :title="'Slabbic' + ' \'' + ltr + '\''"
+        :alt="'Slabbic' + ' \'' + ltr.toUpperCase() + '\''"
+        :title="'Slabbic' + ' \'' + ltr.toUpperCase() + '\''"
         class="letter"
       />
     </template>

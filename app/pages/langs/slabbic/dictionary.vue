@@ -1,23 +1,10 @@
 <script setup>
 import Layout from "~/pages/langs/slabbic/components/Layout.vue";
 import Letter from "~/pages/langs/slabbic/components/Letter.vue";
-import word_data from "~/pages/langs/slabbic/data/dictionary.json" with { type: "json" };
+import word_data from "~/pages/langs/slabbic/data/dictionary.json";
 
 // data formatting and visualizing
-const conjTypeSymbol = (conjType) => {
-  switch (conjType) {
-    case "M-noun":
-      return "m";
-    case "J-noun":
-      return "j";
-    case "H-noun":
-      return "h";
-    case "Standard Verb":
-      return "!";
-    default:
-      return "?";
-  }
-};
+const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
 </script>
 
 <template>
@@ -35,17 +22,20 @@ const conjTypeSymbol = (conjType) => {
             </p>
             <hr />
             <p>
-              <span class="underline">Word Type:</span> &emsp;{{ word.type }}
+              <span class="underline">Word Type:</span>&emsp;{{ word.type }}
             </p>
-            <p v-if="word.conjugation_type">
-              <span class="underline">Conjugation Type:</span> &emsp;<Letter
-                :roman="conjTypeSymbol(word.conjugation_type)"
-              />
-              {{ word.conjugation_type }}
+            <p v-if="word.inflection">
+              <span class="underline">Inflection Type:</span>&emsp;
+              <span
+                v-if="Object.keys(inflection_symbols).includes(word.inflection)"
+                >(<Letter :roman="inflection_symbols[word.inflection]" />)</span
+              >
+              {{ word.inflection }}
             </p>
             <p>
               <span class="underline">English:</span> &emsp;{{ word.english }}
             </p>
+            <p v-if="word.note">{{ word.note }}</p>
           </div>
         </template>
       </div>

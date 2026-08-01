@@ -12,7 +12,7 @@ import Wipbanner from "~/components/Wipbanner.vue";
       ]"
     />
     <Wipbanner />
-    <div class="page-content"><slot></slot></div>
+    <div class="slabbic-page-wrapper"><slot></slot></div>
     <br />
     <hr />
     <br />
@@ -20,26 +20,33 @@ import Wipbanner from "~/components/Wipbanner.vue";
 </template>
 
 <style scoped>
-.page-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  margin-left: 10%;
-  margin-right: 20px;
-  max-width: 1100px;
+.slabbic-page-wrapper {
+  /* Default large margin for computer screens */
+  margin: 0px 15% 20px 15%;
+  text-align: justify;
+}
+@media all and (max-width: 500px) {
+  .slabbic-page-wrapper {
+    /* Small margins for phone screens */
+    margin: 0px 25px 20px 25px;
+    /* Less awkard text on phone screens */
+    text-align: left;
+  }
 }
 
-.page-content p,
-h1,
-h2 {
-  margin-top: 5px;
+:slotted(h1),
+:slotted(h2),
+:slotted(h3) {
+  font-family: helvetica, sans-serif;
+  margin: 20px 0px 15px 0px;
 }
 
-:slotted(p) {
-  font-size: 18px;
-  text-align: left;
-  line-height: 1.5em;
+:slotted(p),
+:slotted(table) {
+  font-family: helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.8em;
+  margin: 8px 0px 5px 0px;
 }
 
 :slotted(.subtitle) {
@@ -53,6 +60,7 @@ h2 {
 
 :slotted(table) {
   border: solid 1px black;
+  margin: 20px 0px 20px 0px;
 }
 :slotted(td) {
   border: solid 1px black;
