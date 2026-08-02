@@ -11,6 +11,15 @@
         of the system is below.
       </p>
       <BinaryExample />
+      <p>
+        A binary system is cool because it can be calculated quickly by
+        computers. It is also cool because it sorts all scales with lower notes
+        before listing scales that use higher notes. It can be slightly awkward
+        to work with however, because the order isn't always intuitive. The fact
+        that scale No.16 is "[4]" while No.32 is "[5]" only makes sense if you
+        recognize that 16 and 32 are the fourth and fifth powers of two,
+        respectively.
+      </p>
     </Layout>
   </div>
 </template>

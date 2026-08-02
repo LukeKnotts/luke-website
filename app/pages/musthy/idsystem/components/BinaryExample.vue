@@ -11,7 +11,7 @@
       <table>
         <thead>
           <tr>
-            <td>Decimal</td>
+            <td>Decimal ID</td>
             <td>{{ edo }}-bit Binary</td>
             <td>Pc Set</td>
           </tr>
@@ -26,12 +26,26 @@
                 <div class="cell-data">{{ scaleID().bin(id, edo) }}</div>
               </td>
               <td>
-                <div class="cell-data">Placeholder</div>
+                <div class="cell-data">
+                  {{
+                    scaleID().scale_bin(scaleID().bin(id, edo), edo).join(", ")
+                  }}
+                </div>
               </td>
             </tr>
           </template>
         </tbody>
       </table>
+      <div class="id-button">
+        <p>
+          <button>&leftarrow;</button>&emsp;
+          <span class="cell-data"
+            >{{ display_range[0] }} -
+            {{ display_range[display_amount - 1] }}</span
+          >
+          &emsp;<button>&rightarrow;</button>
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -45,11 +59,12 @@ const edo = ref(12);
 const scale_count = computed(() => {
   return scaleID().count_scales(edo.value + 1) - 1;
 });
+const display_amount = ref(100);
 // initialize display range
 const display_range = computed(() => {
-  return scale_count.value < 100
+  return scale_count.value < display_amount.value
     ? scaleID().range(0, scale_count.value)
-    : scaleID().range(0, 100);
+    : scaleID().range(0, display_amount.value);
 });
 </script>
 
@@ -81,54 +96,22 @@ const display_range = computed(() => {
   }
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid black;
-
-  table-layout: fixed;
-}
-thead {
-  background-color: rgb(226, 226, 226);
-}
-td {
-  border: 1px solid grey;
-  padding: 5px;
-}
-.cell-data {
-  overflow-y: scroll;
-  overflow-x: scroll;
-}
-.cell-data:hover {
-  /* TODO: only show hover icon if content is scrollable. */
-  text-overflow: clip;
-  cursor: ew-resize;
-}
-.cell-data::before {
-  content: "[";
-  color: green;
-}
-.cell-data::after {
-  content: "]";
-  color: green;
-}
-
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 10px;
-  height: 5px;
-}
-::-webkit-scrollbar-thumb {
-  border-radius: 7px;
-  margin: 2px;
-
-  background-color: rgb(229, 229, 229);
-}
-
 h1 {
   margin: 0px;
 }
-.binary {
-  font-family: monospace;
+
+.id-button {
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #e2e2e2;
+}
+.id-button p {
+  margin: 0px;
 }
 </style>

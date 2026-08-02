@@ -15,6 +15,10 @@
 
 <script setup>
 import Header from "/components/Header.vue";
+
+useHead({
+  meta: [{ name: "format-detection", content: "telephone=no" }],
+});
 </script>
 
 <style scoped>
@@ -43,5 +47,69 @@ import Header from "/components/Header.vue";
   line-height: 1.5em;
   font-family: Georgia, "Times New Roman", Times, serif;
   text-align: justify;
+}
+
+:slotted(:deep(button)) {
+  padding: 0px 5px 0px 5px;
+
+  font-size: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #f5f5f5;
+
+  border: 1px solid rgb(30, 30, 30);
+  border-radius: 2px;
+
+  box-shadow: 1px 1px 1px rgb(79, 79, 79);
+}
+:slotted(:deep(button:active)) {
+  box-shadow: none;
+}
+
+:slotted(:deep(table)) {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+
+  table-layout: fixed;
+}
+:slotted(:deep(thead)) {
+  background-color: #e2e2e2;
+}
+:slotted(:deep(td)) {
+  border: 1px solid grey;
+  padding: 5px;
+}
+:slotted(:deep(.cell-data)) {
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+:slotted(:deep(.cell-data:hover)) {
+  /* TODO: only show hover icon if content is scrollable. */
+  text-overflow: clip;
+  cursor: ew-resize;
+}
+:slotted(:deep(.cell-data::before)) {
+  content: "[";
+  color: green;
+}
+:slotted(:deep(.cell-data::after)) {
+  content: "]";
+  color: green;
+}
+
+:slotted(:deep(::-webkit-scrollbar)) {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 5px;
+}
+:slotted(:deep(::-webkit-scrollbar-thumb)) {
+  border-radius: 7px;
+  margin: 2px;
+
+  background-color: rgb(229, 229, 229);
+}
+
+:slotted(:deep(.binary)) {
+  font-family: "Fira Mono", monospace;
 }
 </style>
