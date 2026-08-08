@@ -12,10 +12,6 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         one layer of blocks on all sides, perhaps built into a wall.
       </p>
       <p>
-        Letter symbol images are either ripped straight from Minecraft or are
-        edited versions of Minecraft textures.
-      </p>
-      <p>
         The alphabet is designed so that all blocks needed for the language can
         be made with stone blocks and a stonecutter.
       </p>
