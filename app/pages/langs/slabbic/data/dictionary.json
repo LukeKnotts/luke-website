@@ -2,7 +2,7 @@
     {"word":"a", "root":"a", "english":"-ing ; The action of ~", "type":"Affix", "inflection":"Prefix", "note":"Used to turn verbs into nouns."},
     {"word":"bdbxjm", "root":"bdbxj-", "english":"True Unity", "type":"Noun", "inflection":"M-noun"},
     {"word":"cbe", "root":"cb-", "english":"To birth ; To create", "type":"Verb", "inflection":"Standard Verb"},
-    {"word":"oh", "root":"o-", "english":"Acacia Wood", "type":"Noun", "inflection":"H-noun"}
-    
-    
+    {"word":"oh", "root":"o-", "english":"Acacia Wood", "type":"Noun", "inflection":"H-noun"},
+    {"word":"zk", "root":"zk", "english":"*done to ~", "type":"Grammatical", "useage":"Initiates an object clause for a verb that is being made into a noun."},
+    {"word":"1u", "root":"1u", "english":"*done by ~", "type":"Grammatical", "useage":"Initiates a subject clause for a verb that is being made into a noun."}
 ]

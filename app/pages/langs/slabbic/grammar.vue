@@ -24,15 +24,17 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         the author.
       </p>
       <hr />
-      <h2>Noun Conjugations</h2>
+      <h2>Noun Declensions</h2>
       <p>
-        There are three conjugation classes of nouns. Nouns that <i>end</i> in
+        There are three
+        <a href="https://en.wikipedia.org/wiki/Declension">declension</a>
+        classes of nouns. Nouns that <i>end</i> in
         <Letter roman="m" /> (M-nouns), <Letter roman="j" /> (J-nouns), or
         <Letter roman="h" /> (H-nouns).
       </p>
       <p>
-        Nouns conjugate based on what role they play in a sentence. The
-        conjugations are as follows:
+        Nouns decline based on what role they play in a sentence. The
+        declensions are as follows:
       </p>
       <table>
         <thead>
@@ -66,11 +68,13 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
       </table>
       <p>
         "Object form" or "Dictionary form" nouns are both the form that is
-        typically listed in the dictionary, as well as the conjugation used to
+        typically listed in the dictionary, as well as the declension used to
         make that noun the object of the sentence's verb. "Subject form" is used
-        to make a noun the subject of the sentence. "Verb form" is a conjugation
+        to make a noun the subject of the sentence. "Verb form" is a declension
         that turns the noun into a verb, like how we jokingly verb nouns to turn
-        them into action words.
+        them into action words. Because nouns decline, you can easily list
+        multiple subjects, objects and verbs anywhere in the sentence if you
+        need to talk about multiple things.
       </p>
       <hr />
       <h2>Verb Types</h2>
@@ -81,8 +85,8 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         stricter role. <i>Strictly Intransitive</i> verbs can never have an
         object, while <i>Strictly Transitive</i> verbs always have an object, so
         no conjugation is necessary. All of the other verbs, called
-        <i>Flexible Verbs</i>, however, conjugate to specify whether or not they
-        have an object.
+        <i>Flexible Verbs</i>, conjugate to specify whether or not they have an
+        object.
       </p>
       <table>
         <thead>
@@ -104,20 +108,30 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
       </table>
       <h2>Making Verbs into Nouns</h2>
       <p>
-        To make a verb into a noun, you can add the noun prefix "<Letter
+        To make a verb into a noun, you add the noun prefix "<Letter
           roman="a"
-        />" to the beginning of it.
+        />" to the beginning of the verb and give it a suffix to indicate what
+        role it plays in the sentence. Add the "<Letter roman="w" />" suffix to
+        make the word in dictionary/object form, and use the "<Letter
+          roman="y"
+        />" suffix to make the word in subject form.
       </p>
       <p>
-        In order to make a whole sentence into a noun, you can use particles
-        that attach object and subject nouns to a specific verb, like a verb
-        that has been turned into a noun with <Letter roman="a" />-. These
-        clauses, listed after the noun-ed verb, can be put in any order, but the
-        clauses must immediately follow. "<Letter roman="1u" />" initiates a
-        clause that lists the noun-ed verb's subject, and "<Letter
+        In order to make a larger sentence into a noun, you must add the affixes
+        to your verb as explained above, and then you can use grammatical words
+        to attach subjects and objects to your verb. The subject clause,
+        initiated with "<Letter roman="1u" />", makes any following nouns the
+        subjects of your verb. The object clause, initiated with "<Letter
           roman="zk"
-        />" initiates a clause that lists the noun-ed verb's object.
+        />", makes any following nouns the objects of your verb. Any nouns
+        listed in these clauses must be in dictionary/object form, and can only
+        be placed immediately after their grammatical words. Preventing the
+        nouns in these clauses from declining helps remove confusion as to what
+        role they play in the sentence at large. Either the subject clause or
+        the object clause can be listed first, but they must immediately follow
+        the noun-ed verb in question.
       </p>
+      <hr />
     </Layout>
   </div>
 </template>

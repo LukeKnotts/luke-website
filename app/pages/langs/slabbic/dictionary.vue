@@ -12,6 +12,10 @@ const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
     <Layout>
       <h1>Dictionary</h1>
       <p>The words in Slabbic.</p>
+      <p>
+        English translations with that include an asterisk (*) require
+        additional context to understand their useage.
+      </p>
       <hr />
       <div class="dictionary">
         <template v-for="word in word_data">
@@ -32,8 +36,11 @@ const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
               >
               {{ word.inflection }}
             </p>
-            <p>
+            <p v-if="word.english">
               <span class="underline">English:</span> &emsp;{{ word.english }}
+            </p>
+            <p v-if="word.useage">
+              <span class="underline">Useage:</span> &emsp;{{ word.useage }}
             </p>
             <p v-if="word.note">{{ word.note }}</p>
           </div>
