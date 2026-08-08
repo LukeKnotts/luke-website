@@ -9,16 +9,16 @@ import Layout from "~/pages/langs/slabbic/components/Layout.vue";
       <p class="subtitle">A language made for Minecraft.</p>
       <hr />
       <ul>
-        <p><a href="/langs/slabbic/lore">Lore</a></p>
-      </ul>
-      <ul>
-        <p><a href="/langs/slabbic/writing">Writing</a></p>
-      </ul>
-      <ul>
         <p><a href="/langs/slabbic/grammar">Grammar</a></p>
       </ul>
       <ul>
         <p><a href="/langs/slabbic/dictionary">Dictionary</a></p>
+      </ul>
+      <ul>
+        <p><a href="/langs/slabbic/writing">Alphabet</a></p>
+      </ul>
+      <ul>
+        <p><a href="/langs/slabbic/lore">Lore</a></p>
       </ul>
     </Layout>
   </div>

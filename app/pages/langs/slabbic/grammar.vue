@@ -132,6 +132,24 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         the noun-ed verb in question.
       </p>
       <hr />
+      <h2>Slabbic Romanization</h2>
+      <p>
+        There are 27 letters in the slabbic language (excluding spaces). These
+        letters are romanized by mapping each one to a latin letter, with the
+        numeral "1" used to cover the last slabbic character. See the
+        <a href="/langs/slabbic/writing">alphabet page</a> to see the exact
+        mapping. For example, the Slabbic "<Letter roman="oh" />" (meaning
+        Acacia Woord) romanizes as "oh".
+      </p>
+      <p>
+        To take romanized text and convert it the other way into a slabbic form,
+        you simply do the same thing in reverse. Each latin letter already
+        corresponds to a slabbic character. For example, the name "Luke Knotts"
+        is written as <Letter roman="luke knotts" class="islab" /> in Slabbic.
+        If anyone's curious, on the developer side of this website, I have a
+        special component that converts romanizations into their Slabbic form.
+      </p>
+      <hr />
     </Layout>
   </div>
 </template>

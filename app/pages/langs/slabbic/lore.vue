@@ -6,7 +6,13 @@ import Layout from "~/pages/langs/slabbic/components/Layout.vue";
   <div>
     <Layout>
       <h1>Lore</h1>
-      <p>Hello!</p>
+      <p>
+        <i>Slabbic</i> is a conlang currently in development by Luke Knotts
+        designed for use in the sandbox video game Minecraft. Sentences are
+        built out of blocks, all of which can be crafted from just a stonecutter
+        and stone blocks for efficient use. Sentences are literally built out of
+        stone blocks, slabs, and stairs.
+      </p>
       <hr />
       <p>Hi again!</p>
     </Layout>
