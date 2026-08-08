@@ -6,7 +6,7 @@ import Layout from "~/pages/langs/slabbic/components/Layout.vue";
   <div>
     <Layout>
       <h1>Slabbic</h1>
-      <p class="subtitle">A language made for Minecraft.</p>
+      <p class="subtitle">A language unofficially made for Minecraft.</p>
       <hr />
       <ul>
         <p><a href="/langs/slabbic/grammar">Grammar</a></p>
