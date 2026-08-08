@@ -14,61 +14,67 @@ if (word == "!") {
 const getLetterLink = (letter) => {
   switch (letter) {
     case "a":
-      return "/images/langs/mclang/a.png";
+      return "/images/slabbic/slabbic_a.png";
     case "b":
-      return "/images/langs/mclang/b.png";
+      return "/images/slabbic/slabbic_b.png";
     case "c":
-      return "/images/langs/mclang/c.png";
+      return "/images/slabbic/slabbic_c.png";
     case "d":
-      return "/images/langs/mclang/d.png";
+      return "/images/slabbic/slabbic_d.png";
     case "e":
-      return "/images/langs/mclang/e.png";
+      return "/images/slabbic/slabbic_e.png";
     case "f":
-      return "/images/langs/mclang/f.png";
+      return "/images/slabbic/slabbic_f.png";
     case "g":
-      return "/images/langs/mclang/g.png";
+      return "/images/slabbic/slabbic_g.png";
     case "h":
-      return "/images/langs/mclang/h.png";
+      return "/images/slabbic/slabbic_h.png";
     case "i":
-      return "/images/langs/mclang/i.png";
+      return "/images/slabbic/slabbic_i.png";
     case "j":
-      return "/images/langs/mclang/j.png";
+      return "/images/slabbic/slabbic_j.png";
     case "k":
-      return "/images/langs/mclang/k.png";
+      return "/images/slabbic/slabbic_k-lone.png";
     case "l":
-      return "/images/langs/mclang/l.png";
+      return "/images/slabbic/slabbic_l-lone.png";
     case "m":
-      return "/images/langs/mclang/m.png";
+      return "/images/slabbic/slabbic_m.png";
     case "n":
-      return "/images/langs/mclang/n.png";
+      return "/images/slabbic/slabbic_n.png";
     case "o":
-      return "/images/langs/mclang/o.png";
+      return "/images/slabbic/slabbic_o.png";
     case "p":
-      return "/images/langs/mclang/p.png";
+      return "/images/slabbic/slabbic_p.png";
     case "q":
-      return "/images/langs/mclang/q.png";
+      return "/images/slabbic/slabbic_q.png";
     case "r":
-      return "/images/langs/mclang/r.png";
+      return "/images/slabbic/slabbic_r.png";
     case "s":
-      return "/images/langs/mclang/s.png";
+      return "/images/slabbic/slabbic_s.png";
     case "t":
-      return "/images/langs/mclang/t.png";
+      return "/images/slabbic/slabbic_t.png";
     case "u":
-      return "/images/langs/mclang/u.png";
+      return "/images/slabbic/slabbic_u.png";
     case "v":
-      return "/images/langs/mclang/v.png";
+      return "/images/slabbic/slabbic_v.png";
     case "w":
-      return "/images/langs/mclang/w.png";
+      return "/images/slabbic/slabbic_w.png";
     case "x":
-      return "/images/langs/mclang/x.png";
+      return "/images/slabbic/slabbic_x.png";
     case "y":
-      return "/images/langs/mclang/y.png";
+      return "/images/slabbic/slabbic_y.png";
     case "z":
-      return "/images/langs/mclang/z.png";
+      return "/images/slabbic/slabbic_z.png";
     case "1":
-      return "/images/langs/mclang/za.png";
+      return "/images/slabbic/slabbic_1.png";
+    case "2":
+      return "/images/slabbic/slabbic_2.png";
+    case "3":
+      return "/images/slabbic/slabbic_3.png";
+    case "4":
+      return "/images/slabbic/slabbic_4.png";
     case " ":
-      return "/images/langs/mclang/zspace.png";
+      return "/images/slabbic/slabbic_space.png";
     default:
       // default image as an "error" image.
       return "/images/occulinary-club/banner.png";
@@ -107,5 +113,8 @@ const getLetterLink = (letter) => {
 }
 img {
   margin: none;
+
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 </style>
