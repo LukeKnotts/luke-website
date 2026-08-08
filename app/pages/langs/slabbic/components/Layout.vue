@@ -64,6 +64,7 @@ import Wipbanner from "~/components/Wipbanner.vue";
 }
 :slotted(td) {
   border: solid 1px black;
+  text-align: center;
 }
 
 :slotted(.todo) {

@@ -132,6 +132,13 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         the noun-ed verb in question.
       </p>
       <hr />
+      <h2>Adjectives, Adverbs and Particles</h2>
+      <p>
+        Descriptive words come immediately after the thing that they're
+        describing. They come in two classes, descriptive words for nouns, and
+        descriptive words for verbs.
+      </p>
+      <hr />
       <h2>Slabbic Romanization</h2>
       <p>
         There are 30 letters in the slabbic language (excluding spaces). These
