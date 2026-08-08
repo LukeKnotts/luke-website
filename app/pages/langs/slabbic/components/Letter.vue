@@ -115,6 +115,5 @@ img {
   margin: none;
 
   image-rendering: pixelated;
-  image-rendering: crisp-edges;
 }
 </style>
