@@ -23,7 +23,7 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         The <Letter roman="k" /> (K) and <Letter roman="l" /> (L) characters
         change form depending on the characters around them, similar to
         ligatures. This text demonstrates their behavior:
-        <Letter roman="klkl kalbl mlm mkl lll" />
+        <Letter roman="klkl kalbl mlm mkl lll" class="islab" />
       </p>
       <hr />
       <h1>Alphabet</h1>
