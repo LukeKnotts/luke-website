@@ -11,7 +11,7 @@ const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
   <div>
     <Layout>
       <h1>Dictionary</h1>
-      <p>The words in Slabbic.</p>
+      <p>The words in <a href="/langs/slabbic">Slabbic</a>.</p>
       <p>
         English translations are sometimes approximate. Words providing a
         "useage" field offer more explanation on their useage.

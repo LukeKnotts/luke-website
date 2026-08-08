@@ -8,6 +8,10 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
     <Layout>
       <h1>Writing</h1>
       <p>
+        The character set used to communicate in
+        <a href="/langs/slabbic">Slabbic</a>.
+      </p>
+      <p>
         Writing is built left-to-right in single rows, preferably surrounded by
         one layer of blocks on all sides, perhaps built into a wall.
       </p>

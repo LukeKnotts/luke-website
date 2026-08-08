@@ -7,7 +7,10 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
   <div>
     <Layout>
       <h1>Grammar</h1>
-      <p>How sentences are structured.</p>
+      <p>
+        How sentences are structured in the
+        <a href="/langs/slabbic">Slabbic</a>.
+      </p>
       <hr />
       <h2>Word Order</h2>
       <p>

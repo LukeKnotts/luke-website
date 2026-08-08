@@ -13,9 +13,15 @@ import Wipbanner from "~/components/Wipbanner.vue";
     />
     <Wipbanner />
     <div class="slabbic-page-wrapper"><slot></slot></div>
-    <br />
-    <hr />
-    <br />
+    <div>
+      <hr />
+      <p class="legal-disclaimer">
+        NOT AN OFFICIAL MINECRAFT [PRODUCT/SERVICE/EVENT/etc.]. NOT APPROVED BY
+        OR ASSOCIATED WITH MOJANG OR MICROSOFT
+      </p>
+      <hr />
+      <br />
+    </div>
   </div>
 </template>
 
@@ -32,6 +38,11 @@ import Wipbanner from "~/components/Wipbanner.vue";
     /* Less awkard text on phone screens */
     text-align: left;
   }
+}
+
+.legal-disclaimer {
+  margin: 0px 0px 0px 20px;
+  color: rgb(69, 68, 68);
 }
 
 :slotted(h1),
