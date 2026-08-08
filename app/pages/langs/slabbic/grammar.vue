@@ -145,7 +145,7 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         To take romanized text and convert it the other way into a slabbic form,
         you simply do the same thing in reverse. Each latin letter already
         corresponds to a slabbic character. For example, the name "Luke Knotts"
-        is written as <Letter roman="luke knotts" class="islab" /> in Slabbic.
+        is written as <Letter roman="Luke Knotts" class="islab" /> in Slabbic.
         If anyone's curious, on the developer side of this website, I have a
         special component that converts romanizations into their Slabbic form.
       </p>
