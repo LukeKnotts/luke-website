@@ -45,8 +45,8 @@ import Wipbanner from "~/components/Wipbanner.vue";
 :slotted(table) {
   font-family: helvetica, sans-serif;
   font-size: 16px;
-  line-height: 1.8em;
-  margin: 8px 0px 5px 0px;
+  line-height: 1.7em;
+  margin: 12px 0px 10px 0px;
 }
 
 :slotted(.subtitle) {
@@ -67,11 +67,18 @@ import Wipbanner from "~/components/Wipbanner.vue";
   text-align: center;
 }
 
+:slotted(a) {
+  color: green;
+}
 :slotted(.todo) {
   color: red;
 }
 :slotted(.underline) {
   text-decoration: underline;
+}
+:slotted(.highlight) {
+  color: green;
+  font-weight: bold;
 }
 /* Stands for "inline Slabbic". Used to make text in Slabbic that is in the middle of an English paragraph not look too weird.*/
 :slotted(.islab) {

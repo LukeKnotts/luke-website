@@ -67,10 +67,12 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         </tbody>
       </table>
       <p>
-        "Object form" or "Dictionary form" nouns are both the form that is
-        typically listed in the dictionary, as well as the declension used to
-        make that noun the object of the sentence's verb. "Subject form" is used
-        to make a noun the subject of the sentence. "Verb form" is a declension
+        "<span class="highlight">Object form</span>" or "<span class="highlight"
+          >Dictionary form</span
+        >" nouns are both the form that is typically listed in the dictionary,
+        as well as the declension used to make that noun the object of the
+        sentence's verb. "Subject form" is used to make a noun the subject of
+        the sentence. "<span class="highlight">Verb form</span>" is a declension
         that turns the noun into a verb, like how we jokingly verb nouns to turn
         them into action words. Because nouns decline, you can easily list
         multiple subjects, objects and verbs anywhere in the sentence if you
@@ -82,11 +84,13 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         In Slabbic, verbs conjugate to tell you whether or not they have
         objects. This way, you can leave out the nouns of a sentence and still
         get a meaning across. Some verbs do not conjugate however, and play a
-        stricter role. <i>Strictly Intransitive</i> verbs can never have an
-        object, while <i>Strictly Transitive</i> verbs always have an object, so
-        no conjugation is necessary. All of the other verbs, called
-        <i>Flexible Verbs</i>, conjugate to specify whether or not they have an
-        object.
+        stricter role. "<span class="highlight"
+          >Strictly <span class="underline">In</span>transitive</span
+        >" verbs can never have an object, while "<span class="highlight"
+          >Strictly Transitive</span
+        >" verbs always have an object, so no conjugation is necessary. All of
+        the other verbs, called "<span class="highlight">Flexible Verbs</span>",
+        conjugate to specify whether or not they have an object.
       </p>
       <table>
         <thead>
@@ -131,13 +135,57 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         the object clause can be listed first, but they must immediately follow
         the noun-ed verb in question.
       </p>
-      <hr />
-      <h2>Adjectives, Adverbs and Particles</h2>
+      <h2>Verb Tense</h2>
       <p>
-        Descriptive words come immediately after the thing that they're
-        describing. They come in two classes, descriptive words for nouns, and
-        descriptive words for verbs.
+        By default, verb tense is implied through context. To specify a tense,
+        an affix can be used, as described in the next section.
       </p>
+      <hr />
+      <h2>Affix Descriptive Words</h2>
+      <p>
+        Descriptive words in Slabbic are <i>affixes</i>, meaning they are
+        attached to a word. They can come immediately after (suffixes) or
+        immediately before (prefixes) the word that they are describing or
+        altering. They come in four classes: descriptive words for nouns called
+        "<span class="highlight">Noun Affixes</span>", descriptive words for
+        verbs called "<span class="highlight">Verb Affixes</span>", words that
+        can describe nouns and verbs called "<span class="highlight"
+          >Multi Affixes</span
+        >", and special "<span class="highlight">Affix Affixes</span>" which
+        describe other affixes.
+      </p>
+      <p>
+        Examples of Noun Affixes include the prefix "<Letter roman="b" />-",
+        which means that the noun is large in size, literally or metaphorically;
+        and the suffix "-<Letter roman="cc" />", which means wooden planks made
+        from the used noun.
+      </p>
+      <p>
+        Examples of Verb Affixes include the suffix "-<Letter roman="d" />",
+        which means that the verb happened in the past; and the prefix "<Letter
+          roman="a"
+        />-", which turns a verb into a noun meaning the action of doing that
+        verb.
+      </p>
+      <p>
+        An example of a Multi Affix (i.e., can apply to either nouns or verbs)
+        is the prefix "<Letter roman="v2" />-", which changes a verb or noun to
+        mean the <i>opposite</i> of that word. This could be context dependent,
+        changing "fire" into "ice" in one context, and changing "fire" into
+        "water" in another.
+      </p>
+      <h2>Turning Affixes into Nouns</h2>
+      <p>
+        Affixes can be turned into nouns with a special "<span class="highlight"
+          >Affix Affix</span
+        >" (that is, an affix that alters another affix) prefix "<Letter
+          roman="yy"
+        />-" which turns an affix into "the property of having that affix". For
+        example, "<Letter roman="yyd" />" means "the property of having happened
+        in the past", or similarly, "completedness", "finishedness" or
+        "doneness".
+      </p>
+      <p></p>
       <hr />
       <h2>Slabbic Romanization</h2>
       <p>

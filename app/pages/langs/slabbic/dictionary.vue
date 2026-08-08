@@ -13,16 +13,24 @@ const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
       <h1>Dictionary</h1>
       <p>The words in Slabbic.</p>
       <p>
-        English translations with that include an asterisk (*) require
-        additional context to understand their useage.
+        English translations are sometimes approximate. Words providing a
+        "useage" field offer more explanation on their useage.
       </p>
       <hr />
       <div class="dictionary">
         <template v-for="word in word_data">
           <div class="dictionary-word">
             <p>
-              <Letter :roman="word.word" />
-              &emsp;|&emsp; {{ word.word }}
+              <span v-if="word.inflection == 'Suffix'">~ </span
+              ><Letter :roman="word.word" /><span
+                v-if="word.inflection == 'Prefix'"
+              >
+                ~</span
+              >
+              &emsp;|&emsp;
+              <span v-if="word.inflection == 'Suffix'">&ndash;</span
+              >{{ word.word
+              }}<span v-if="word.inflection == 'Prefix'">&ndash;</span>
             </p>
             <hr />
             <p>
@@ -37,12 +45,15 @@ const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
               {{ word.inflection }}
             </p>
             <p v-if="word.english">
-              <span class="underline">English:</span> &emsp;{{ word.english }}
+              <span class="underline">English:</span>
+              <span v-for="(translation, index) in word.english"
+                ><span v-if="index > 0" class="highlight">&nbsp;;&nbsp;</span
+                ><span v-else>&nbsp;&nbsp;</span>{{ translation }}</span
+              >
             </p>
             <p v-if="word.useage">
               <span class="underline">Useage:</span> &emsp;{{ word.useage }}
             </p>
-            <p v-if="word.note">{{ word.note }}</p>
           </div>
         </template>
       </div>
