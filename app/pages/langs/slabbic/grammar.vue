@@ -81,10 +81,9 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         as well as the declension used to make that noun the object of the
         sentence's verb. "Subject form" is used to make a noun the subject of
         the sentence. "<span class="highlight">Verb form</span>" is a declension
-        that turns the noun into a verb, like how we jokingly verb nouns to turn
-        them into action words. Because nouns decline, you can easily list
-        multiple subjects, objects and verbs anywhere in the sentence if you
-        need to talk about multiple things.
+        that turns the noun into a verb, like how we jokingly <i>verb</i> nouns
+        to turn them into action words. Because nouns decline, you can easily
+        list multiple subjects, objects and verbs anywhere in the sentence.
       </p>
       <hr />
       <h2>Verb Types</h2>
