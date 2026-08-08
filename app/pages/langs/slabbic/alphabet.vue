@@ -19,6 +19,12 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         The alphabet is designed so that all blocks needed for the language can
         be made with stone blocks and a stonecutter.
       </p>
+      <p>
+        The <Letter roman="k" /> (K) and <Letter roman="l" /> (L) characters
+        change form depending on the characters around them similar to
+        ligatures. This text demonstrates their behavior:
+        <Letter roman="klkl kalbl mlm mkl lll" />
+      </p>
       <hr />
       <h1>Alphabet</h1>
       <div class="alphabet">

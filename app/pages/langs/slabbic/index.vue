@@ -15,7 +15,7 @@ import Layout from "~/pages/langs/slabbic/components/Layout.vue";
         <p><a href="/langs/slabbic/dictionary">Dictionary</a></p>
       </ul>
       <ul>
-        <p><a href="/langs/slabbic/writing">Alphabet</a></p>
+        <p><a href="/langs/slabbic/alphabet">Alphabet</a></p>
       </ul>
       <ul>
         <p><a href="/langs/slabbic/lore">Lore</a></p>
