@@ -30,7 +30,12 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
       <h2>Noun Declensions</h2>
       <p>
         There are three
-        <a href="https://en.wikipedia.org/wiki/Declension">declension</a>
+        <a
+          href="https://en.wikipedia.org/wiki/Declension"
+          target="_blank"
+          class="external-link"
+          >declension</a
+        >
         classes of nouns. Nouns that <i>end</i> in
         <Letter roman="m" /> (M-nouns), <Letter roman="j" /> (J-nouns), or
         <Letter roman="h" /> (H-nouns).
@@ -185,8 +190,7 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
           roman="yy"
         />-" which turns an affix into "the property of having that affix". For
         example, "<Letter roman="yyd" />" means "the property of having happened
-        in the past", or similarly, "completedness", "finishedness" or
-        "doneness".
+        in the past", or similarly, "completedness" or "finishedness".
       </p>
       <p></p>
       <hr />

@@ -62,10 +62,16 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         </ul>
         <br />
         <ul>
-          <p>11 - K - <Letter roman="k" /> - Cobblestone Wall</p>
+          <p>
+            11 - K - <Letter roman="5" /> / <Letter roman="6" /> /
+            <Letter roman="7" /> / <Letter roman="8" /> - Cobblestone Wall
+          </p>
         </ul>
         <ul>
-          <p>12 - L - <Letter roman="l" /> - Stone Brick Wall</p>
+          <p>
+            12 - L - <Letter roman="9" /> / <Letter roman="@" /> /
+            <Letter roman="#" /> / <Letter roman="$" /> - Stone Brick Wall
+          </p>
         </ul>
         <br />
         <ul>

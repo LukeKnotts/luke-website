@@ -91,6 +91,13 @@ import Wipbanner from "~/components/Wipbanner.vue";
   color: green;
   font-weight: bold;
 }
+:slotted(.external-link) {
+  color: rgb(216, 112, 71);
+}
+:slotted(.external-link:after) {
+  content: " ↗";
+  font-family: times;
+}
 /* Stands for "inline Slabbic". Used to make text in Slabbic that is in the middle of an English paragraph not look too weird.*/
 :slotted(.islab) {
   border: 1px solid rgb(47, 47, 170);

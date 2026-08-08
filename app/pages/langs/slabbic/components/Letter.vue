@@ -56,6 +56,14 @@ const getLetterLink = (before, letter, after) => {
       } else {
         return "/images/slabbic/slabbic_k-lone.png";
       }
+    case "5":
+      return "/images/slabbic/slabbic_k-lone.png";
+    case "6":
+      return "/images/slabbic/slabbic_k-right.png";
+    case "7":
+      return "/images/slabbic/slabbic_k-left.png";
+    case "8":
+      return "/images/slabbic/slabbic_k-mid.png";
     case "l":
       if (wall_connects.includes(before)) {
         if (wall_connects.includes(after)) {
@@ -68,6 +76,14 @@ const getLetterLink = (before, letter, after) => {
       } else {
         return "/images/slabbic/slabbic_l-lone.png";
       }
+    case "9":
+      return "/images/slabbic/slabbic_l-lone.png";
+    case "@":
+      return "/images/slabbic/slabbic_l-right.png";
+    case "#":
+      return "/images/slabbic/slabbic_l-left.png";
+    case "$":
+      return "/images/slabbic/slabbic_l-mid.png";
     case "m":
       return "/images/slabbic/slabbic_m.png";
     case "n":
