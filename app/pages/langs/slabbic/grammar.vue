@@ -134,10 +134,11 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
       <hr />
       <h2>Slabbic Romanization</h2>
       <p>
-        There are 27 letters in the slabbic language (excluding spaces). These
-        letters are romanized by mapping each one to a latin letter, with the
-        numeral "1" used to cover the last slabbic character. See the
-        <a href="/langs/slabbic/alphabet">alphabet page</a> to see the exact
+        There are 30 letters in the slabbic language (excluding spaces). These
+        letters are romanized by mapping each one to a latin letter with the
+        numerals "1" through "4" used to cover the last slabbic characters. See
+        the
+        <a href="/langs/slabbic/alphabet">alphabet page</a> for the exact
         mapping. For example, the Slabbic "<Letter roman="oh" />" (meaning
         Acacia Woord) romanizes as "oh".
       </p>
