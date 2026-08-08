@@ -150,6 +150,7 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         special component that converts romanizations into their Slabbic form.
       </p>
       <hr />
+      <p><Letter roman="klkl kalbl mlm" /></p>
     </Layout>
   </div>
 </template>
