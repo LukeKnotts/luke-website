@@ -38,12 +38,21 @@
       </table>
       <div class="id-button">
         <p>
-          <button>&leftarrow;</button>&emsp;
-          <span class="cell-data"
-            >{{ display_range[0] }} -
-            {{ display_range[display_amount - 1] }}</span
+          <button
+            @click="change_range('down')"
+            :class="{ unavailable: !left_arrow }"
           >
-          &emsp;<button>&rightarrow;</button>
+            &leftarrow;</button
+          >&emsp;
+          <span class="cell-data"
+            >{{ display_range[0] }} - {{ display_range.at(-1) }}</span
+          >
+          &emsp;<button
+            @click="change_range('up')"
+            :class="{ unavailable: !right_arrow }"
+          >
+            &rightarrow;
+          </button>
         </p>
       </div>
     </div>
@@ -55,17 +64,50 @@ import EdoSelect from "~/pages/musthy/components/EdoSelect.vue";
 import scaleID from "~/pages/musthy/composables/scaleid.js";
 
 const edo = ref(12);
-// make system to choose to count transpositions and use that instead.
+// When using scale_count, remember to subtract -1 for size comparisons with index if zero-indexed. This "counts zero".
 const scale_count = computed(() => {
-  return scaleID().count_scales(edo.value + 1) - 1;
+  return scaleID().count_scales(edo.value);
 });
 const display_amount = ref(100);
 // initialize display range
+const range_index = ref(0);
 const display_range = computed(() => {
-  return scale_count.value < display_amount.value
-    ? scaleID().range(0, scale_count.value)
-    : scaleID().range(0, display_amount.value);
+  if (scale_count.value - 1 < (range_index.value + 1) * display_amount.value) {
+    return scaleID().range(
+      range_index.value * display_amount.value,
+      scale_count.value,
+    );
+  } else {
+    return scaleID().range(
+      range_index.value * display_amount.value,
+      (range_index.value + 1) * display_amount.value,
+    );
+  }
 });
+const left_arrow = computed(() => {
+  if (display_range.value[0] == 0) {
+    return false;
+  } else {
+    return true;
+  }
+});
+const right_arrow = computed(() => {
+  // add one because we're looking if just beyond what's visible is out of bounds.
+  if (display_range.value.at(-1) + 1 > scale_count.value - 1) {
+    return false;
+  } else {
+    return true;
+  }
+});
+const change_range = (direction) => {
+  if (direction == "down") {
+    range_index.value -= 1;
+  } else if (direction == "up") {
+    range_index.value += 1;
+  } else {
+    console.error("Invalid direction inputted to change_range() function.");
+  }
+};
 </script>
 
 <style scoped>

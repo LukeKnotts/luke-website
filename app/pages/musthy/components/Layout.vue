@@ -96,6 +96,10 @@ useHead({
   content: "]";
   color: green;
 }
+:slotted(:deep(.unavailable)) {
+  opacity: 0.5;
+  pointer-events: none;
+}
 
 :slotted(:deep(::-webkit-scrollbar)) {
   -webkit-appearance: none;
