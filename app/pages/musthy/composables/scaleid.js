@@ -46,24 +46,17 @@ export default function scaleID() {
         return true;
     }
 
-    // count all transpositionally equaivalent pc sets with edo notes.
-    // (ignores the empty set)
-    const count_scales = (edo) => {
+    // Count number of musical scales in edo
+    // (Counts the empty set by default)
+    const count_scales = (edo, transpositions=false) => {
         if (!valid_edo(edo)) {
             return "[Error; invalid edo.]"
         }
-
-        // Count the empty set.
-        let count = 1;
-        // loop uses "edo - 1" to avoid transpositions (basically calculate with one less note), but start on 0 to also count that one 1-note scale.
-        for (let ii = 0; ii <= edo - 1; ii++) {
-            count += comb(edo - 1, ii);
+        if (transpositions) {
+            return 2 ** edo;
+        } else {
+            return ((2 ** (edo - 1)) + 1);
         }
-
-        // TODO:
-        // make feature to choose to count transpositions.
-
-        return count;
     }
 
     // make array of incrementing values with start and end

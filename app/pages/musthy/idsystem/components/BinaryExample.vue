@@ -5,7 +5,13 @@
       <EdoSelect
         v-model="edo"
         :include_transpositions="true"
-        @update="(n) => (edo = n)"
+        @update="
+          (n) => {
+            edo = n;
+            // make sure to reset range_index too!
+            range_index = 0;
+          }
+        "
       />
 
       <table>
@@ -66,8 +72,10 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
 const edo = ref(12);
 // When using scale_count, remember to subtract -1 for size comparisons with index if zero-indexed. This "counts zero".
 const scale_count = computed(() => {
-  return scaleID().count_scales(edo.value);
+  // "true" to count transpositions (as is standard in binary numbering)
+  return scaleID().count_scales(edo.value, true);
 });
+
 const display_amount = ref(100);
 // initialize display range
 const range_index = ref(0);

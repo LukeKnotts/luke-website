@@ -37,7 +37,7 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
       There are
       {{
         include_transpositions
-          ? scaleID().count_scales(model).toLocaleString()
+          ? scaleID().count_scales(model, true).toLocaleString()
           : scaleID().count_scales(model).toLocaleString()
       }}
       scales {{ include_transpositions ? "(including transpositions)" : "" }} in
