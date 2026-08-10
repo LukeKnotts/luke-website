@@ -6,10 +6,11 @@
         v-model="edo"
         :include_transpositions="true"
         @update="
-          (n) => {
+          (n, highlight) => {
             edo = n;
             // make sure to reset range_index too!
             range_index = 0;
+            highlight_transpositions = highlight;
           }
         "
       />
@@ -75,6 +76,8 @@ const scale_count = computed(() => {
   // "true" to count transpositions (as is standard in binary numbering)
   return scaleID().count_scales(edo.value, true);
 });
+
+const highlight_transpositions = ref(false);
 
 const display_amount = ref(100);
 // initialize display range

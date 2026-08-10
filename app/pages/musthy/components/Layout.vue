@@ -116,4 +116,9 @@ useHead({
 :slotted(:deep(.binary)) {
   font-family: "Fira Mono", monospace;
 }
+
+:slotted(:deep(.highlight)) {
+  color: green;
+  font-weight: bold;
+}
 </style>

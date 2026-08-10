@@ -12,37 +12,48 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
 
 <template>
   <div class="edoselect-content">
-    <label for="edo-input">Type your edo tuning! </label>
-    <input
-      id="edo-input"
-      type="text"
-      class="text-input"
-      v-model="text_input"
-      @keyup="
-        () => {
-          text_input = String(text_input).replace(/[^0-9]/g, '');
-        }
-      "
-      @keyup.enter="
-        () => {
-          if (scaleID().valid_edo(Number(text_input))) {
+    <div>
+      <label for="edo-input">Type your edo tuning! </label>
+      <input
+        id="edo-input"
+        type="text"
+        class="text-input"
+        v-model="text_input"
+        @keyup="
+          () => {
             text_input = String(text_input).replace(/[^0-9]/g, '');
-            $emit('update', Number(text_input));
           }
-        }
-      "
-    />
-    <p class="inline">&nbsp; The current tuning is {{ model }}edo.</p>
-    <p>
-      There are
-      {{
-        include_transpositions
-          ? scaleID().count_scales(model, true).toLocaleString()
-          : scaleID().count_scales(model).toLocaleString()
-      }}
-      scales {{ include_transpositions ? "(including transpositions)" : "" }} in
-      this tuning.
-    </p>
+        "
+        @keyup.enter="
+          () => {
+            if (scaleID().valid_edo(Number(text_input))) {
+              text_input = String(text_input).replace(/[^0-9]/g, '');
+              $emit('update', Number(text_input));
+            }
+          }
+        "
+      />
+    </div>
+    <div>
+      <p>
+        The current tuning is <span class="highlight">{{ model }}edo</span>.
+        There are
+        {{
+          include_transpositions
+            ? scaleID().count_scales(model, true).toLocaleString()
+            : scaleID().count_scales(model).toLocaleString()
+        }}
+        scales
+        {{ include_transpositions ? "(including transpositions)" : "" }} in this
+        tuning.
+      </p>
+    </div>
+    <div v-if="include_transpositions">
+      <p>
+        <label for="transpositions">Highlight transpositions?</label>
+        <input id="transpositions" type="checkbox" />
+      </p>
+    </div>
   </div>
 </template>
 
