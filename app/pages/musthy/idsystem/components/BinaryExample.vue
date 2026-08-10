@@ -5,13 +5,16 @@
       <EdoSelect
         v-model="edo"
         :include_transpositions="true"
-        @update="
-          (n, highlight) => {
+        @update_edo="
+          (n) => {
             edo = n;
             // make sure to reset range_index too!
             range_index = 0;
             highlight_transpositions = highlight;
           }
+        "
+        @update_highlight="
+          (highlight) => (highlight_transpositions = highlight)
         "
       />
 
@@ -19,13 +22,21 @@
         <thead>
           <tr>
             <td>Decimal ID</td>
-            <td>{{ edo }}-bit Binary</td>
+            <td>{{ edo > 0 ? edo : 1 }}-bit Binary</td>
             <td>Pc Set</td>
           </tr>
         </thead>
         <tbody>
           <template v-for="id in display_range">
-            <tr>
+            <tr
+              :class="
+                !scaleID().scale_bin(scaleID().bin(id, edo), edo).includes(0) &&
+                highlight_transpositions &&
+                scaleID().scale_bin(scaleID().bin(id, edo), edo).length > 0
+                  ? 'rowhighlight'
+                  : null
+              "
+            >
               <td>
                 <div class="cell-data">{{ id }}</div>
               </td>
@@ -52,7 +63,10 @@
             &leftarrow;</button
           >&emsp;
           <span class="cell-data"
-            >{{ display_range[0] }} - {{ display_range.at(-1) }}</span
+            >{{ display_range[0]
+            }}<span v-if="display_range[0] != display_range.at(-1)">
+              - {{ display_range.at(-1) }}</span
+            ></span
           >
           &emsp;<button
             @click="change_range('up')"

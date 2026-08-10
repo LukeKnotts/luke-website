@@ -78,6 +78,7 @@ useHead({
 :slotted(:deep(td)) {
   border: 1px solid grey;
   padding: 5px;
+  background-color: none;
 }
 :slotted(:deep(.cell-data)) {
   overflow-y: scroll;
@@ -95,6 +96,9 @@ useHead({
 :slotted(:deep(.cell-data::after)) {
   content: "]";
   color: green;
+}
+:slotted(:deep(tr.rowhighlight td)) {
+  background-color: rgb(252, 248, 207);
 }
 :slotted(:deep(.unavailable)) {
   opacity: 0.5;

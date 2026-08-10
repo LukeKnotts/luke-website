@@ -5,7 +5,9 @@ const include_transpositions = props.include_transpositions;
 const model = defineModel();
 const text_input = ref(model.value);
 
-defineEmits(["update"]);
+const highlight = ref(false);
+
+defineEmits(["update_edo", "update_highlight"]);
 
 import scaleID from "~/pages/musthy/composables/scaleid.js";
 </script>
@@ -28,7 +30,7 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
           () => {
             if (scaleID().valid_edo(Number(text_input))) {
               text_input = String(text_input).replace(/[^0-9]/g, '');
-              $emit('update', Number(text_input));
+              $emit('update_edo', Number(text_input));
             }
           }
         "
@@ -51,7 +53,16 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
     <div v-if="include_transpositions">
       <p>
         <label for="transpositions">Highlight transpositions?</label>
-        <input id="transpositions" type="checkbox" />
+        <input
+          id="transpositions"
+          type="checkbox"
+          @click="
+            () => {
+              highlight = !highlight;
+              $emit('update_highlight', highlight);
+            }
+          "
+        />
       </p>
     </div>
   </div>
