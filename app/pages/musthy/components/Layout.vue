@@ -116,6 +116,9 @@ useHead({
 
   background-color: rgb(229, 229, 229);
 }
+:slotted(:deep(::-webkit-scrollbar-corner)) {
+  background-color: transparent;
+}
 
 :slotted(:deep(.binary)) {
   font-family: "Fira Mono", monospace;
