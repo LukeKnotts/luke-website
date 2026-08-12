@@ -9,6 +9,7 @@ const highlight = ref(false);
 
 defineEmits(["update_edo", "update_highlight"]);
 
+import TuningBlurb from "~/pages/musthy/components/TuningBlurb.vue";
 import scaleID from "~/pages/musthy/composables/scaleid.js";
 </script>
 
@@ -37,20 +38,10 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
         "
       />
     </div>
-    <div>
-      <p>
-        The current tuning is <span class="highlight">{{ model }}edo</span>.
-        There are
-        {{
-          include_transpositions
-            ? scaleID().count_scales(model, true).toLocaleString()
-            : scaleID().count_scales(model).toLocaleString()
-        }}
-        scales
-        {{ include_transpositions ? "(including transpositions)" : "" }} in this
-        tuning.
-      </p>
-    </div>
+    <TuningBlurb
+      :edo="model"
+      :include_transpositions="include_transpositions"
+    />
     <div v-if="include_transpositions">
       <p>
         <label for="transpositions">Highlight transpositions?</label>

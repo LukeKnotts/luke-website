@@ -1,6 +1,6 @@
 <template>
-  <div class="id-example-flexcontainer">
-    <div class="id-example-content">
+  <div class="idexample-flexcontainer">
+    <div class="idexample-content">
       <h1>Binary Scale IDs</h1>
       <EdoSelect
         v-model="edo"
@@ -19,7 +19,7 @@
         "
       />
 
-      <table>
+      <table v-if="display_range.length > 0">
         <thead>
           <tr>
             <td>Decimal ID</td>
@@ -54,34 +54,24 @@
           </template>
         </tbody>
       </table>
-      <div class="id-button">
-        <p>
-          <button
-            @click="change_range('down')"
-            :class="{ unavailable: !left_arrow }"
-          >
-            &leftarrow;</button
-          >&emsp;
-          <span class="cell-data"
-            >{{ display_range[0]
-            }}<span v-if="display_range[0] != display_range.at(-1)">
-              - {{ display_range.at(-1) }}</span
-            ></span
-          >
-          &emsp;<button
-            @click="change_range('up')"
-            :class="{ unavailable: !right_arrow }"
-          >
-            &rightarrow;
-          </button>
-        </p>
+      <div v-else>
+        <p>Loading scales...</p>
       </div>
+      <DisplayRange
+        :edo="edo"
+        @update_display_range="
+          (range) => {
+            display_range = range;
+          }
+        "
+      />
     </div>
   </div>
 </template>
 
 <script setup>
 import EdoSelect from "~/pages/musthy/components/EdoSelect.vue";
+import DisplayRange from "~/pages/musthy/components/DisplayRange.vue";
 import scaleID from "~/pages/musthy/composables/scaleid.js";
 
 const props = defineProps(["getscalefunction", "showbinary"]);
@@ -89,11 +79,6 @@ const props = defineProps(["getscalefunction", "showbinary"]);
 const show_binary = ref(props.showbinary);
 
 const edo = ref(12);
-// When using scale_count, remember to subtract -1 for size comparisons with index if zero-indexed. This "counts zero".
-const scale_count = computed(() => {
-  // "true" to count transpositions (as is standard in binary numbering)
-  return scaleID().count_scales(edo.value, true);
-});
 
 const get_scale = (id) => {
   return props.getscalefunction(id, edo.value);
@@ -101,55 +86,16 @@ const get_scale = (id) => {
 
 const highlight_transpositions = ref(false);
 
-const display_amount = ref(100);
-// initialize display range
-const range_index = ref(0);
-const display_range = computed(() => {
-  if (scale_count.value - 1 < (range_index.value + 1) * display_amount.value) {
-    return scaleID().range(
-      range_index.value * display_amount.value,
-      scale_count.value,
-    );
-  } else {
-    return scaleID().range(
-      range_index.value * display_amount.value,
-      (range_index.value + 1) * display_amount.value,
-    );
-  }
-});
-const left_arrow = computed(() => {
-  if (display_range.value[0] == 0) {
-    return false;
-  } else {
-    return true;
-  }
-});
-const right_arrow = computed(() => {
-  // add one because we're looking if just beyond what's visible is out of bounds.
-  if (display_range.value.at(-1) + 1 > scale_count.value - 1) {
-    return false;
-  } else {
-    return true;
-  }
-});
-const change_range = (direction) => {
-  if (direction == "down") {
-    range_index.value -= 1;
-  } else if (direction == "up") {
-    range_index.value += 1;
-  } else {
-    console.error("Invalid direction inputted to change_range() function.");
-  }
-};
+const display_range = ref([]);
 </script>
 
 <style scoped>
-.id-example-flexcontainer {
+.idexample-flexcontainer {
   display: flex;
   justify-content: center;
 }
 
-.id-example-content {
+.idexample-content {
   border: 1px solid black;
   border-radius: 5px;
   padding: 20px 20px 20px 20px;
@@ -165,28 +111,13 @@ const change_range = (direction) => {
   overflow-y: scroll;
 }
 @media only screen and (max-width: 500px) {
-  .id-example-content {
+  .idexample-content {
     width: 95%;
     overscroll-behavior: auto;
   }
 }
 
 h1 {
-  margin: 0px;
-}
-
-.id-button {
-  border: 1px solid black;
-  padding: 10px;
-  margin-top: 5px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  background-color: #e2e2e2;
-}
-.id-button p {
   margin: 0px;
 }
 </style>

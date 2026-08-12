@@ -3,7 +3,7 @@
     <Layout>
       <h1>Musical Scales</h1>
       <p>Howdy folks!</p>
-      <TuningStats :edo="edo" />
+      <TuningBlurb :edo="edo" />
       <button @click="test().printScales(edo)">Test Button</button>
       <template v-for="(scale_num, index) in 100 + 1">
         <ScaleCard :pcs_num="index" :edo="edo" />
@@ -14,8 +14,8 @@
 
 <script setup>
 import Layout from "~/pages/musthy/components/Layout.vue";
-import TuningStats from "~/pages/musthy/scales/components/TuningStats.vue";
-import ScaleCard from "~/pages/musthy/scales/components/ScaleCard.vue";
+import TuningBlurb from "~/pages/musthy/components/TuningBlurb.vue";
+import ScaleCard from "~/pages/musthy/components/ScaleCard.vue";
 
 const edo = ref(12);
 

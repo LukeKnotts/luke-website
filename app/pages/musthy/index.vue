@@ -13,8 +13,8 @@ import Layout from "~/pages/musthy/components/Layout.vue";
       </p>
       <hr />
       <ul>
-        <li><a href="/musthy/scales">Scale Calculator</a></li>
-        <li><a href="/musthy/idsystem">ID's for Musical Scales</a></li>
+        <li><a href="/musthy/scalelist">Scale Calculator</a></li>
+        <li><a href="/musthy/idsystems">ID's for Musical Scales</a></li>
       </ul>
     </Layout>
   </div>

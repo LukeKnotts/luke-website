@@ -32,7 +32,7 @@
 
 <script setup>
 import Layout from "~/pages/musthy/components/Layout.vue";
-import IdExample from "~/pages/musthy/idsystem/components/IdExample.vue";
+import IdExample from "~/pages/musthy/components/IdExample.vue";
 
 import scaleID from "~/pages/musthy/composables/scaleid";
 </script>
