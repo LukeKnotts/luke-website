@@ -83,11 +83,12 @@ useHead({
 :slotted(:deep(.cell-data)) {
   overflow-y: scroll;
   overflow-x: scroll;
+
+  white-space: nowrap;
 }
 :slotted(:deep(.cell-data:hover)) {
   /* TODO: only show hover icon if content is scrollable. */
   text-overflow: clip;
-  cursor: ew-resize;
 }
 :slotted(:deep(.cell-data::before)) {
   content: "[";
@@ -108,7 +109,7 @@ useHead({
 :slotted(:deep(::-webkit-scrollbar)) {
   -webkit-appearance: none;
   width: 10px;
-  height: 5px;
+  height: 4px;
 }
 :slotted(:deep(::-webkit-scrollbar-thumb)) {
   border-radius: 7px;

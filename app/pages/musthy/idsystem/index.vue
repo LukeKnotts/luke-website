@@ -10,7 +10,14 @@
         <a href="https://ianring.com/musictheory/">their website</a>. An example
         of the system is below.
       </p>
-      <BinaryExample />
+      <IdExample
+        :getscalefunction="
+          (id, edo) => {
+            return scaleID().scale_from_bin(scaleID().bin(id, edo), edo);
+          }
+        "
+        :showbinary="true"
+      />
       <p>
         A binary system is cool because it can be calculated quickly by
         computers. It is also cool because it sorts all scales with lower notes
@@ -25,5 +32,7 @@
 
 <script setup>
 import Layout from "~/pages/musthy/components/Layout.vue";
-import BinaryExample from "~/pages/musthy/idsystem/components/BinaryExample.vue";
+import IdExample from "~/pages/musthy/idsystem/components/IdExample.vue";
+
+import scaleID from "~/pages/musthy/composables/scaleid";
 </script>

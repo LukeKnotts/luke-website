@@ -1,15 +1,16 @@
 <template>
-  <div class="binexample-flexcontainer">
-    <div class="binexample-content">
+  <div class="id-example-flexcontainer">
+    <div class="id-example-content">
       <h1>Binary Scale IDs</h1>
       <EdoSelect
         v-model="edo"
         :include_transpositions="true"
         @update_edo="
-          (n) => {
+          (n, highlight) => {
             edo = n;
             // make sure to reset range_index too!
             range_index = 0;
+            // make sure to apply highlight when data changes so it isn't ignored
             highlight_transpositions = highlight;
           }
         "
@@ -22,7 +23,8 @@
         <thead>
           <tr>
             <td>Decimal ID</td>
-            <td>{{ edo > 0 ? edo : 1 }}-bit Binary</td>
+            <!-- You can't really have zero bits, 0edo would use one bit I think -->
+            <td v-if="show_binary">{{ edo > 0 ? edo : 1 }}-bit Binary</td>
             <td>Pc Set</td>
           </tr>
         </thead>
@@ -30,9 +32,9 @@
           <template v-for="id in display_range">
             <tr
               :class="
-                !scaleID().scale_bin(scaleID().bin(id, edo), edo).includes(0) &&
+                !get_scale(id).includes(0) &&
                 highlight_transpositions &&
-                scaleID().scale_bin(scaleID().bin(id, edo), edo).length > 0
+                get_scale(id).length > 0
                   ? 'rowhighlight'
                   : null
               "
@@ -40,14 +42,12 @@
               <td>
                 <div class="cell-data">{{ id }}</div>
               </td>
-              <td class="binary">
+              <td class="binary" v-if="show_binary">
                 <div class="cell-data">{{ scaleID().bin(id, edo) }}</div>
               </td>
               <td>
                 <div class="cell-data">
-                  {{
-                    scaleID().scale_bin(scaleID().bin(id, edo), edo).join(", ")
-                  }}
+                  {{ String(get_scale(id).join(", ")) }}
                 </div>
               </td>
             </tr>
@@ -84,12 +84,20 @@
 import EdoSelect from "~/pages/musthy/components/EdoSelect.vue";
 import scaleID from "~/pages/musthy/composables/scaleid.js";
 
+const props = defineProps(["getscalefunction", "showbinary"]);
+
+const show_binary = ref(props.showbinary);
+
 const edo = ref(12);
 // When using scale_count, remember to subtract -1 for size comparisons with index if zero-indexed. This "counts zero".
 const scale_count = computed(() => {
   // "true" to count transpositions (as is standard in binary numbering)
   return scaleID().count_scales(edo.value, true);
 });
+
+const get_scale = (id) => {
+  return props.getscalefunction(id, edo.value);
+};
 
 const highlight_transpositions = ref(false);
 
@@ -136,12 +144,12 @@ const change_range = (direction) => {
 </script>
 
 <style scoped>
-.binexample-flexcontainer {
+.id-example-flexcontainer {
   display: flex;
   justify-content: center;
 }
 
-.binexample-content {
+.id-example-content {
   border: 1px solid black;
   border-radius: 5px;
   padding: 20px 20px 20px 20px;
@@ -157,7 +165,7 @@ const change_range = (direction) => {
   overflow-y: scroll;
 }
 @media only screen and (max-width: 500px) {
-  .binexample-content {
+  .id-example-content {
     width: 95%;
     overscroll-behavior: auto;
   }

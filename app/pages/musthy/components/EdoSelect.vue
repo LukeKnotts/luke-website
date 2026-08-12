@@ -30,7 +30,8 @@ import scaleID from "~/pages/musthy/composables/scaleid.js";
           () => {
             if (scaleID().valid_edo(Number(text_input))) {
               text_input = String(text_input).replace(/[^0-9]/g, '');
-              $emit('update_edo', Number(text_input));
+              // Emit highlight as well, otherwise highlight value isn't acknowledged on data updates
+              $emit('update_edo', Number(text_input), highlight);
             }
           }
         "

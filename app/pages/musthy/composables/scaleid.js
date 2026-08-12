@@ -147,7 +147,7 @@ export default function scaleID() {
     }
 
 
-    const scale_bin = (num, edo) => {
+    const scale_from_bin = (num, edo) => {
         let num_string = String(num);
         let scale_notes = range(0, edo);
         let output = [];
@@ -179,6 +179,6 @@ export default function scaleID() {
         scale,
 
         bin,
-        scale_bin,
+        scale_from_bin,
     }
 }
