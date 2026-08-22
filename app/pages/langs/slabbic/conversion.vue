@@ -77,7 +77,7 @@ const space_char = ref("space");
 
 const input_text = ref("");
 const output_text = computed(() => {
-  let word = process().toLowerCase();
+  let word = process();
   let output = "";
   for (let ii = 0; ii < word.length; ii++) {
     let letter = word[ii];
@@ -92,8 +92,8 @@ const output_text = computed(() => {
   }
   return output;
 });
-const process = () => {
-  let output = input_text.value;
+const process = (input = input_text.value) => {
+  let output = input;
   switch (case_setting.value) {
     case "lower":
       return output.toLowerCase();
