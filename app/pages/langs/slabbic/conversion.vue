@@ -3,7 +3,7 @@
     <Layout>
       <h1>Text &rightarrow; Emoji Syntax Converter</h1>
       <p>
-        Convert a text into those letters with specific prefixes and affixes on
+        Convert a text into those letters with specific prefixes and suffixes on
         either sides. This website is designed to convert an alphabetical cipher
         into a format that could be used to substitute the text with
         corresponding discord emojis, like emojis for each letter in
