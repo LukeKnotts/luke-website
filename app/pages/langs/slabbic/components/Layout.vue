@@ -106,6 +106,11 @@ import Wipbanner from "~/components/Wipbanner.vue";
   border-radius: 3px;
 }
 
+:slotted(.times-font) {
+  font-family: georgia, times;
+  font-size: 18px;
+}
+
 :slotted(hr) {
   width: 100%;
 }

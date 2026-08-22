@@ -5,6 +5,7 @@
     {"word":"cbe", "root":"cb-", "english":["To create from nothing"], "type":"Verb", "inflection":"Standard Verb"},
     {"word":"cc", "root":"cc", "english":["~ planks", "planks made from ~"], "type":"Noun Affix", "inflection":"Suffix"},
     {"word":"d", "root":"d", "english":["-ed", "was done"], "type":"Verb Affix", "inflection":"Prefix", "useage":"Makes a verb past tense."},
+    {"word":"l", "root":"l", "english":["not ~"], "type":"Verb Affix", "inflection":"Prefix", "useage":"Turns a verb into the verb of not doing that verb."},
     {"word":"oh", "root":"o-", "english":["Acacia Wood"], "type":"Noun", "inflection":"H-noun"},
     {"word":"v2", "root":"v2", "english":["the opposite of ~", "anti-", "un-"], "type":"Multi Affix", "inflection":"Prefix", "useage":"Changes a noun or verb into something approximately the opposite of that word."},
     {"word":"yy", "root":"yy", "english":["the property of ~"], "type":"Affix Affix", "inflection":"Prefix", "useage":"Turns an affix into a noun meaning 'the property of havin that affix'."},
