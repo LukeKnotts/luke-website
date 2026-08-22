@@ -53,6 +53,9 @@
           }
         "
       />
+      <p>
+        <button @click="copy_text(output_text)">Copy Text</button>
+      </p>
       <h2>Output</h2>
       <input class="converter-box" :value="output_text" />
       <br />
@@ -74,10 +77,11 @@ const space_char = ref("space");
 
 const input_text = ref("");
 const output_text = computed(() => {
+  let word = process().toLowerCase();
   let output = "";
-  for (let ii = 0; ii < input_text.value.length; ii++) {
-    let letter = input_text.value[ii];
-    switch (input_text.value[ii]) {
+  for (let ii = 0; ii < word.length; ii++) {
+    let letter = word[ii];
+    switch (word[ii]) {
       case " ":
         letter = space_char.value;
         break;
@@ -88,19 +92,23 @@ const output_text = computed(() => {
   }
   return output;
 });
-
 const process = () => {
+  let output = input_text.value;
   switch (case_setting.value) {
     case "lower":
-      return input_text.value.toLowerCase();
+      return output.toLowerCase();
       break;
     case "upper":
-      return input_text.value.toUpperCase();
+      return output.toUpperCase();
       break;
     default:
-      return input_text.value;
+      return output;
       break;
   }
+};
+
+const copy_text = async (text) => {
+  await navigator.clipboard.writeText(text);
 };
 </script>
 
