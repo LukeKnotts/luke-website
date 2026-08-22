@@ -20,6 +20,9 @@ import Layout from "~/pages/langs/slabbic/components/Layout.vue";
       <ul>
         <p><a href="/langs/slabbic/lore">Lore</a></p>
       </ul>
+      <ul>
+        <p><a href="/langs/slabbic/tools">Tools</a></p>
+      </ul>
       <hr />
     </Layout>
   </div>
