@@ -9,6 +9,7 @@
         Team: <a href="https://cherrihoney.itch.io/">CherriHoney</a>,
         <a href="https://itch.io/profile/cultistbird">Cultistbird</a>,
         <a href="https://itch.io/profile/danceinabyss">DanceInAbyss</a>,
+        <a href="https://gamedagamez-dev.itch.io/">Gamedagamez-dev</a>,
         <a href="https://blob-guy.itch.io/">Luke Knotts</a>,
         <a href="https://papa-shrim.itch.io/">Christopher Marini Herron</a>,
         <a href="https://oochiiehehe3.itch.io/">Zaida Martin</a>, and
