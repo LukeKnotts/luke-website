@@ -2,11 +2,14 @@
   <div>
     <Header />
     <DefLayout>
+      <h1>LukeKnotts.com</h1>
       <p>
-        Howdy! I'm Luke, an undergraduate in Mathematics at the University of
-        Denver. On this website you can find my video game projects, music
-        theory work, and other schenanigans.
+        Howdy! I'm Luke. Right now I'm an undergraduate in Mathematics who
+        spends his free time with projects in video game development,
+        storytelling, and music theory. On this website you can find some of my
+        projects.
       </p>
+      <p><a href="/about">About page</a>.</p>
       <img src="/images/homepage/me.JPG" class="portrait" />
       <hr />
       <h1>Projects</h1>

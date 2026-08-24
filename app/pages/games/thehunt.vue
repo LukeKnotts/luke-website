@@ -7,7 +7,8 @@
     <ul>
       <li>Team Size: Nine</li>
       <li>Engine: Unreal Engine 5</li>
-      <li>Role: Project Manager, Level Design</li>
+      <li>My Role: Project Manager, Level Design</li>
+      <li>OS: MacOS, Windows</li>
       <li>Made In: &#8776; 48 Hours</li>
       <li>
         <a href="https://blob-guy.itch.io/overclocked-cj-2025">Play it!</a>

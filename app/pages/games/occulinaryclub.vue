@@ -15,7 +15,7 @@ import Header from "~/components/Header.vue";
     <ul>
       <li>Team Size: Six</li>
       <li>Languages: Javascript, HTML, CSS</li>
-      <li>Role: Project Manager, Design, Web Development</li>
+      <li>My Role: Project Manager, Design, Web Development</li>
       <li>Made In: &#8776; 2 Weeks</li>
       <li>
         <a href="https://rollsroyce21.itch.io/the-occulinary-club">Play it!</a>

@@ -18,6 +18,9 @@ import DefLayout from "~/components/DefLayout.vue";
       </p>
       <ul>
         <li>
+          <NuxtLink to="/games/downforthecount">Down for the Count!</NuxtLink>
+        </li>
+        <li>
           <NuxtLink to="/games/thehunt">The Hunt!</NuxtLink>
         </li>
         <li>

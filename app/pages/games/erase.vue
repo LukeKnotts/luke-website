@@ -13,15 +13,18 @@ import Header from "~/components/Header.vue";
     <img src="/images/erase-employment-game/basket.png" />
     <ul class="summary">
       <li>
-        Team: <a href="https://itch.io/profile/callend-07">Callen Dickerson</a>,
-        <a href="https://hirokahara.itch.io/">Hiro Kahara</a>, Luke Knotts (me),
+        Team: <a href="https://itch.io/profile/danceinabyss">DanceInAbyss</a>,
+        <a href="https://itch.io/profile/callend-07">Callen Dickerson</a>,
+        <a href="https://hirokahara.itch.io/">Hiro Kahara</a>,
+        <a href="https://blob-guy.itch.io/">Luke Knotts</a>,
         <a href="https://alexprice2123.github.io/alex.price/">Alex Price</a>,
         <a href="https://www.mushroomsoupcat.com/">Emma Schmucker</a>,
         <a href="https://ratbill.itch.io/">Leo Sheng</a>, and
         <a href="https://itch.io/profile/dqrktimes-lukas">Lukas Wilkens Mota</a>
       </li>
       <li>Engine: Unreal Engine 5</li>
-      <li>Role: Project Manager, Lead Designer, Level Design</li>
+      <li>My Role: Project Manager, Lead Designer, Level Design</li>
+      <li>OS: MacOS</li>
       <li>Made over the 2024-25 school year as we learned game development.</li>
       <li><a href="https://blob-guy.itch.io/erase-employment">Play it!</a></li>
     </ul>
