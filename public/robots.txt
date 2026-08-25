@@ -1,1 +1,12 @@
+# ------------------------------------
+# Traditional Search Engines
+# ------------------------------------
+User-agent: *
+Allow: /
+Disallow: /_nuxt/
+Disallow: /admin/
 
+# --------------------------------------------------
+# SITEMAP DIRECTION
+# --------------------------------------------------
+Sitemap: https://lukeknotts.xml

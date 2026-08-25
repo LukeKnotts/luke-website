@@ -36,4 +36,39 @@
 <script setup>
 import Header from "/components/Header.vue";
 import DefLayout from "/components/DefLayout.vue";
+
+const profile = {
+  name: "Luke Knotts",
+  url: "https://lukeknotts.com/",
+  sameAs: [
+    "https://www.youtube.com/@BlobiousCity",
+    "https://blob-guy.itch.io/",
+  ],
+  description:
+    "Mathematics undergrad exploring game development, music theory, and conlanging. Creator of the superhero 'Blob Guy'.",
+  knowsAbout: [
+    "Mathematics",
+    "Web Development",
+    "Video Game Development",
+    "Music Theory",
+    "Conlanging",
+  ],
+};
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: profile.name,
+        url: profile.url,
+        sameAs: profile.sameAs,
+        description: profile.description,
+        knowsAbout: profile.knowsAbout,
+      }),
+    },
+  ],
+});
 </script>
