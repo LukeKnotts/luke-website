@@ -19,3 +19,4 @@ Luke Knotts is a Mathematics undergrad exploring video game development, storyte
 * Main Website: https://lukeknotts.com/
 * YouTube: https://www.youtube.com/@BlobiousCity
 * Itch.io: https://blob-guy.itch.io/
+* GitHub: https://github.com/LukeKnotts

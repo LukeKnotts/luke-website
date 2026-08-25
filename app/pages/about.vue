@@ -17,6 +17,7 @@
         <li>
           <a href="https://www.youtube.com/@BlobiousCity">YouTube</a>
         </li>
+        <li><a href="https://github.com/LukeKnotts">GitHub</a></li>
       </ul>
       <hr />
     </Layout>
