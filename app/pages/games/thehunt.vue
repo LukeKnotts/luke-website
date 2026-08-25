@@ -3,7 +3,7 @@
     <Header :array="[{ link: '/games', name: 'Games' }]" />
     <h1>The Hunt</h1>
     <p>for Warren Tech's 2025 Creative Jam: Run!</p>
-    <img src="/images/thehunt/unsafe.png" />
+    <img src="/images/games/thehunt/unsafe.png" />
     <ul>
       <li>Team Size: Nine</li>
       <li>Engine: Unreal Engine 5</li>

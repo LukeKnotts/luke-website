@@ -10,7 +10,7 @@ import Header from "~/components/Header.vue";
       Made during my 2024-25 school year at
       <a href="https://warrentech.jeffcopublicschools.org/">Warren Tech</a>.
     </p>
-    <img src="/images/erase-employment-game/basket.png" />
+    <img src="/images/games/erase-employment-game/basket.png" />
     <ul class="summary">
       <li>
         Team: <a href="https://itch.io/profile/danceinabyss">DanceInAbyss</a>,

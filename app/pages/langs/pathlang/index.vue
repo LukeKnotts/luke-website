@@ -1,6 +1,11 @@
 <template>
   <div>
-    <Header :array="[{ link: '/langs', name: 'Langs' }]" />
+    <Header
+      :array="[
+        { link: '/langs', name: 'Langs' },
+        { link: '/langs/pathlang', name: 'Pathlang' },
+      ]"
+    />
     <Wipbanner />
     <h1>Pathlang</h1>
     <p>Hello!</p>

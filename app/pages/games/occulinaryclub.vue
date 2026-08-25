@@ -9,7 +9,7 @@ import Header from "~/components/Header.vue";
     <p>A strange club with even stranger members...</p>
     <img
       title="An almost official club of Hippocampus High School!"
-      src="/images/occulinary-club/banner.png"
+      src="/images/games/occulinary-club/banner.png"
       alt="A mad scientist smiles over the 'Culinary Club' banner. He has a whisk. And a knife."
     />
     <ul>

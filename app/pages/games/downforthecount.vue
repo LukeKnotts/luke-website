@@ -3,7 +3,7 @@
     <Header :array="[{ link: '/games', name: 'Games' }]" />
     <h1>Down for the Count!</h1>
     <p>Made in four days for the 2026 GMTK game jam.</p>
-    <img src="/images/misc-games/dtfc.png" />
+    <img src="/images/games/downforthecount/dtfc.png" />
     <ul class="summary">
       <li>
         Team: <a href="https://cherrihoney.itch.io/">CherriHoney</a>,

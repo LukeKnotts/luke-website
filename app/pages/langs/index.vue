@@ -5,7 +5,7 @@ import Wipbanner from "~/components/Wipbanner.vue";
 
 <template>
   <div>
-    <Header />
+    <Header :array="[{ link: '/langs', name: 'Langs' }]" />
     <Wipbanner />
     <h1>Languages</h1>
     <p>A place for me to put the languages I've made. Woo-hoo!</p>

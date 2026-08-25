@@ -5,7 +5,7 @@ import DefLayout from "~/components/DefLayout.vue";
 
 <template>
   <div>
-    <Header />
+    <Header :array="[{ link: '/games', name: 'Games' }]" />
     <DefLayout>
       <h1>Games</h1>
       <p>

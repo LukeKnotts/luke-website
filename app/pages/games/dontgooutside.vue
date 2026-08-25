@@ -7,7 +7,7 @@ import Header from "~/components/Header.vue";
     <Header :array="[{ link: '/games', name: 'Games' }]" />
     <h1>Don't Go Outside</h1>
     <p>A Choose-Your-Own-Adventure style mystery</p>
-    <img src="/images/dontgooutside/title.png" />
+    <img src="/images/games/dontgooutside/title.png" />
     <p>
       Don't Go Outside is a text based story inspired by
       <i>Choose Your Own Adventure</i> books. It was worked on by myself, John

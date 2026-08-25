@@ -5,7 +5,7 @@ import Wipbanner from "~/components/Wipbanner.vue";
 
 <template>
   <div>
-    <Header />
+    <Header :array="[{ link: '/codes', name: 'Codes' }]" />
     <Wipbanner />
     <h1>Code Catalogue</h1>
     <p>

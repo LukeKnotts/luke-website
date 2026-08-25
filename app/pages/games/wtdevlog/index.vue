@@ -8,7 +8,12 @@ const { data: posts } = await useAsyncData("blog", () =>
 
 <template>
   <div>
-    <Header :array="[{ link: '/games/', name: 'Games' }]" />
+    <Header
+      :array="[
+        { link: '/games/', name: 'Games' },
+        { link: '/games/wtdevlog', name: 'WT Devlog' },
+      ]"
+    />
     <h1>Warren Tech Devlog</h1>
     <p>
       Posts written while I was a student at Warren Tech's game development

@@ -25,106 +25,106 @@ const handle_undefined = (letter) => {
 const getLetterLink = (before, letter, after) => {
   switch (letter) {
     case "a":
-      return "/images/slabbic/slabbic_a.png";
+      return "/images/langs/slabbic/slabbic_a.png";
     case "b":
-      return "/images/slabbic/slabbic_b.png";
+      return "/images/langs/slabbic/slabbic_b.png";
     case "c":
-      return "/images/slabbic/slabbic_c.png";
+      return "/images/langs/slabbic/slabbic_c.png";
     case "d":
-      return "/images/slabbic/slabbic_d.png";
+      return "/images/langs/slabbic/slabbic_d.png";
     case "e":
-      return "/images/slabbic/slabbic_e.png";
+      return "/images/langs/slabbic/slabbic_e.png";
     case "f":
-      return "/images/slabbic/slabbic_f.png";
+      return "/images/langs/slabbic/slabbic_f.png";
     case "g":
-      return "/images/slabbic/slabbic_g.png";
+      return "/images/langs/slabbic/slabbic_g.png";
     case "h":
-      return "/images/slabbic/slabbic_h.png";
+      return "/images/langs/slabbic/slabbic_h.png";
     case "i":
-      return "/images/slabbic/slabbic_i.png";
+      return "/images/langs/slabbic/slabbic_i.png";
     case "j":
-      return "/images/slabbic/slabbic_j.png";
+      return "/images/langs/slabbic/slabbic_j.png";
     case "k":
       if (wall_connects.includes(before)) {
         if (wall_connects.includes(after)) {
-          return "/images/slabbic/slabbic_k-mid.png";
+          return "/images/langs/slabbic/slabbic_k-mid.png";
         } else {
-          return "/images/slabbic/slabbic_k-left.png";
+          return "/images/langs/slabbic/slabbic_k-left.png";
         }
       } else if (wall_connects.includes(after)) {
-        return "/images/slabbic/slabbic_k-right.png";
+        return "/images/langs/slabbic/slabbic_k-right.png";
       } else {
-        return "/images/slabbic/slabbic_k-lone.png";
+        return "/images/langs/slabbic/slabbic_k-lone.png";
       }
     case "5":
-      return "/images/slabbic/slabbic_k-lone.png";
+      return "/images/langs/slabbic/slabbic_k-lone.png";
     case "6":
-      return "/images/slabbic/slabbic_k-right.png";
+      return "/images/langs/slabbic/slabbic_k-right.png";
     case "7":
-      return "/images/slabbic/slabbic_k-left.png";
+      return "/images/langs/slabbic/slabbic_k-left.png";
     case "8":
-      return "/images/slabbic/slabbic_k-mid.png";
+      return "/images/langs/slabbic/slabbic_k-mid.png";
     case "l":
       if (wall_connects.includes(before)) {
         if (wall_connects.includes(after)) {
-          return "/images/slabbic/slabbic_l-mid.png";
+          return "/images/langs/slabbic/slabbic_l-mid.png";
         } else {
-          return "/images/slabbic/slabbic_l-left.png";
+          return "/images/langs/slabbic/slabbic_l-left.png";
         }
       } else if (wall_connects.includes(after)) {
-        return "/images/slabbic/slabbic_l-right.png";
+        return "/images/langs/slabbic/slabbic_l-right.png";
       } else {
-        return "/images/slabbic/slabbic_l-lone.png";
+        return "/images/langs/slabbic/slabbic_l-lone.png";
       }
     case "9":
-      return "/images/slabbic/slabbic_l-lone.png";
+      return "/images/langs/slabbic/slabbic_l-lone.png";
     case "@":
-      return "/images/slabbic/slabbic_l-right.png";
+      return "/images/langs/slabbic/slabbic_l-right.png";
     case "#":
-      return "/images/slabbic/slabbic_l-left.png";
+      return "/images/langs/slabbic/slabbic_l-left.png";
     case "$":
-      return "/images/slabbic/slabbic_l-mid.png";
+      return "/images/langs/slabbic/slabbic_l-mid.png";
     case "m":
-      return "/images/slabbic/slabbic_m.png";
+      return "/images/langs/slabbic/slabbic_m.png";
     case "n":
-      return "/images/slabbic/slabbic_n.png";
+      return "/images/langs/slabbic/slabbic_n.png";
     case "o":
-      return "/images/slabbic/slabbic_o.png";
+      return "/images/langs/slabbic/slabbic_o.png";
     case "p":
-      return "/images/slabbic/slabbic_p.png";
+      return "/images/langs/slabbic/slabbic_p.png";
     case "q":
-      return "/images/slabbic/slabbic_q.png";
+      return "/images/langs/slabbic/slabbic_q.png";
     case "r":
-      return "/images/slabbic/slabbic_r.png";
+      return "/images/langs/slabbic/slabbic_r.png";
     case "s":
-      return "/images/slabbic/slabbic_s.png";
+      return "/images/langs/slabbic/slabbic_s.png";
     case "t":
-      return "/images/slabbic/slabbic_t.png";
+      return "/images/langs/slabbic/slabbic_t.png";
     case "u":
-      return "/images/slabbic/slabbic_u.png";
+      return "/images/langs/slabbic/slabbic_u.png";
     case "v":
-      return "/images/slabbic/slabbic_v.png";
+      return "/images/langs/slabbic/slabbic_v.png";
     case "w":
-      return "/images/slabbic/slabbic_w.png";
+      return "/images/langs/slabbic/slabbic_w.png";
     case "x":
-      return "/images/slabbic/slabbic_x.png";
+      return "/images/langs/slabbic/slabbic_x.png";
     case "y":
-      return "/images/slabbic/slabbic_y.png";
+      return "/images/langs/slabbic/slabbic_y.png";
     case "z":
-      return "/images/slabbic/slabbic_z.png";
+      return "/images/langs/slabbic/slabbic_z.png";
     case "1":
-      return "/images/slabbic/slabbic_1.png";
+      return "/images/langs/slabbic/slabbic_1.png";
     case "2":
-      return "/images/slabbic/slabbic_2.png";
+      return "/images/langs/slabbic/slabbic_2.png";
     case "3":
-      return "/images/slabbic/slabbic_3.png";
+      return "/images/langs/slabbic/slabbic_3.png";
     case "4":
-      return "/images/slabbic/slabbic_4.png";
+      return "/images/langs/slabbic/slabbic_4.png";
     case " ":
-      return "/images/slabbic/slabbic_space.png";
+      return "/images/langs/slabbic/slabbic_space.png";
     default:
       // default image as an "error" image.
-      return "/images/occulinary-club/banner.png";
+      return "/images/games/occulinary-club/banner.png";
   }
 };
 </script>

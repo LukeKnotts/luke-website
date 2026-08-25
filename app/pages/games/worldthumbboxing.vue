@@ -7,7 +7,7 @@ import Header from "~/components/Header.vue";
     <Header :array="[{ link: '/games', name: 'Games' }]" />
     <h1>World Thumb Boxing (Canceled)</h1>
     <p>The first game jam I failed to complete...!</p>
-    <img src="/images/WorldThumbBoxing/credits.png" />
+    <img src="/images/games/WorldThumbBoxing/credits.png" />
     <p>
       World Thumb Boxing was the unfinished game jam project for Warren Tech's
       December 2024 game jam, "Relentless". It was worked on by Dillan Gray,
@@ -18,12 +18,12 @@ import Header from "~/components/Header.vue";
       duke it out in a fight. I even wrote some music for the project:
     </p>
     <audio controls>
-      <source src="/music/musicbattleWTB.wav" />
+      <source src="/music/games/worldthumbboxing/musicbattleWTB.wav" />
       Your browser does not support the audio element.
     </audio>
 
     <audio controls>
-      <source src="/music/NewMusicRelentlessWTB.wav" />
+      <source src="/music/games/worldthumbboxing/NewMusicRelentlessWTB.wav" />
       Your browser does not support the audio element.
     </audio>
 
