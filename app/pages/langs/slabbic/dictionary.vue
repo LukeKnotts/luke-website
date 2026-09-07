@@ -34,7 +34,10 @@ const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
               &emsp;|&emsp;
               <span v-if="word.inflection == 'Suffix'">&ndash;</span
               >{{ word.word
-              }}<span v-if="word.inflection == 'Prefix'">&ndash;</span>
+              }}<span v-if="word.inflection == 'Prefix'">&ndash;</span
+              >&emsp;<span class="word-stem" v-if="word.stem">{{
+                word.stem
+              }}</span>
             </p>
             <hr />
             <p>
@@ -77,5 +80,15 @@ const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
   border: solid 1px black;
   padding: 10px;
   margin: 5px;
+}
+.word-stem {
+  color: grey;
+  font-size: 80%;
+}
+.word-stem::before {
+  content: "( ";
+}
+.word-stem::after {
+  content: " )";
 }
 </style>

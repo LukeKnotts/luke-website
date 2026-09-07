@@ -21,6 +21,9 @@
         "word":"cc", "english":["~ planks", "planks made from ~"], "type":"Noun Affix", "inflection":"Suffix"
     },
     {
+        "word":"chj", "english":["Oak tree"], "type":"Noun", "inflection":"J-Noun", "stem":"ch-"
+    },
+    {
         "word":"d", "english":["-ed", "was done"], "type":"Verb Affix", "inflection":"Prefix", "useage":"Makes a verb past tense."
     },
     {
