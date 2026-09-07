@@ -14,35 +14,62 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
       <hr />
       <h2>Word Order</h2>
       <p>
-        A sentence has three core words. At minimum it must have a verb, and it
-        may also have subject and object nouns. These words can go anywhere in
-        the sentence, but clauses, adjectives, and other attached words are
-        ordered relative to the core words.
+        Slabbic has free word order. The sentence's main verb, object, and
+        subject can go anywhere, and additional words are placed relative to
+        these words.
+      </p>
+      <p>
+        Thus, the main verbs, subjects, and objects of a sentence are called
+        "<span class="highlight">Core words</span>", and are essentially the
+        roots of a sentence.
       </p>
       <h3>Example</h3>
       <p>
-        This means that both <Letter roman="cbe bdbxji oh" class="islab" /> and
+        Both <Letter roman="cbe bdbxji oh" class="islab" /> and
         <Letter roman="oh bdbxji cbe" class="islab" /> are valid translations of
-        "Unity creates Acacia wood". The order of the words is entirely up to
-        the author.
+        "Unity creates Acacia Trees". The order of the core words is entirely up
+        to the author.
+      </p>
+      <hr />
+      <h2>Multiple Core Words</h2>
+      <p>
+        In Slabbic, a sentence can have as many of each kind of core word as you
+        wish. You can list multiple subjects, objects and verbs anywhere in a
+        sentence.
+      </p>
+      <h3>Example</h3>
+      <p>
+        Using multiple of each kind of core word with free word order allows one
+        to write sentences like <Letter />
       </p>
       <hr />
       <h2>Noun Declensions</h2>
       <p>
-        There are three
+        Because of Slabbic's free word order, the role of a noun in a sentence
+        is determined by
         <a
           href="https://en.wikipedia.org/wiki/Declension"
           target="_blank"
           class="external-link"
           >declension</a
-        >
-        classes of nouns. Nouns that <i>end</i> in
-        <Letter roman="m" /> (M-nouns), <Letter roman="j" /> (J-nouns), or
-        <Letter roman="h" /> (H-nouns).
+        >. Nouns come in three types, those that end in
+        <Letter roman="m" /> (M-nouns), those that end in
+        <Letter roman="j" /> (J-nouns), and those that end in
+        <Letter roman="h" /> (H-nouns). Nouns decline differnetly based on these
+        endings.
       </p>
       <p>
-        Nouns decline based on what role they play in a sentence. The
-        declensions are as follows:
+        There are three declensions a given noun can take on. An "<span
+          class="highlight"
+          >Object</span
+        >" / "<span class="highlight">Dictionary</span>" form, a "<span
+          class="highlight"
+          >Subject</span
+        >" form, and a "<span class="highlight">Verb</span>" form.
+      </p>
+      <p>
+        The below table indicates how the different kinds of noun decline when
+        used in different parts of a sentence.
       </p>
       <table>
         <thead>
@@ -75,29 +102,44 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
         </tbody>
       </table>
       <p>
-        "<span class="highlight">Object form</span>" or "<span class="highlight"
+        "<span class="highlight">Object form</span>", also called "<span
+          class="highlight"
           >Dictionary form</span
-        >" nouns are both the form that is typically listed in the dictionary,
-        as well as the declension used to make that noun the object of the
-        sentence's verb. "Subject form" is used to make a noun the subject of
-        the sentence. "<span class="highlight">Verb form</span>" is a declension
-        that turns the noun into a verb, like how we jokingly <i>verb</i> nouns
-        to turn them into action words. Because nouns decline, you can easily
-        list multiple subjects, objects and verbs anywhere in the sentence.
+        >", is used as a base form of the word to be listed in dictionaries.
+        This <i>Object form</i> is also used to indicate the sentence's core
+        object(s).
+      </p>
+      <p>
+        "<span class="highlight">Subject form</span>" is used to make a noun the
+        subject of the sentence.
+      </p>
+      <p>
+        "<span class="highlight">Verb form</span>" is a declension that turns
+        the noun into a verb, like how we often <i>verb</i> nouns in English to
+        turn them into action words.
+      </p>
+      <hr />
+      <h2>Plural Nouns</h2>
+      <p>
+        By default, it is implied through context whether or not a noun is
+        plural or singular. "<span class="highlight">Noun Affixes</span>" are
+        used to concretely specify a noun's count.
       </p>
       <hr />
       <h2>Verb Types</h2>
       <p>
-        In Slabbic, verbs conjugate to tell you whether or not they have
-        objects. This way, you can leave out the nouns of a sentence and still
-        get a meaning across. Some verbs do not conjugate however, and play a
-        stricter role. "<span class="highlight"
+        In Slabbic, verbs conjugate based on whether or not they have objects.
+        This allows speakers to omit nouns from a sentence while still
+        indicating that an object exists. Some verbs do not conjugate however,
+        and play a stricter role. "<span class="highlight"
           >Strictly <span class="underline">In</span>transitive</span
         >" verbs can never have an object, while "<span class="highlight"
           >Strictly Transitive</span
-        >" verbs always have an object, so no conjugation is necessary. All of
-        the other verbs, called "<span class="highlight">Flexible Verbs</span>",
-        conjugate to specify whether or not they have an object.
+        >" verbs always have an object. Because of these words' 'strict' roles,
+        they do not need to conjugate. All of the other verbs, called "<span
+          class="highlight"
+          >Flexible Verbs</span
+        >", conjugate to specify whether or not they have an object.
       </p>
       <table>
         <thead>
@@ -117,69 +159,85 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
           </tr>
         </tbody>
       </table>
+      <hr />
       <h2>Making Verbs into Nouns</h2>
       <p>
-        To make a verb into a noun, you add the noun prefix "<Letter
-          roman="a"
-        />" to the beginning of the verb and give it a suffix to indicate what
-        role it plays in the sentence. Add the "<Letter roman="w" />" suffix to
-        make the word in dictionary/object form, and use the "<Letter
-          roman="y"
-        />" suffix to make the word in subject form.
+        To make a verb into a noun, the noun prefix "<Letter roman="a" />" is
+        added to the beginning of the verb. If the word is in dictionary/object
+        form, no suffix is added to the word. If you need to indicated that the
+        noun-ed verb is in subject form, the "<Letter roman="y" />" suffix is
+        added to the word.
+      </p>
+      <hr />
+      <h2>Converting a Verb with Subjects and Objects into a Noun</h2>
+      <p>
+        In order to convert a verb with subject(s) and/or object(s) into a noun,
+        the normal noun conversion affixes are applied to verb, and then
+        grammatical words are used to attach subjects and objects to that verb.
+        The subject clause, initiated with the word "<Letter roman="1u" />",
+        makes any following nouns the subjects of your verb. The object clause,
+        initiated with the word "<Letter roman="zk" />", makes any following
+        nouns the objects of your verb. Any nouns listed in these clauses must
+        be in dictionary/object form, and can only be placed immediately after
+        their grammatical words. Preventing the nouns in these clauses from
+        declining helps remove confusion as to what role they play in the
+        sentence at large. Either the subject clause or the object clause can be
+        listed first, but they must immediately follow the noun-ed verb in
+        question.
       </p>
       <p>
-        In order to make a larger sentence into a noun, you must add the affixes
-        to your verb as explained above, and then you can use grammatical words
-        to attach subjects and objects to your verb. The subject clause,
-        initiated with "<Letter roman="1u" />", makes any following nouns the
-        subjects of your verb. The object clause, initiated with "<Letter
-          roman="zk"
-        />", makes any following nouns the objects of your verb. Any nouns
-        listed in these clauses must be in dictionary/object form, and can only
-        be placed immediately after their grammatical words. Preventing the
-        nouns in these clauses from declining helps remove confusion as to what
-        role they play in the sentence at large. Either the subject clause or
-        the object clause can be listed first, but they must immediately follow
-        the noun-ed verb in question.
+        It is worth noting that if multiple nouns are listed in an object
+        clause, it can be ambiguous whether or not any of them beyond the first
+        noun are a part of the object clause or are simply core words of the
+        sentence at large. This is can be fixed by listing the object clause
+        before the subject clause, as clause-ed noun words must be written in
+        sequence, but this method only works to disambiguate phrases that use
+        both an object clause and a subject clause.
       </p>
+      <hr />
       <h2>Verb Tense</h2>
       <p>
-        By default, verb tense is implied through context. To specify a tense,
-        an affix can be used, as described in the next section.
+        By default, verb tense is implied through context. To specify a tense, a
+        "<span class="highlight">Verb Affix</span>" can be used.
       </p>
       <hr />
       <h2>Affix Descriptive Words</h2>
       <p>
         Descriptive words in Slabbic are <i>affixes</i>, meaning they are
         attached to a word. They can come immediately after (suffixes) or
-        immediately before (prefixes) the word that they are describing or
-        altering. They come in four classes: descriptive words for nouns called
-        "<span class="highlight">Noun Affixes</span>", descriptive words for
-        verbs called "<span class="highlight">Verb Affixes</span>", words that
-        can describe nouns and verbs called "<span class="highlight"
+        immediately before (prefixes) the words that they describe or alter.
+        They come in four classes: descriptive words for nouns called "<span
+          class="highlight"
+          >Noun Affixes</span
+        >", descriptive words for verbs called "<span class="highlight"
+          >Verb Affixes</span
+        >", words that can describe nouns and verbs called "<span
+          class="highlight"
           >Multi Affixes</span
         >", and special "<span class="highlight">Affix Affixes</span>" which
-        describe other affixes.
+        describe or alter other affixes.
       </p>
       <p>
-        Examples of Noun Affixes include the prefix "<Letter roman="b" />-",
-        which means that the noun is large in size, literally or metaphorically;
-        and the suffix "-<Letter roman="cc" />", which means wooden planks made
-        from the used noun.
+        Examples of "<span class="highlight">Noun Affixes</span>" include the
+        prefix "<Letter roman="b" />-", which means that the noun is large in
+        size, literally or metaphorically; and the suffix "-<Letter
+          roman="cc"
+        />", which means planks made from the used noun (likely some kind of
+        wood).
       </p>
       <p>
-        Examples of Verb Affixes include the suffix "-<Letter roman="d" />",
-        which means that the verb happened in the past; and the prefix "<Letter
-          roman="a"
-        />-", which turns a verb into a noun meaning the action of doing that
-        verb.
+        Examples of "<span class="highlight">Verb Affixes</span>" include the
+        suffix "-<Letter roman="d" />", which means that the verb happened in
+        the past; and the prefix "<Letter roman="a" />-", which turns a verb
+        into a noun meaning the action of doing that verb.
       </p>
       <p>
-        An example of a Multi Affix (i.e., can apply to either nouns or verbs)
-        is the prefix "<Letter roman="v2" />-", which changes a verb or noun to
-        mean the <i>opposite</i> of that word. This could be context dependent,
-        changing "fire" into "ice" in one context, and changing "fire" into
-        "water" in another.
+        An example of a "<span class="highlight">Multi Affix</span>" (i.e., can
+        apply to either nouns or verbs) is the prefix "<Letter roman="v2" />-",
+        which changes a verb or noun to mean the <i>opposite</i> of that word.
+        This could be context dependent, especially if a word has multiple
+        meanings, like changing "fire" into "ice" in one context, and changing
+        "fire" into "hire" in another context.
       </p>
       <h2>Turning Affixes into Nouns</h2>
       <p>
@@ -187,9 +245,9 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
           >Affix Affix</span
         >" (that is, an affix that alters another affix) prefix "<Letter
           roman="yy"
-        />-" which turns an affix into "the property of having that affix". For
-        example, "<Letter roman="yyd" />" means "the property of having happened
-        in the past", or similarly, "completedness" or "finishedness".
+        />-" which turns an affix into a noun meaning "the property of having
+        that affix". For example, "<Letter roman="yyd" />" means "the property
+        of having happened in the past".
       </p>
       <p></p>
       <hr />

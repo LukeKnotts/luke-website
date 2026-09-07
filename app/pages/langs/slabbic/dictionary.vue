@@ -19,7 +19,7 @@ const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
       <hr />
       <div class="dictionary">
         <template v-for="word in word_data">
-          <div class="dictionary-word">
+          <div class="dictionary-word" v-if="word.__comment__ != true">
             <p class="times-font">
               <span v-if="word.inflection == 'Suffix'">~ </span
               ><Letter :roman="word.word" /><span
