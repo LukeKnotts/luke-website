@@ -1,6 +1,10 @@
 <script setup>
 import Layout from "~/pages/langs/slabbic/components/Layout.vue";
 import Letter from "~/pages/langs/slabbic/components/Letter.vue";
+
+useHead({
+  title: "Slabbic - Grammar",
+});
 </script>
 
 <template>
@@ -116,7 +120,10 @@ import Letter from "~/pages/langs/slabbic/components/Letter.vue";
       <p>
         "<span class="highlight">Verb form</span>" is a declension that turns
         the noun into a verb, like how we often <i>verb</i> nouns in English to
-        turn them into action words.
+        turn them into action words. Nouns often have specific meanings when
+        used in <i>Verb form</i> (these are listed with the word's definition in
+        the <a href="./dictionary">dictionary</a>). However, in some cases,
+        verbing a word has a context-dependent meaning that is up to the author.
       </p>
       <hr />
       <h2>Plural Nouns</h2>

@@ -1,6 +1,10 @@
 <script setup>
 import Layout from "~/pages/langs/slabbic/components/Layout.vue";
 import Letter from "~/pages/langs/slabbic/components/Letter.vue";
+
+useHead({
+  title: "Slabbic - Alphabet",
+});
 </script>
 
 <template>

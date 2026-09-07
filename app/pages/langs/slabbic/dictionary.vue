@@ -3,6 +3,10 @@ import Layout from "~/pages/langs/slabbic/components/Layout.vue";
 import Letter from "~/pages/langs/slabbic/components/Letter.vue";
 import word_data from "~/pages/langs/slabbic/data/dictionary.json";
 
+useHead({
+  title: "Slabbic - Dictionary",
+});
+
 // data formatting and visualizing
 const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
 </script>
