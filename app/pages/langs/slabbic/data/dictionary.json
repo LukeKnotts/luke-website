@@ -1,21 +1,62 @@
 [
-    {"__comment__":true, "dictionary format":"{ WORD, (ROOTS), ENGLISH, TYPE, (INFLECTION), (USEAGE) }."},
-    {"word":"a", "english":["-ing", "The action of ~"], "type":"Verb Affix", "inflection":"Prefix", "useage":"Used to turn verbs into nouns."},
-    {"word":"a", "english":["One or more ~", "-(s)"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there are one or more of that noun."},
-    {"word":"b", "english":["big"], "type":"Noun Affix", "inflection":"Prefix"},
-    {"word":"bdbxjm", "english":["Unity", "connection between different things"], "type":"Noun", "inflection":"M-noun", "stem":"bdbxj-"},
-    {"word":"cbe", "english":["To create from nothing"], "type":"Verb", "inflection":"Standard Verb", "stem":"cb-"},
-    {"word":"cc", "english":["~ planks", "planks made from ~"], "type":"Noun Affix", "inflection":"Suffix"},
-    {"word":"d", "english":["-ed", "was done"], "type":"Verb Affix", "inflection":"Prefix", "useage":"Makes a verb past tense."},
-    {"word":"e", "english":["one ~", "a ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Makes a noun singular."},
-    {"word":"ee", "roots":["e"], "english":["two ~", "a pair of ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there are two of that noun."},
-    {"word":"h", "english":["Multiple ~", "-s"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Makes the noun plural."},
-    {"word":"hh", "roots":["h"], "english":["A lot of ~", "many ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there are relatively many of that noun."},
-    {"word":"l", "english":["not ~"], "type":"Multi Affix", "inflection":"Prefix", "useage":"Used to declare that the altered noun or verb did not take place in its role in the sentence."},
-    {"word":"oh", "english":["Acacia tree"], "type":"Noun", "inflection":"H-noun", "stem":"o-"},
-    {"word":"v2", "english":["the opposite of ~", "anti-", "un-"], "type":"Multi Affix", "inflection":"Prefix", "useage":"Changes a noun or verb into something the \"opposite\" of that word."},
-    {"word":"y", "english":["~ is the doer"], "type":"Verb Affix", "inflection":"Suffix", "useage":"Used to convert a verb that has been converted into a noun into 'subject form'."},
-    {"word":"yy", "english":["the property of ~"], "type":"Affix Affix", "inflection":"Prefix", "useage":"Turns an affix into a noun meaning 'the property of having [that affix]'."},
-    {"word":"zk", "english":["done to ~"], "type":"Grammatical", "useage":"Initiates an object clause for a verb that is being made into a noun."},
-    {"word":"1u", "english":["done by ~"], "type":"Grammatical", "useage":"Initiates a subject clause for a verb that is being made into a noun."}
+    {
+        "__comment__":true, "dictionary format":"{ WORD, (ROOTS), ENGLISH, TYPE, (INFLECTION), (STEM) (USEAGE) }."
+    },
+    {
+        "word":"a", "english":["-ing", "The action of ~"], "type":"Verb Affix", "inflection":"Prefix", "useage":"Used to turn verbs into nouns."
+    },
+    {
+        "word":"a", "english":["One or more ~", "-(s)"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there are one or more of that noun."
+    },
+    {
+        "word":"b", "english":["big"], "type":"Noun Affix", "inflection":"Prefix"
+    },
+    {
+        "word":"bdbxjm", "english":["Unity", "connection between different things"], "type":"Noun", "inflection":"M-noun", "stem":"bdbxj-"
+    },
+    {
+        "word":"cbe", "english":["To create from nothing"], "type":"Verb", "inflection":"Standard Verb", "stem":"cb-"
+    },
+    {
+        "word":"cc", "english":["~ planks", "planks made from ~"], "type":"Noun Affix", "inflection":"Suffix"
+    },
+    {
+        "word":"d", "english":["-ed", "was done"], "type":"Verb Affix", "inflection":"Prefix", "useage":"Makes a verb past tense."
+    },
+    {
+        "word":"e", "english":["one ~", "a ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Makes a noun singular."
+    },
+    {
+        "word":"ee", "roots":["e"], "english":["two ~", "a pair of ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there are two of that noun."
+    },
+    {
+        "word":"eh", "roots":["e", "h"], "english":["Less than one ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there is less than one of that noun."
+    },
+    {
+        "word":"h", "english":["Multiple ~", "-s"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Makes the noun plural."
+    },
+    {
+        "word":"hh", "roots":["h"], "english":["A lot of ~", "many ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there are relatively many of that noun."
+    },
+    {
+        "word":"l", "english":["not ~"], "type":"Multi Affix", "inflection":"Prefix", "useage":"Used to declare that the altered noun or verb did not take place in its role in the sentence."
+    },
+    {
+        "word":"oh", "english":["Acacia tree"], "type":"Noun", "inflection":"H-noun", "stem":"o-"
+    },
+    {
+        "word":"v2", "english":["the opposite of ~", "anti-", "un-"], "type":"Multi Affix", "inflection":"Prefix", "useage":"Changes a noun or verb into something the \"opposite\" of that word."
+    },
+    {
+        "word":"y", "english":["~ is the doer"], "type":"Verb Affix", "inflection":"Suffix", "useage":"Used to convert a verb that has been converted into a noun into 'subject form'."
+    },
+    {
+        "word":"yy", "english":["the property of ~"], "type":"Affix Affix", "inflection":"Prefix", "useage":"Turns an affix into a noun meaning 'the property of having [that affix]'."
+    },
+    {
+        "word":"zk", "english":["done to ~"], "type":"Grammatical", "useage":"Initiates an object clause for a verb that is being made into a noun."
+    },
+    {
+        "word":"1u", "english":["done by ~"], "type":"Grammatical", "useage":"Initiates a subject clause for a verb that is being made into a noun."
+    }
 ]
