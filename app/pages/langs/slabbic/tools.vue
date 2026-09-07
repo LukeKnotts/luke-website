@@ -15,4 +15,8 @@
 
 <script setup>
 import Layout from "./components/Layout.vue";
+
+useHead({
+  title: "Slabbic - Tools",
+});
 </script>

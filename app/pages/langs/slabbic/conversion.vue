@@ -70,6 +70,10 @@
 <script setup>
 import Layout from "./components/Layout.vue";
 
+useHead({
+  title: "Slabbic - Char Format Conversion",
+});
+
 const prefix = ref(":_");
 const suffix = ref(":");
 const case_setting = ref("lower");

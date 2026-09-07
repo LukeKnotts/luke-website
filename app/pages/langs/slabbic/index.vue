@@ -1,5 +1,9 @@
 <script setup>
 import Layout from "~/pages/langs/slabbic/components/Layout.vue";
+
+useHead({
+  title: "Slabbic - the Conlang",
+});
 </script>
 
 <template>
