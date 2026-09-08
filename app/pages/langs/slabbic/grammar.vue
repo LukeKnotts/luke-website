@@ -331,6 +331,10 @@ useHead({
         subject form, and "<Letter roman="lukez" />" would represent the verb
         form.
       </p>
+      <p>
+        Cases where adding a suffix to make a B-noun also can arise when using
+        other affixes to convert words into nouns.
+      </p>
       <hr />
     </Layout>
   </div>
