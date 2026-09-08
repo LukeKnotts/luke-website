@@ -122,8 +122,10 @@ useHead({
         the noun into a verb, like how we often <i>verb</i> nouns in English to
         turn them into action words. Nouns often have specific meanings when
         used in <i>Verb form</i> (these are listed with the word's definition in
-        the <a href="./dictionary">dictionary</a>). However, in some cases,
-        verbing a word has a context-dependent meaning that is up to the author.
+        the <a href="./dictionary">dictionary</a>). However, in other cases,
+        verbing a word has a context-dependent meaning that is completely up to
+        the author, or a noun is verbed that has yet to have an established verb
+        meaning.
       </p>
       <hr />
       <h2>Plural Nouns</h2>
@@ -258,6 +260,15 @@ useHead({
       </p>
       <p></p>
       <hr />
+      <h2>Specific Affix Uses</h2>
+      <p>
+        Some <i>Noun + Affix</i> combinations have established, perhaps
+        arbitrary meanings in Slabbic. For example, "<Letter roman="chjga" />"
+        (using the affix "-<Letter roman="ga" />" meaning 'material made from
+        ~') usually refers to "Oak wood logs", even though it technically could
+        refer to Oak leaves, or even sticks or apples as well.
+      </p>
+      <hr />
       <h2>Slabbic Romanization</h2>
       <p>
         There are 30 letters in the slabbic language (excluding spaces). These
@@ -275,6 +286,45 @@ useHead({
         is written as <Letter roman="Luke Knotts" class="islab" /> in Slabbic.
         If anyone's curious, on the developer side of this website, I have a
         special component that converts romanizations into their Slabbic form.
+      </p>
+      <hr />
+      <h2>Suffix Appending for Foreign Nouns</h2>
+      <p>
+        Say you wanted to convert something into a noun and that was not a
+        normal Slabbic word, such as a loan word. It coule be ambiguous what
+        role that word plays in a sentence if it doesn't end in a typical noun
+        declension (if it did, it is typical to then decline the word as if it
+        were a Slabbic word, even using a declined form as the 'dictionary form'
+        of the word in Slabbic). In these unconforming cases, the base form of
+        the word is considered the "Object" or dictionary form, and the suffixes
+        "-<Letter roman="b" />" and "-<Letter roman="z" />" change the word into
+        the "Subject" and "Verb" forms, respectively. This creates the "<span
+          class="highlight"
+          >B-noun</span
+        >" class, as shown in the below table.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Object (dict. form)</th>
+            <th>Subject Form</th>
+            <th>Verb Form</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>[base form]</td>
+            <td>-<Letter roman="b" /></td>
+            <td>-<Letter roman="z" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Thus if you wanted to convert the foreign name "<Letter roman="luke" />
+        (Luke)" into a Slabbic noun, "<Letter roman="luke" />" would represent
+        the dictionary form, "<Letter roman="lukeb" />" would represent the
+        subject form, and "<Letter roman="lukez" />" would represent the verb
+        form.
       </p>
       <hr />
     </Layout>

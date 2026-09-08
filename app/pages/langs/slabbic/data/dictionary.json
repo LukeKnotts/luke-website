@@ -1,6 +1,6 @@
 [
     {
-        "__comment__":true, "dictionary format":"{ WORD, (ROOTS), ENGLISH, TYPE, (INFLECTION), (STEM) (USEAGE) }."
+        "__comment__":true, "dictionary format":"{ WORD, (ROOTS), ENGLISH, TYPE, (INFLECTION), (STEM) (USEAGE) }.", "sorting preference":"(alphabetical) word contents > not an affix word > prefix word > suffix word."
     },
     {
         "word":"a", "english":["-ing", "The action of ~"], "type":"Verb Affix", "inflection":"Prefix", "useage":"Used to turn verbs into nouns."
@@ -24,28 +24,40 @@
         "word":"chj", "english":["Oak tree"], "type":"Noun", "inflection":"J-Noun", "stem":"ch-"
     },
     {
+        "word":"chjga", "roots":["chj", "ga"], "english":["Oak wood logs"], "type":"Noun (Compound)", "inflection":"J-Noun", "stem":"ch_ga"
+    },
+    {
         "word":"d", "english":["-ed", "was done"], "type":"Verb Affix", "inflection":"Prefix", "useage":"Makes a verb past tense."
     },
     {
         "word":"e", "english":["one ~", "a ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Makes a noun singular."
     },
     {
-        "word":"ee", "roots":["e"], "english":["two ~", "a pair of ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there are two of that noun."
+        "word":"ee", "roots":["e", "e"], "english":["two ~", "a pair of ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there are two of that noun."
     },
     {
         "word":"eh", "roots":["e", "h"], "english":["Less than one ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there is less than one of that noun."
     },
     {
+        "word":"ga", "english":["material from ~", ""], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means a noun made out of [X], or created from the raw resource [X]."
+    },
+    {
         "word":"h", "english":["Multiple ~", "-s"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Makes the noun plural."
     },
     {
-        "word":"hh", "roots":["h"], "english":["A lot of ~", "many ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there are relatively many of that noun."
+        "word":"hh", "roots":["h", "h"], "english":["A lot of ~", "many ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there are relatively many of that noun."
+    },
+    {
+        "word":"j", "english":["stone", "rock"], "type":"Noun", "inflection":"J-noun", "stem":"-"
     },
     {
         "word":"l", "english":["not ~"], "type":"Multi Affix", "inflection":"Prefix", "useage":"Used to declare that the altered noun or verb did not take place in its role in the sentence."
     },
     {
         "word":"oh", "english":["Acacia tree"], "type":"Noun", "inflection":"H-noun", "stem":"o-"
+    },
+    {
+        "word":"ohga", "roots":["oh", "ga"], "english":["Acacia wood logs"], "type":"Noun (Compound)", "inflection":"H-noun", "stem":"o_ga"
     },
     {
         "word":"v2", "english":["the opposite of ~", "anti-", "un-"], "type":"Multi Affix", "inflection":"Prefix", "useage":"Changes a noun or verb into something the \"opposite\" of that word."

@@ -9,6 +9,26 @@ useHead({
 
 // data formatting and visualizing
 const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
+
+// Color words based on word type
+const type_color = (type) => {
+  if (type == "Verb Affix" || type == "Multi Affix" || type == "Affix Affix") {
+    // pink red
+    return "#d45965";
+  } else if (type == "Noun Affix") {
+    // magenta
+    return "#cc528c";
+  } else if (type == "Noun" || type == "Noun (Compound)") {
+    // blue
+    return "#607ebd";
+  } else if (type == "Verb") {
+    // green
+    return "#64b364";
+  } else if (type == "Grammatical") {
+    // gray
+    return "#6e6e6e";
+  }
+};
 </script>
 
 <template>
@@ -24,43 +44,65 @@ const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
       <div class="dictionary">
         <template v-for="word in word_data">
           <div class="dictionary-word" v-if="word.__comment__ != true">
-            <p class="times-font">
-              <span v-if="word.inflection == 'Suffix'">~ </span
-              ><Letter :roman="word.word" /><span
-                v-if="word.inflection == 'Prefix'"
-              >
-                ~</span
-              >
-              &emsp;|&emsp;
-              <span v-if="word.inflection == 'Suffix'">&ndash;</span
-              >{{ word.word
-              }}<span v-if="word.inflection == 'Prefix'">&ndash;</span
-              >&emsp;<span class="word-stem" v-if="word.stem">{{
-                word.stem
-              }}</span>
-            </p>
-            <hr />
-            <p>
-              <span class="underline">Word Type:</span>&emsp;{{ word.type }}
-            </p>
-            <p v-if="word.inflection">
-              <span class="underline">Inflection Type:</span>&emsp;
-              <span
-                v-if="Object.keys(inflection_symbols).includes(word.inflection)"
-                >(<Letter :roman="inflection_symbols[word.inflection]" />)</span
-              >
-              {{ word.inflection }}
-            </p>
-            <p v-if="word.english">
-              <span class="underline">English:</span>
-              <span v-for="(translation, index) in word.english"
-                ><span v-if="index > 0" class="highlight">&nbsp;;&nbsp;</span
-                ><span v-else>&nbsp;&nbsp;</span>{{ translation }}</span
-              >
-            </p>
-            <p v-if="word.useage">
-              <span class="underline">Useage:</span> &emsp;{{ word.useage }}
-            </p>
+            <div
+              class="word-header-block"
+              :style="'background-color: ' + type_color(word.type) + ';'"
+            >
+              <p class="times-font word-header-text">
+                <span v-if="word.inflection == 'Suffix'">~ </span
+                ><Letter :roman="word.word" /><span
+                  v-if="word.inflection == 'Prefix'"
+                >
+                  ~</span
+                >
+                &emsp;|&emsp;
+                <span v-if="word.inflection == 'Suffix'">&ndash;</span
+                >{{ word.word
+                }}<span v-if="word.inflection == 'Prefix'">&ndash;</span
+                >&emsp;<span class="word-stem" v-if="word.stem">{{
+                  word.stem
+                }}</span>
+              </p>
+            </div>
+            <div class="word-content">
+              <p>
+                <span
+                  class="thick-underline"
+                  :style="
+                    'text-decoration-color: ' + type_color(word.type) + ';'
+                  "
+                  >Word Type:</span
+                >&emsp;{{ word.type }}
+              </p>
+              <p v-if="word.inflection">
+                <span class="underline">Inflection Type:</span>&emsp;
+                <span
+                  v-if="
+                    Object.keys(inflection_symbols).includes(word.inflection)
+                  "
+                  >(<Letter
+                    :roman="inflection_symbols[word.inflection]"
+                  />)</span
+                >
+                {{ word.inflection }}
+              </p>
+              <p v-if="word.english">
+                <span class="underline">English:</span>
+                <span v-for="(translation, index) in word.english"
+                  ><span v-if="index > 0" class="highlight">&nbsp;;&nbsp;</span
+                  ><span v-else>&nbsp;&nbsp;</span>{{ translation }}</span
+                >
+              </p>
+              <p v-if="word.useage">
+                <span class="underline">Useage:</span> &emsp;{{ word.useage }}
+              </p>
+              <p v-if="word.roots">
+                <span class="underline">Etymology:</span>&nbsp;
+                <template v-for="(root, index) in word.roots">
+                  <span v-if="index != 0"> + </span><i>{{ root }}</i>
+                </template>
+              </p>
+            </div>
           </div>
         </template>
       </div>
@@ -78,17 +120,35 @@ const inflection_symbols = ref({ "M-noun": "m", "J-noun": "j", "H-noun": "h" });
   width: 300px;
 
   border: solid 1px black;
-  padding: 10px;
-  margin: 5px;
+  margin: 3px;
 }
 .word-stem {
-  color: grey;
+  color: rgb(105, 105, 105);
   font-size: 80%;
+  white-space: nowrap;
 }
 .word-stem::before {
   content: "( ";
 }
 .word-stem::after {
   content: " )";
+}
+
+.word-header-text {
+  background-color: white;
+  margin: 8px;
+  padding: 8px;
+  border-radius: 5px;
+}
+.word-header-block {
+  padding: 5px;
+}
+.word-content {
+  margin: 10px;
+}
+
+.thick-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2.5px;
 }
 </style>
