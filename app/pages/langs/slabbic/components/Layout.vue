@@ -100,8 +100,8 @@ import Wipbanner from "~/components/Wipbanner.vue";
 }
 /* Stands for "inline Slabbic". Used to make text in Slabbic that is in the middle of an English paragraph not look too weird.*/
 :slotted(.islab) {
-  border: 1px solid rgb(47, 47, 170);
-  background: rgb(201, 225, 233);
+  border: 1.5px solid rgb(62, 169, 207);
+  background: rgb(248, 238, 225);
   padding: 2px;
   border-radius: 3px;
 }

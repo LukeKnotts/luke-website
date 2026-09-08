@@ -36,9 +36,17 @@ const type_color = (type) => {
     <Layout>
       <h1>Dictionary</h1>
       <p>The words in <a href="/langs/slabbic">Slabbic</a>.</p>
+      <!-- One is subtracted from the word_data.length to ignore the comment at the top of the .json file! -->
       <p>
         English translations are sometimes approximate. Words providing a
-        "useage" field offer more explanation on their useage.
+        "useage" field offer more explanation on their useage. There are
+        currently {{ word_data.length - 1 }} registered words and affixes in
+        Slabbic.
+      </p>
+      <p>
+        The words are sorted lexicographically per the
+        <a href="./alphabet">alphabet</a> page:
+        <Letter roman="abcdefghijklmnopqrstuvwxyz1234" class="islab" />.
       </p>
       <hr />
       <div class="dictionary">
@@ -93,9 +101,12 @@ const type_color = (type) => {
                   ><span v-else>&nbsp;&nbsp;</span>{{ translation }}</span
                 >
               </p>
-              <p v-if="word.useage">
-                <span class="underline">Useage:</span> &emsp;{{ word.useage }}
-              </p>
+              <div v-if="word.useage">
+                <p class="useage-text">
+                  <span class="underline">Useage:</span> &emsp;
+                </p>
+                <p class="useage-text">{{ word.useage }}</p>
+              </div>
               <p v-if="word.roots">
                 <span class="underline">Etymology:</span>&nbsp;
                 <template v-for="(root, index) in word.roots">
@@ -139,12 +150,20 @@ const type_color = (type) => {
   margin: 8px;
   padding: 8px;
   border-radius: 5px;
+  border: 1px solid black;
 }
 .word-header-block {
   padding: 5px;
+  border-bottom: 1px solid black;
 }
 .word-content {
   margin: 10px;
+}
+
+.useage-text {
+  text-align: left;
+  text-justify: none;
+  display: inline;
 }
 
 .thick-underline {

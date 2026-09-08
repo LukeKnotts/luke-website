@@ -1,6 +1,6 @@
 [
     {
-        "__comment__":true, "dictionary format":"{ WORD, (ROOTS), ENGLISH, TYPE, (INFLECTION), (STEM) (USEAGE) }.", "sorting preference":"(alphabetical) word contents > not an affix word > prefix word > suffix word."
+        "__comment__":true, "dictionary format":"{ WORD, (ROOTS), ENGLISH, TYPE, (INFLECTION), (STEM) (USEAGE) }.", "sorting preference":"(alphabetical) word spelling > not an affix word > prefix word > suffix word > not a grammatical word > grammatical word."
     },
     {
         "word":"a", "english":["-ing", "The action of ~"], "type":"Verb Affix", "inflection":"Prefix", "useage":"Used to turn verbs into nouns."
@@ -13,6 +13,9 @@
     },
     {
         "word":"bdbxjm", "english":["Unity", "connection between different things"], "type":"Noun", "inflection":"M-noun", "stem":"bdbxj-"
+    },
+    {
+        "word":"c", "english":["to do ~"], "type":"Grammatical", "inflection":"Suffix", "useage":"The Verb form ending for J-nouns."
     },
     {
         "word":"cbe", "english":["To create from nothing"], "type":"Verb", "inflection":"Standard Verb", "stem":"cb-"
@@ -39,25 +42,49 @@
         "word":"eh", "roots":["e", "h"], "english":["Less than one ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there is less than one of that noun."
     },
     {
+        "word":"g", "english":["~ is the doer"], "type":"Grammatical", "inflection":"Suffix", "useage":"The Subject form ending for H-nouns."
+    },
+    {
         "word":"ga", "english":["material from ~", ""], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means a noun made out of [X], or created from the raw resource [X]."
     },
     {
         "word":"h", "english":["Multiple ~", "-s"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Makes the noun plural."
     },
     {
+        "word":"h", "english":["had ~ done to it"], "type":"Grammatical", "inflection":"Suffix", "useage":"The Object (dict. form) ending for H-nouns."
+    },
+    {
         "word":"hh", "roots":["h", "h"], "english":["A lot of ~", "many ~"], "type":"Noun Affix", "inflection":"Suffix", "useage":"Means that there are relatively many of that noun."
+    },
+    {
+        "word":"i", "english":["~ is the doer"], "type":"Grammatical", "inflection":"Suffix", "useage":"The Subject form ending for M-nouns."
     },
     {
         "word":"j", "english":["stone", "rock"], "type":"Noun", "inflection":"J-noun", "stem":"-"
     },
     {
+        "word":"j", "english":["had ~ done to it"], "type":"Grammatical", "inflection":"Suffix", "useage":"The Object (dict. form) ending for J-nouns."
+    },
+    {
+        "word":"k", "english":["~ is the doer"], "type":"Grammatical", "inflection":"Suffix", "useage":"The Subject form ending for J-nouns."
+    },
+    {
         "word":"l", "english":["not ~"], "type":"Multi Affix", "inflection":"Prefix", "useage":"Used to declare that the altered noun or verb did not take place in its role in the sentence."
+    },
+    {
+        "word":"m", "english":["had ~ done to it"], "type":"Grammatical", "inflection":"Suffix", "useage":"The Object (dict. form) ending for M-nouns."
     },
     {
         "word":"oh", "english":["Acacia tree"], "type":"Noun", "inflection":"H-noun", "stem":"o-"
     },
     {
         "word":"ohga", "roots":["oh", "ga"], "english":["Acacia wood logs"], "type":"Noun (Compound)", "inflection":"H-noun", "stem":"o_ga"
+    },
+    {
+        "word":"p", "english":["to do ~"], "type":"Grammatical", "inflection":"Suffix", "useage":"The Verb form ending for H-nouns."
+    },
+    {
+        "word":"v", "english":["to do ~"], "type":"Grammatical", "inflection":"Suffix", "useage":"The Verb form ending for M-nouns."
     },
     {
         "word":"v2", "english":["the opposite of ~", "anti-", "un-"], "type":"Multi Affix", "inflection":"Prefix", "useage":"Changes a noun or verb into something the \"opposite\" of that word."

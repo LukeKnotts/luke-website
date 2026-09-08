@@ -168,6 +168,11 @@ useHead({
           </tr>
         </tbody>
       </table>
+      <p>
+        Noun-ed verbs are an exception to this rule, instead working
+        context-dependently. A noun in "Verb form" does not have any suffixes
+        telling the reader what role it is playing.
+      </p>
       <hr />
       <h2>Making Verbs into Nouns</h2>
       <p>
