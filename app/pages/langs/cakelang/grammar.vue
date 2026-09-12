@@ -11,11 +11,12 @@
         >) created by <a href="/">Luke Knotts</a>.
       </p>
       <p>
-        A sentenece in Cakelang consits of a row of objects and object-looking
+        A sentence in Cakelang consists of a row of objects and object-looking
         cakes. Cakelang speakers prepare and present these cakes, while Cakelang
-        listeners sus out which objects are secretly cake, and cut into and
-        taste them to hear the Cakelang message.
+        listeners sus out which objects are secretly cake and cut into and taste
+        them to "hear" the Cakelang message.
       </p>
+      <hr />
     </Layout>
   </div>
 </template>
