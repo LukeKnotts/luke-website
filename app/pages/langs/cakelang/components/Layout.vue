@@ -23,6 +23,8 @@ import WIPbanner from "~/components/Wipbanner.vue";
   margin-left: 15%;
   margin-right: 15%;
   width: auto;
+  --primary-color: rgb(80, 80, 233);
+  --secondary-color: rgb(151, 33, 151);
 }
 @media all and (max-width: 500px) {
   .cakelang-wrapper {
@@ -42,5 +44,17 @@ import WIPbanner from "~/components/Wipbanner.vue";
 }
 :deep(a) {
   font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--primary-color);
+}
+
+:deep(.def) {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+:deep(.external) {
+  color: var(--secondary-color);
+}
+:deep(.external::after) {
+  content: " ↗";
 }
 </style>
