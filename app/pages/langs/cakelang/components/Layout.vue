@@ -36,6 +36,16 @@ import WIPbanner from "~/components/Wipbanner.vue";
 :deep(h1) {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+:deep(h2) {
+  color: var(--primary-color);
+  font-size: 28px;
+}
+:deep(.h2-num) {
+  color: black;
+}
+:deep(.h2-num::after) {
+  content: "\00A0";
+}
 :deep(p) {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
@@ -50,6 +60,7 @@ import WIPbanner from "~/components/Wipbanner.vue";
 :deep(.def) {
   font-weight: bold;
   color: var(--primary-color);
+  display: inline;
 }
 :deep(.external) {
   color: var(--secondary-color);

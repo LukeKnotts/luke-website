@@ -3,7 +3,7 @@
     <Layout>
       <h1>A Grammar of the Cakelang Language</h1>
       <p>
-        <span class="def">Cakelang</span> is a conlang (i.e.,
+        <Def>Cakelang</Def> is a conlang (i.e.,
         <a
           class="external"
           href="https://en.wikipedia.org/wiki/Constructed_language"
@@ -17,10 +17,23 @@
         them to "hear" the Cakelang message.
       </p>
       <hr />
+      <h2><span class="h2-num">1.0</span> Three Cakes</h2>
+      <p>
+        A sentence in Cakelang consists of <Def>three</Def> cakes, one of them
+        secretly fake (i.e., not cake).
+      </p>
+      <p>
+        Despite this limitation, Cakelang is still capable of conveying
+        arbitrarily long and complex utterances. The way Cakelang does this is
+        <Def>Cake layers</Def>. Each cake in a Cakelang utterance contains some
+        amount of layers, each represent a <Def>word</Def> in Cakelang.
+      </p>
+      <hr />
     </Layout>
   </div>
 </template>
 
 <script setup>
 import Layout from "./components/Layout.vue";
+import Def from "./components/Highlight.vue";
 </script>
