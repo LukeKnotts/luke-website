@@ -20,8 +20,8 @@ import WIPbanner from "~/components/Wipbanner.vue";
 
 <style scoped>
 .cakelang-wrapper {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
   width: auto;
   --primary-color: rgb(80, 80, 233);
   --secondary-color: rgb(151, 33, 151);
@@ -40,11 +40,17 @@ import WIPbanner from "~/components/Wipbanner.vue";
   color: var(--primary-color);
   font-size: 28px;
 }
-:deep(.h2-num) {
+:deep(.h-num) {
   color: black;
 }
-:deep(.h2-num::after) {
+:deep(.h-num::after) {
   content: "\00A0";
+}
+:deep(h3) {
+  color: var(--primary-color);
+  font-size: 24px;
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-color);
 }
 :deep(p) {
   font-family: Georgia, "Times New Roman", Times, serif;
