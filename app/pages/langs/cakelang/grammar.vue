@@ -59,8 +59,8 @@
       <p>
         Cakelang words have two components. The <Def>index</Def> and the
         <Def>value</Def>. The <i>index</i> tells you how that particular cake
-        layer is related to the rest of the sentence, and the <i>value</i> is
-        the particular concept that layer represents.
+        layer is related to the rest of the sentence; the <i>value</i> is what
+        that layer conceptually means, or its <i>definition</i>.
       </p>
       <hr />
       <!-- Footer -->
