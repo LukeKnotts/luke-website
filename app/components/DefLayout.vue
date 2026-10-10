@@ -22,8 +22,8 @@ const bg_color = ref("rgb(0,0,0)");
   margin: 0px 15% 20px 15%;
 
   /* TEXT STYLE */
-  font-family: georgia, serif;
-  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
   line-height: 1.5em;
   text-align: justify;
   color: green;
