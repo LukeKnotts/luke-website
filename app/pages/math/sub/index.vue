@@ -1,8 +1,8 @@
 <template>
   <div>
     <Layout>
-      <h1>Sub</h1>
-      <p>Webpage.</p>
+      <h1>Substitution</h1>
+      <p>There is stuff on this webpage.</p>
     </Layout>
   </div>
 </template>
