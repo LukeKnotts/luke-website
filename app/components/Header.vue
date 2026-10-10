@@ -36,7 +36,7 @@ const can_scroll = ref(false);
 .header-component {
   position: sticky;
   top: 0;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(44, 44, 44);
 
   padding: 5px 10px 5px 20px;
   border-bottom: black 2px solid;

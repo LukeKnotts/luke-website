@@ -13,7 +13,7 @@ onMounted(() => {
   });
 });
 
-const bg_color = ref("rgb(224, 186, 132)");
+const bg_color = ref("rgb(0,0,0)");
 </script>
 
 <style scoped>
@@ -26,6 +26,7 @@ const bg_color = ref("rgb(224, 186, 132)");
   font-size: 16px;
   line-height: 1.5em;
   text-align: justify;
+  color: green;
 }
 
 @media all and (max-width: 500px) {
